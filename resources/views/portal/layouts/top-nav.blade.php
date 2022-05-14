@@ -23,8 +23,8 @@
                             <i class="fa fas-cog text-primary"></i>
                             Settings
                         </a>
-                        <a class="dropdown-item">
-                            <i class="mdi mdi-logout text-primary"></i>
+                        <a class="dropdown-item" href="{{route('logout')}}">
+                            <i class="fa-solid fa-right-from-bracket"></i>
                             Logout
                         </a>
                     </div>
