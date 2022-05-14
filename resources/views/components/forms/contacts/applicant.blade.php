@@ -23,7 +23,7 @@
                                 <div class="col-sm-9">
                                     <input name="applicant_id" type="applicant_id" class="form-control"
                                         placeholder=" Sample Invention Disclosure"
-                                        value="{{ old('applicant_id') ?? ($investor->applicant_id ?? (app()->environment('local') ? 'Investor ID' : '')) }}"
+                                        value="{{ old('applicant_id') ?? ($investor->applicant_id ?? (app()->environment('local') ? 'Applicant ID' : '')) }}"
                                         required>
                                     @error('applicant_id')
                                         <div class="invalid-feedback">

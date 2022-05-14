@@ -16,7 +16,8 @@ class CreateInvestorTable extends Migration
         Schema::create('investor', function (Blueprint $table) {
             $table->id();
             $table->string("InvestorID")->unique();
-            $table->string("InvestorName");
+            $table->string("InvestorLastName");
+            $table->string("InvestorGivenName");
             $table->string("InvestorPhone");
             $table->string("InvestorEmail");
             $table->date("Date_of_Termination");
