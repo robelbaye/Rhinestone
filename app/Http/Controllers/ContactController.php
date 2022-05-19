@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Country;
+use App\Models\Licensor;
+use App\Models\Applicant;
+use App\Models\Investor;
+use App\Models\Agent;
+use App\Models\Licensee;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -16,8 +21,13 @@ class ContactController extends Controller
     public function index()
     {
         $countries = Country::all();
+        $applicant = Applicant::all();
+        $investor = Investor::all();
+        $licensor = Licensor::all();
+        $licensee = Licensee::all();
+        $agent = Agent::all();
 
-        return \view('portal.contacts.index', compact(['countries']));
+        return \view('portal.contacts.index', compact(['countries','applicant','investor','licensor','agent','licensee']));
     }
 
     /**
@@ -38,7 +48,13 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::transaction(function() use($request) {
+            $applicant = Applicant::create((array) $request->all());
+        });
+
+        return back()->with([
+            'success' => 'Added successfully'
+        ]);
     }
 
     /**

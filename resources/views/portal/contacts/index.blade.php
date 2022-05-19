@@ -52,24 +52,41 @@
                     title="Create Investor"
                 />
                 <div class="table-responsive">
-                    <table class="table">
+                    <table id="Devroinvestor" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Investor ID</th>
                                 <th>Surname</th>
                                 <th>Given Name(s)</th>
                                 <th>Nationality</th>
-                                <th>Employment Status</th>
+                                <th>Investors Phone</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($investor as $invsitem)
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$invsitem->InvestorID}}</td>
+                                <td>{{$invsitem->InvestorLastName}}</td>
+                                <td>{{$invsitem->InvestorGivenName}}</td>
+                                <td>{{$invsitem->Nationality}}</td>
+                                <td>{{$invsitem->InvestorPhone}}</td>
+                                <td class="text-center">
+                                    <a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        View
+                                    </a>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="#">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a>
+                                </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -83,7 +100,7 @@
                     title="Create Applicant"
                 />
                 <div class="table-responsive">
-                    <table class="table">
+                    <table id="Devroapplicant" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -95,19 +112,31 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($applicant as $appsitem)
                             <tr>
-                                <td>John Doe</td>
-                                <td>john@doe.test</td>
-                                <td>+1 77322 728 32</td>
-                                <td>Canada</td>
-                                <td>Approved</td>
+                                <td>{{$appsitem->applicant_name}}</td>
+                                <td>{{$appsitem->applicant_email}}</td>
+                                <td>{{$appsitem->applicant_phone}}</td>
+                                <td>{{$appsitem->applicant_nationality}}</td>
+                                <td>
+                                    <label class="badge badge-info">{{$appsitem->applicant_status}}</label>
+                                </td>
                                 <td class="text-center">
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
                                     </a>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="#">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -123,68 +152,86 @@
                     title="Create Licensor"
                 />
                 <div class="table-responsive">
-                    <table class="table">
+                    <table id="Devrolicensor" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone Number</th>
                                 <th>Nationality</th>
-                                <th>Status</th>
+                                <th>Date of Contract</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($licensor as $licensoritem)
                             <tr>
-                                <td>John Doe</td>
-                                <td>john@doe.test</td>
-                                <td>+1 77322 728 32</td>
-                                <td>Canada</td>
-                                <td>Approved</td>
+                                <td>{{$licensoritem->Last_Name}}&nbsp;&nbsp;{{$licensoritem->Given_Name}}</td>
+                                <td>{{$licensoritem->Email_of_Future_Contact}}</td>
+                                <td>{{$licensoritem->Phone_Number}}</td>
+                                <td>{{$licensoritem->Nationality}}</td>
+                                <td>{{$licensoritem->Date_of_Contract}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
                                     </a>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="#">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-licensee" role="tabpanel" aria-labelledby="pills-licensee-tab">
                 <x-forms.contacts.licensee
-                    id="create-licensor-modal"
+                    id="create-licensee-modal"
                     class="btn btn-primary btn-sm"
                     :countries="$countries"
-                    title="Create Licensor"
+                    title="Create Licensee"
                 />
                 <div class="table-responsive">
-                    <table class="table">
+                    <table id="Devrolicensee" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone Number</th>
                                 <th>Nationality</th>
-                                <th>Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($licensee as $licenseeitem)
                             <tr>
-                                <td>John Doe</td>
-                                <td>john@doe.test</td>
-                                <td>+1 77322 728 32</td>
-                                <td>Canada</td>
-                                <td>Approved</td>
+                                <td>{{$licenseeitem->Licensee_Name}}</td>
+                                <td>{{$licenseeitem->Licensee_Email}}</td>
+                                <td>{{$licenseeitem->Licensee_Phone}}</td>
+                                <td>{{$licenseeitem->Nationality}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
                                     </a>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="#">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -196,13 +243,13 @@
             </div>
             <div class="tab-pane fade" id="pills-agent" role="tabpanel" aria-labelledby="pills-agent-tab">
                 <x-forms.contacts.agent
-                    id="create-licensor-modal"
+                    id="create-agent-modal"
                     class="btn btn-primary btn-sm"
                     :countries="$countries"
-                    title="Create Licensor"
+                    title="Create Agent"
                 />
                 <div class="table-responsive">
-                    <table class="table">
+                    <table id="Devroagent" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -214,19 +261,31 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($agent as $agentitem)
                             <tr>
-                                <td>John Doe</td>
-                                <td>john@doe.test</td>
-                                <td>+1 77322 728 32</td>
-                                <td>Canada</td>
-                                <td>Approved</td>
+                                <td>{{$agentitem->agent_name}}</td>
+                                <td>{{$agentitem->agent_email}}</td>
+                                <td>{{$agentitem->agent_phone}}</td>
+                                <td>{{$agentitem->agent_nationality}}</td>
+                                <td>
+                                    <label class="badge badge-info">{{$agentitem->agent_status}}</label>
+                                </td>
                                 <td class="text-center">
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
                                     </a>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="#">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-outline-danger btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -241,3 +300,12 @@
     </div>
 </div>
 @endsection
+<script>
+    $(document).ready(function() {
+        $('#Devroinvestor').DataTable();
+        $('#Devroapplicant').DataTable();
+        $('#Devrolicensor').DataTable();
+        $('#Devrolicensee').DataTable();
+        $('#Devroagent').DataTable();
+    });
+</script>

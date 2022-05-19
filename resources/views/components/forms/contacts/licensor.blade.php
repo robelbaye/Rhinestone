@@ -13,18 +13,18 @@
             data-bs-parent="#accordion-4">
             <div class="card">
                 <div class="card-body row">
-                    <form class="row card-body" id="disclosure-form"
-                        action="{{ route('invention-disclosures.store') }}" method="POST">
+                    <form class="row card-body" id="licensor-form"
+                        action="{{ route('licensor-crud.store') }}" method="POST">
                         @csrf
                         <div class="col-6">
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Licensor ID: </label>
                                 <div class="col-sm-9">
-                                    <input name="licensor_id" type="licensor_id" class="form-control"
-                                        placeholder=" Sample Invention Disclosure"
-                                        value="{{ old('licensor_id') ?? ($investor->licensor_id ?? (app()->environment('local') ? 'Licensor ID' : '')) }}"
+                                    <input name="Licensor_ID" type="Licensor_ID" class="form-control"
+                                        placeholder=" Licensor ID"
+                                        value="{{ old('Licensor_ID') ?? ($licensor->Licensor_ID ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('licensor_id')
+                                    @error('Licensor_ID')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -32,13 +32,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Last Name </label>
+                                <label class="col-sm-3 col-form-label">Surname </label>
                                 <div class="col-sm-9">
-                                    <input name="name" type="name" class="form-control"
-                                        placeholder=" Sample Invention Disclosure"
-                                        value="{{ old('name') ?? ($investor->name ?? (app()->environment('local') ? 'Name' : '')) }}"
+                                    <input name="Last_Name" type="Last_Name" class="form-control"
+                                        placeholder=" Surname"
+                                        value="{{ old('Last_Name') ?? ($licensor->Last_Name ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('name')
+                                    @error('Last_Name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -46,11 +46,25 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Given name</label>
+                                <label class="col-sm-3 col-form-label">Given Name</label>
                                 <div class="col-sm-9">
-                                    <input name="given_name" type="given_name" class="form-control"
-                                        placeholder=" Given name"
-                                        value="{{ old('given_name') ?? ($investor->given_name ?? (app()->environment('local') ? 'Given name' : '')) }}"
+                                    <input name="Given_Name" type="Given_Name" class="form-control"
+                                        placeholder=" Given Name"
+                                        value="{{ old('Given_Name') ?? ($licensor->Given_Name ?? (app()->environment('local') ? '' : '')) }}"
+                                        required>
+                                    @error('Given_Name')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Phone Number</label>
+                                <div class="col-sm-9">
+                                    <input name="Phone_Number" type="Phone_Number" class="form-control"
+                                        placeholder=" Phone Number"
+                                        value="{{ old('Phone_Number') ?? ($licensor->Phone_Number ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
                                     @error('name')
                                         <div class="invalid-feedback">
@@ -62,33 +76,31 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Nationality</label>
                                 <div class="col-sm-9">
-                                    <select name="country_id"
-                                        class="form-control @error('country_id') is-invalid @enderror" required>
+                                    <select name="Nationality"
+                                        class="form-control @error('Nationality') is-invalid @enderror" required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
-                                            <option value="{{ $country->id }}"
-                                                {{ old('country') == $country->id ? 'selected' : '' }}>
+                                            <option value="{{ $country->name }}"
+                                                {{ old('country') == $country->name ? 'selected' : '' }}>
                                                 {{ $country->name }}</option>
                                         @endforeach
                                     </select>
-                                    @error('country_id')
+                                    @error('Nationality')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6">
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Home Address</label>
                                 <div class="col-sm-9">
-                                    <input name="address" type="text"
-                                        class="form-control @error('address') is-invalid @enderror"
-                                        placeholder=" applicant's address"
-                                        value="{{ old('address') ?? ($licensor->address ?? (app()->environment('local') ? 'licensors address' : '')) }}"
+                                    <input name="Home_Address" type="text"
+                                        class="form-control @error('Home_Address') is-invalid @enderror"
+                                        placeholder=" Home Address"
+                                        value="{{ old('Home_Address') ?? ($licensor->Home_Address ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('address')
+                                    @error('Home_Address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -96,14 +108,14 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Employer</label>
+                                <label class="col-sm-3 col-form-label">Employer Name</label>
                                 <div class="col-sm-9">
-                                    <input name="employer_name" type="text"
-                                        class="form-control @error('employer_name') is-invalid @enderror"
-                                        placeholder=" applicant's employer_name"
-                                        value="{{ old('employer_name') ?? ($licensor->employer_name ?? (app()->environment('local') ? 'licensors employer name' : '')) }}"
+                                    <input name="Employer" type="text"
+                                        class="form-control @error('Employer') is-invalid @enderror"
+                                        placeholder=" Licensors Employer Name"
+                                        value="{{ old('Employer') ?? ($licensor->Employer ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('employer_name')
+                                    @error('Employer')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -113,8 +125,8 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Employer Address </label>
                                 <div class="col-sm-9">
-                                    <select name="country_id"
-                                        class="form-control @error('country_id') is-invalid @enderror" required>
+                                    <select name="Employer_Address"
+                                        class="form-control @error('Employer_Address') is-invalid @enderror" required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->id }}"
@@ -122,36 +134,24 @@
                                                 {{ $country->name }}</option>
                                         @endforeach
                                     </select>
-                                    @error('country_id')
+                                    @error('Employer_Address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Given name</label>
-                                <div class="col-sm-9">
-                                    <input name="given_name" type="given_name" class="form-control"
-                                        placeholder=" Given name"
-                                        value="{{ old('given_name') ?? ($investor->given_name ?? (app()->environment('local') ? 'Given name' : '')) }}"
-                                        required>
-                                    @error('name')
-                                        <div class="invalid-feedback">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-                            </div>
+                        </div>
+                        <div class="col-6">
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Date of Termination </label>
                                 <div class="col-sm-9">
-                                    <input name="date_of_termination" type="date"
-                                        class="form-control @error('date_of_termination') is-invalid @enderror"
-                                        placeholder=" 72"
-                                        value="{{ old('date_of_termination') ?? ((isset($investor->date_of_termination) ? $investor->date_of_termination->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                    <input name="Date_of_Termination" type="date"
+                                        class="form-control @error('Date_of_Termination') is-invalid @enderror"
+                                        placeholder=""
+                                        value="{{ old('Date_of_Termination') ?? ((isset($licensor->Date_of_Termination) ? $licensor->Date_of_Termination->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('date_of_termination')
+                                    @error('Date_of_Termination')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -161,12 +161,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Date of Commencement </label>
                                 <div class="col-sm-9">
-                                    <input name="date_of_contract" type="date"
-                                        class="form-control @error('date_of_contract') is-invalid @enderror"
-                                        placeholder=" 72"
-                                        value="{{ old('date_of_contract') ?? ((isset($investor->date_of_contract) ? $investor->date_of_contract->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                    <input name="Date_of_Commencement" type="date"
+                                        class="form-control @error('Date_of_Commencement') is-invalid @enderror"
+                                        placeholder=""
+                                        value="{{ old('Date_of_Commencement') ?? ((isset($licensor->Date_of_Commencement) ? $licensor->Date_of_Commencement->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('date_of_contract')
+                                    @error('Date_of_Commencement')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -176,12 +176,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Contractor </label>
                                 <div class="col-sm-9">
-                                    <input name="contractor" type="text"
-                                        class="form-control @error('contractor') is-invalid @enderror"
-                                        placeholder=" applicant's contractor"
-                                        value="{{ old('contractor') ?? ($licensor->contractor ?? (app()->environment('local') ? 'contractor' : '')) }}"
+                                    <input name="Contractor" type="text"
+                                        class="form-control @error('Contractor') is-invalid @enderror"
+                                        placeholder=" Applicant's Contractor"
+                                        value="{{ old('Contractor') ?? ($licensor->Contractor ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('contractor')
+                                    @error('Contractor')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -189,14 +189,14 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Contractor </label>
+                                <label class="col-sm-3 col-form-label">Contractor Type</label>
                                 <div class="col-sm-9">
-                                    <input name="type_contractor" type="text"
-                                        class="form-control @error('type_contractor') is-invalid @enderror"
-                                        placeholder=" applicant's type_contractor"
-                                        value="{{ old('type_contractor') ?? ($licensor->type_contractor ?? (app()->environment('local') ? 'A type of ontract' : '')) }}"
+                                    <input name="ContractorType" type="text"
+                                        class="form-control @error('ContractorType') is-invalid @enderror"
+                                        placeholder=" Applicant's Contractor Type"
+                                        value="{{ old('ContractorType') ?? ($licensor->ContractorType ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('type_contractor')
+                                    @error('ContractorType')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -206,12 +206,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Date of Contract </label>
                                 <div class="col-sm-9">
-                                    <input name="date_of_termination" type="date"
-                                        class="form-control @error('date_of_termination') is-invalid @enderror"
-                                        placeholder=" 72"
-                                        value="{{ old('date_of_termination') ?? ((isset($investor->date_of_termination) ? $investor->date_of_termination->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                    <input name="Date_of_Contract" type="date"
+                                        class="form-control @error('Date_of_Contract') is-invalid @enderror"
+                                        placeholder=""
+                                        value="{{ old('Date_of_Contract') ?? ((isset($licensor->Date_of_Contract) ? $licensor->Date_of_Contract->format('Y-m-d') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('date_of_termination')
+                                    @error('Date_of_Contract')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -221,12 +221,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Email of Future Contact </label>
                                 <div class="col-sm-9">
-                                    <input name="email_of_future_contact" type="text"
-                                        class="form-control @error('email_of_future_contact') is-invalid @enderror"
-                                        placeholder=" investor's email_of_future_contact"
-                                        value="{{ old('email_of_future_contact') ?? ($investor->email_of_future_contact ?? (app()->environment('local') ? 'licensors employer name' : '')) }}"
+                                    <input name="Email_of_Future_Contact" type="email"
+                                        class="form-control @error('Email_of_Future_Contact') is-invalid @enderror"
+                                        placeholder=" Licensors Employer Name"
+                                        value="{{ old('Email_of_Future_Contact') ?? ($licensor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('email_of_future_contact')
+                                    @error('Email_of_Future_Contact')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -236,15 +236,15 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Notes </label>
                                 <div class="col-sm-9">
-                                    <textarea cols="600" rows="3" class="form-control" id="notes" placeholder="notes"
-                                        name="notes"
-                                        placeholder="Enter value here">{{ $investor->notes ?? 'notes' }}</textarea>
+                                    <textarea cols="600" rows="3" class="form-control" id="Notes" placeholder="Notes"
+                                        name="Notes"
+                                        placeholder="Enter value here">{{ $licensor->notes ?? '' }}</textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="disclosure-form" type="submit" class="btn btn-primary">
+                                <button form="licensor-form" type="submit" class="btn btn-primary">
                                     Save Details
                                 </button>
                             </div>

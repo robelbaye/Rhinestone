@@ -85,8 +85,14 @@
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
+            $('#Devroinvestor').DataTable();
+            $('#Devroapplicant').DataTable();
+            $('#Devrolicensor').DataTable();
+            $('#Devrolicensee').DataTable();
+            $('#Devroagent').DataTable();
         } );
     </script>
+
 </body>
 
 

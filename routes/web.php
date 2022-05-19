@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InventionDisclosureController;
+use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\InvestorController;
+use App\Http\Controllers\LicensorController;
+use App\Http\Controllers\LicenseeController;
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SettingValueController;
 use Illuminate\Support\Facades\Auth;
@@ -37,6 +42,32 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 Route::resource('invention-disclosures', InventionDisclosureController::class)->only(['index', 'store', 'show', 'update', 'delete']);
 Route::name('invention-disclosures.')->prefix('invention-disclosures')->group(function(){
 });
+
+// Applicant
+Route::resource('applicant-crud', ApplicantController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('applicant-crud.')->prefix('applicant-crud')->group(function(){
+});
+
+// Investor
+Route::resource('investor-crud', InvestorController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('investor-crud.')->prefix('investor-crud')->group(function(){
+});
+
+// Licensee
+Route::resource('licensee-crud', LicenseeController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('licensee-crud.')->prefix('licensee-crud')->group(function(){
+});
+
+// Licensor
+Route::resource('licensor-crud', LisensorController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('licensor-crud.')->prefix('licensor-crud')->group(function(){
+});
+
+// Agent
+Route::resource('agent-crud', AgentController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('agent-crud.')->prefix('agent-crud')->group(function(){
+});
+
 
 // Contacts
 Route::resource('contacts', ContactController::class)->only(['index', 'store', 'show', 'update', 'delete']);

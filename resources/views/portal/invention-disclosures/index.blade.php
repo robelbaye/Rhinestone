@@ -32,6 +32,14 @@
                                             href="{{ route('invention-disclosures.show', ['invention_disclosure' => 2]) }}">
                                             View
                                         </a>
+                                        <a class="btn btn-outline-danger btn-sm"
+                                            href="#">
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-outline-danger btn-sm"
+                                            href="#">
+                                            Delete
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach
