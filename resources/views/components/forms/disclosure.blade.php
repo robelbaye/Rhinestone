@@ -30,8 +30,8 @@
                                             <div class="col-sm-9">
                                                 <input name="reference_number" type="text"
                                                     class="form-control @error('reference_number') is-invalid @enderror"
-                                                    placeholder=" ayu7687/t767/21"
-                                                    value="{{ old('reference_number') ?? ($sow->reference_number ?? (app()->environment('local') ? 'ayu7687/t767/21' : '')) }}"
+                                                    placeholder=" IDs Ref. No"
+                                                    value="{{ old('reference_number') ?? ($sow->reference_number ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                                 @error('reference_number')
                                                     <div class="invalid-feedback">
@@ -44,8 +44,8 @@
                                             <label class="col-sm-3 col-form-label">Title: </label>
                                             <div class="col-sm-9">
                                                 <input name="title" type="title" class="form-control"
-                                                    placeholder=" Sample Invention Disclosure"
-                                                    value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? 'Title' : '')) }}"
+                                                    placeholder=" Title"
+                                                    value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                             @error('reference_number')
@@ -89,7 +89,7 @@
                                                 <input name="file_open_date" type="date"
                                                     class="form-control @error('file_open_date') is-invalid @enderror"
                                                     placeholder=" 72"
-                                                    value="{{ old('file_open_date') ?? ((isset($sow->file_open_date) ? $sow->file_open_date->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                                    value="{{ old('file_open_date') ?? ((isset($sow->file_open_date) ? $sow->file_open_date->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@
                                                 <input name="date_of_invention" type="date"
                                                     class="form-control @error('date_of_invention') is-invalid @enderror"
                                                     placeholder=" 72"
-                                                    value="{{ old('date_of_invention') ?? ((isset($sow->date_of_invention) ? $sow->date_of_invention->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                                    value="{{ old('date_of_invention') ?? ((isset($sow->date_of_invention) ? $sow->date_of_invention->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -109,7 +109,7 @@
                                                 <input name="keyword" type="text"
                                                     class="form-control @error('keyword') is-invalid @enderror"
                                                     placeholder=" Keywords"
-                                                    value="{{ old('keyword') ?? ($sow->keyword ?? (app()->environment('local') ? 'Keywords' : '')) }}"
+                                                    value="{{ old('keyword') ?? ($sow->keyword ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -118,7 +118,7 @@
                                             <div class="col-sm-9">
                                                 <input name="cost_center" type="cost_center" class="form-control"
                                                     placeholder=" Center 1"
-                                                    value="{{ old('cost_center') ?? ($user->cost_center ?? (app()->environment('local') ? 'Center 1' : '')) }}"
+                                                    value="{{ old('cost_center') ?? ($user->cost_center ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -201,7 +201,7 @@
                                             <div class="col-sm-9">
                                                 <input name="center_code" type="center_code" class="form-control"
                                                     placeholder=" 100"
-                                                    value="{{ old('center_code') ?? ($user->center_code ?? (app()->environment('local') ? '100' : '')) }}"
+                                                    value="{{ old('center_code') ?? ($user->center_code ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -212,7 +212,7 @@
                                             <div class="col-sm-9">
                                                 <textarea class="form-control" id="invention_notes"
                                                     placeholder="Invention description" name="invention_notes"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Invention description' }}</textarea>
+                                                    placeholder="Invention description">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -220,7 +220,7 @@
                                             <div class="col-sm-9">
                                                 <textarea class="form-control" id="invention_notes"
                                                     placeholder="Invention description" name="invention_notes"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Invention description' }}</textarea>
+                                                    placeholder="Invention description">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -228,7 +228,7 @@
                                             <div class="col-sm-9">
                                                 <textarea cols="600" rows="3" class="form-control"
                                                     id="proposed_investors" name="proposed_investors"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Proposed Investor' }}</textarea>
+                                                    placeholder="Proposed Investor">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -251,7 +251,7 @@
                                             <div class="col-sm-9">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Reasons of Approval or Rejection' }}</textarea>
+                                                    placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -259,7 +259,7 @@
                                             <div class="col-sm-9">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Reasons of Approval or Rejection' }}</textarea>
+                                                    placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -269,8 +269,8 @@
                                             <div class="col-sm-9">
                                                 <input name="date_of_invention" type="date"
                                                     class="form-control @error('date_of_invention') is-invalid @enderror"
-                                                    placeholder=" 72"
-                                                    value="{{ old('date_of_invention') ?? ((isset($sow->date_of_invention) ? $sow->date_of_invention->format('Y-m-d') : null) ?? (app()->environment('local') ? '2022-01-01' : '')) }}"
+                                                    placeholder=""
+                                                    value="{{ old('date_of_invention') ?? ((isset($sow->date_of_invention) ? $sow->date_of_invention->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
@@ -279,7 +279,7 @@
                                             <div class="col-sm-9">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
-                                                    placeholder="Enter value here">{{ $evaluation->suggestion ?? 'Reasons of Approval or Rejection' }}</textarea>
+                                                    placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                     </div>

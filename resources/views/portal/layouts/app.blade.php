@@ -90,6 +90,8 @@
             $('#Devrolicensor').DataTable();
             $('#Devrolicensee').DataTable();
             $('#Devroagent').DataTable();
+            $('#Devropatent').DataTable();
+            $('#Devrodesign').DataTable();
         } );
     </script>
 

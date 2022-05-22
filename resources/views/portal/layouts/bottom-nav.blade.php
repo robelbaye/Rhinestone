@@ -22,12 +22,9 @@
                     <i class="fa fa-arrow"></i></a>
                 <div class="submenu">
                     <ul class="submenu-item">
-                        <li class="nav-item"><a class="nav-link"
-                                href="#"><b>Patent</b></a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="#"><b>Design</b></a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="#"><b>Trademark</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('patent') }}"><b>Patent</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('design') }}"><b>Design</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Trademark</b></a></li>
                     </ul>
                 </div>
             </li>

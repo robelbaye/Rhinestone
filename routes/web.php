@@ -6,6 +6,8 @@ use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\InvestorController;
 use App\Http\Controllers\LicensorController;
 use App\Http\Controllers\LicenseeController;
+use App\Http\Controllers\PatentController;
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SettingValueController;
@@ -38,9 +40,23 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
+// Route::get('/patent', [App\Http\Controllers\CountryController::class, 'patent'])->name('patent');
+Route::get('/patent', [App\Http\Controllers\PatentController::class, 'index'])->name('patent');
+Route::get('/design', [App\Http\Controllers\DesignController::class, 'index'])->name('design');
+
 // Invention Disclosures
 Route::resource('invention-disclosures', InventionDisclosureController::class)->only(['index', 'store', 'show', 'update', 'delete']);
 Route::name('invention-disclosures.')->prefix('invention-disclosures')->group(function(){
+});
+
+// Design
+Route::resource('design-crud', DesignController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('design-crud.')->prefix('design-crud')->group(function(){
+});
+
+// Patent
+Route::resource('patent-crud', PatentController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::name('patent-crud.')->prefix('patent-crud')->group(function(){
 });
 
 // Applicant

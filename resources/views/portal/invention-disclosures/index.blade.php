@@ -9,7 +9,7 @@
                 <div class="col-12">
                     <div class="table-responsive">
                         <table id="example" class="table table-striped table-bordered" style="width:100%">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
                                     <th>Reference Number</th>
                                     <th>Title</th>
@@ -18,7 +18,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 @foreach ($inventionDisclosures as $Disitem)
                                 <tr>
                                     <td>{{$Disitem->reference_number}}</td>

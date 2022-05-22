@@ -53,7 +53,7 @@
                 />
                 <div class="table-responsive">
                     <table id="Devroinvestor" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>Investor ID</th>
                                 <th>Surname</th>
@@ -63,7 +63,7 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($investor as $invsitem)
                             <tr>
                                 <td>{{$invsitem->InvestorID}}</td>
@@ -71,7 +71,7 @@
                                 <td>{{$invsitem->InvestorGivenName}}</td>
                                 <td>{{$invsitem->Nationality}}</td>
                                 <td>{{$invsitem->InvestorPhone}}</td>
-                                <td class="text-center">
+                                <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
@@ -101,7 +101,7 @@
                 />
                 <div class="table-responsive">
                     <table id="Devroapplicant" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -111,7 +111,7 @@
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($applicant as $appsitem)
                             <tr>
                                 <td>{{$appsitem->applicant_name}}</td>
@@ -121,7 +121,7 @@
                                 <td>
                                     <label class="badge badge-info">{{$appsitem->applicant_status}}</label>
                                 </td>
-                                <td class="text-center">
+                                <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
@@ -153,7 +153,7 @@
                 />
                 <div class="table-responsive">
                     <table id="Devrolicensor" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -163,7 +163,7 @@
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($licensor as $licensoritem)
                             <tr>
                                 <td>{{$licensoritem->Last_Name}}&nbsp;&nbsp;{{$licensoritem->Given_Name}}</td>
@@ -171,7 +171,7 @@
                                 <td>{{$licensoritem->Phone_Number}}</td>
                                 <td>{{$licensoritem->Nationality}}</td>
                                 <td>{{$licensoritem->Date_of_Contract}}</td>
-                                <td class="text-center">
+                                <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
@@ -200,7 +200,7 @@
                 />
                 <div class="table-responsive">
                     <table id="Devrolicensee" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -209,14 +209,14 @@
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($licensee as $licenseeitem)
                             <tr>
                                 <td>{{$licenseeitem->Licensee_Name}}</td>
                                 <td>{{$licenseeitem->Licensee_Email}}</td>
                                 <td>{{$licenseeitem->Licensee_Phone}}</td>
                                 <td>{{$licenseeitem->Nationality}}</td>
-                                <td class="text-center">
+                                <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
@@ -250,7 +250,7 @@
                 />
                 <div class="table-responsive">
                     <table id="Devroagent" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -260,7 +260,7 @@
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($agent as $agentitem)
                             <tr>
                                 <td>{{$agentitem->agent_name}}</td>
@@ -270,7 +270,7 @@
                                 <td>
                                     <label class="badge badge-info">{{$agentitem->agent_status}}</label>
                                 </td>
-                                <td class="text-center">
+                                <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         View
