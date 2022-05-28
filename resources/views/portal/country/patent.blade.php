@@ -18,21 +18,23 @@
                     <table id="Devropatent" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
-                                <th>Info-1</th>
-                                <th>Info-2</th>
-                                <th>Info-3</th>
-                                <th>Info-4</th>
-                                <th>Info-5</th>
+                                <th>Family No</th>
+                                <th>Internal Title</th>
+                                <th>Formal Title</th>
+                                <th>Type of Filing</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
                             <tr>
-                                <td>Info-1</td>
-                                <td>Info-2</td>
-                                <td>Info-3</td>
-                                <td>Info-4</td>
-                                <td>Info-5</td>
+                                <td>013/2022</td>
+                                <td>Auto Fill Title</td>
+                                <td>Test Title</td>
+                                <td>Patent</td>
+                                <td>
+                                    <label class="badge badge-info">Opened</label>
+                                </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
