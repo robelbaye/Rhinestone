@@ -20,7 +20,7 @@ class DesignController extends Controller
         // $designitems = DesignController::all();
 
         //  Get manager users
-        $attorneys = User::all();
+        $users = User::all();
 
         //  Get trainer users
         $paralegals = User::all();
@@ -28,7 +28,7 @@ class DesignController extends Controller
         // Get Country List
         $countries = Country::all();
         
-        return \view('portal.country.design', compact('countries', 'attorneys', 'paralegals'));
+        return \view('portal.country.design', compact('countries', 'users', 'paralegals'));
     }
 
     /**

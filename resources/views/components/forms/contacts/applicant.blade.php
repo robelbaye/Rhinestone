@@ -19,8 +19,8 @@
                         @csrf
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant ID: </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Applicant ID: </label>
+                                <div class="col-sm-8">
                                     <input name="applicant_ID" type="applicant_ID" class="form-control"
                                         placeholder=" Applicant ID"
                                         value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}"
@@ -33,8 +33,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant Name </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Applicant Name </label>
+                                <div class="col-sm-8">
                                     <input name="applicant_name" type="applicant_name" class="form-control"
                                         placeholder=" Applicant Name"
                                         value="{{ old('applicant_name') ?? ($applicant->applicant_name ?? (app()->environment('local') ? '' : '')) }}"
@@ -47,8 +47,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant's Address</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Applicant's Address</label>
+                                <div class="col-sm-8">
                                     <input name="applicant_address" type="text"
                                         class="form-control @error('applicant_address') is-invalid @enderror"
                                         placeholder=" Applicant's Address"
@@ -62,8 +62,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant's Phone</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Applicant's Phone</label>
+                                <div class="col-sm-8">
                                     <input name="applicant_phone" type="number"
                                         class="form-control @error('applicant_phone') is-invalid @enderror"
                                         placeholder=" Applicant's Address"
@@ -77,10 +77,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Nationality</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Nationality</label>
+                                <div class="col-sm-8">
                                     <select name="applicant_nationality"
-                                        class="form-control @error('applicant_nationality') is-invalid @enderror"
+                                        class="form-control @error('applicant_nationality') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -99,10 +99,10 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Country of Registration</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Country of Registration</label>
+                                <div class="col-sm-8">
                                     <select name="country_of_registration"
-                                        class="form-control @error('country_of_registration') is-invalid @enderror"
+                                        class="form-control @error('country_of_registration') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -119,8 +119,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Date of Incorporation</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Date of Incorporation</label>
+                                <div class="col-sm-8">
                                     <input name="date_of_incorporation" type="date"
                                         class="form-control @error('date_of_incorporation') is-invalid @enderror"
                                         placeholder=" "
@@ -134,16 +134,16 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Notes </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Notes </label>
+                                <div class="col-sm-8">
                                     <textarea cols="600" rows="3" class="form-control" id="note"
                                         placeholder="notes" name="note"
                                         placeholder="Enter value here">{{ $applicant->note ?? '' }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant's e-Mail</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Applicant's e-Mail</label>
+                                <div class="col-sm-8">
                                     <input name="applicant_email" type="email"
                                         class="form-control @error('applicant_email') is-invalid @enderror"
                                         placeholder=" Applicant's Address"
@@ -157,9 +157,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Applicant Status:
+                                <label class="col-sm-4 col-form-label text-right">Applicant Status:
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-8">
                                     <select name="applicant_status"
                                         class="form-control @error('applicant_status') is-invalid @enderror"
                                         required>

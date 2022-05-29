@@ -19,8 +19,8 @@
                         @csrf
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Licensee ID: </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Licensee ID:</label>
+                                <div class="col-sm-8">
                                     <input name="Licensee_ID" type="Licensee_ID" class="form-control" placeholder=" Licensee ID" 
                                     value="{{ old('Licensee_ID') ?? ( $investor->Licensee_ID ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
                                     @error('Licensee_ID')
@@ -31,8 +31,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Licensee Name </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Licensee Name:</label>
+                                <div class="col-sm-8">
                                     <input name="Licensee_Name" type="Licensee_Name" 
                                     class="form-control" placeholder=" Licensee Name" 
                                     value="{{ old('Licensee_Name') ?? ( $licencee->Licensee_Name ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
@@ -44,8 +44,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Licensee's Address</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Licensee's Address:</label>
+                                <div class="col-sm-8">
                                     <input name="Licensee_Address" type="text"
                                         class="form-control @error('Licensee_Address') is-invalid @enderror"
                                         placeholder=" Licensee's Address"
@@ -59,8 +59,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Licensee's e-Mail</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Licensee's e-Mail:</label>
+                                <div class="col-sm-8">
                                     <input name="Licensee_Email" type="email"
                                         class="form-control @error('Licensee_Email') is-invalid @enderror"
                                         placeholder=" Licensee's e-Mail"
@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Phone Number</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Phone Number:</label>
+                                <div class="col-sm-8">
                                     <input name="Licensee_Phone" type="text"
                                         class="form-control @error('Licensee_Phone') is-invalid @enderror"
                                         placeholder=" Phone Number"
@@ -89,10 +89,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Nationality</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Nationality:</label>
+                                <div class="col-sm-8">
                                     <select name="Nationality"
-                                        class="form-control @error('Nationality') is-invalid @enderror"
+                                        class="form-control @error('Nationality') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -111,10 +111,10 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Country of Registration</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Country of Registration:</label>
+                                <div class="col-sm-8">
                                     <select name="Country_of_Registration"
-                                        class="form-control @error('Country_of_Registration') is-invalid @enderror"
+                                        class="form-control @error('Country_of_Registration') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -131,8 +131,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Date of Incorporation</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Date of Incorporation:</label>
+                                <div class="col-sm-8">
                                     <input name="Date_of_Incorporation" type="date"
                                         class="form-control @error('Date_of_Incorporation') is-invalid @enderror"
                                         placeholder=""
@@ -146,8 +146,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Notes </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Notes:</label>
+                                <div class="col-sm-8">
                                     <textarea cols="600" rows="3" class="form-control" id="Notes"
                                         placeholder="Notes" name="Notes"
                                         placeholder="Enter value here">{{ $licensee->Notes ?? '' }}</textarea>

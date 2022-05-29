@@ -19,8 +19,8 @@
                         @csrf
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Investor ID: </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Investor ID:</label>
+                                <div class="col-sm-8">
                                     <input name="InvestorID" type="text"
                                         class="form-control @error('InvestorID') is-invalid @enderror"
                                         placeholder="Reference Number"
@@ -34,10 +34,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Title: </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Title:</label>
+                                <div class="col-sm-8">
                                     <select name="title"
-                                        class="form-control @error('title') is-invalid @enderror"
+                                        class="form-control @error('title') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select title</option>
                                         <option value="Mr.">Mr.</option>
@@ -54,8 +54,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Surname </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Surname:</label>
+                                <div class="col-sm-8">
                                     <input name="InvestorLastName" type="name" class="form-control"
                                         placeholder=" Surname"
                                         value="{{ old('InvestorLastName') ?? ($investor->InvestorLastName ?? (app()->environment('local') ? '' : '')) }}"
@@ -68,9 +68,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Given name(s)
-                                </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Given name(s):</label>
+                                <div class="col-sm-8">
                                     <input name="InvestorGivenName" type="InvestorGivenName" class="form-control"
                                         placeholder=" Given name"
                                         value="{{ old('InvestorGivenName') ?? ($investor->InvestorGivenName ?? (app()->environment('local') ? '' : '')) }}"
@@ -83,9 +82,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Investor Phone
+                                <label class="col-sm-4 col-form-label text-right">Investor Phone:
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-8">
                                     <input name="InvestorPhone" type="phone" class="form-control"
                                         placeholder=" Investor Phone"
                                         value="{{ old('InvestorPhone') ?? ($investor->InvestorPhone ?? (app()->environment('local') ? '' : '')) }}"
@@ -98,9 +97,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Investor e-Mail
+                                <label class="col-sm-4 col-form-label text-right">Investor e-Mail:
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-8">
                                     <input name="InvestorEmail" type="email" class="form-control"
                                         placeholder=" Investor Email"
                                         value="{{ old('InvestorEmail') ?? ($investor->InvestorEmail ?? (app()->environment('local') ? '' : '')) }}"
@@ -113,8 +112,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Contract </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Contract:</label>
+                                <div class="col-sm-8">
                                     <input name="Contractor" type="text"
                                         class="form-control @error('Contractor') is-invalid @enderror"
                                         placeholder=" Investor's Contract"
@@ -128,8 +127,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Type of Contract </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Type of Contract:</label>
+                                <div class="col-sm-8">
                                     <input name="ContractorType" type="text"
                                         class="form-control @error('ContractorType') is-invalid @enderror"
                                         placeholder=" Investor's Contract Type"
@@ -143,8 +142,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Date of Termination </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Date of Termination:</label>
+                                <div class="col-sm-8">
                                     <input name="Date_of_Termination" type="date"
                                         class="form-control @error('Date_of_Termination') is-invalid @enderror"
                                         placeholder=""
@@ -158,8 +157,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Notes </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Notes:</label>
+                                <div class="col-sm-8">
                                     <textarea cols="600" rows="3" class="form-control" id="Notes"
                                         placeholder="Notes" name="Notes"
                                         placeholder="Enter value here">{{ $investor->Notes ?? '' }}</textarea>
@@ -168,10 +167,10 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Nationality</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Nationality:</label>
+                                <div class="col-sm-8">
                                     <select name="Nationality"
-                                        class="form-control @error('Nationality') is-invalid @enderror"
+                                        class="form-control @error('Nationality') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -183,8 +182,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Home </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Home:</label>
+                                <div class="col-sm-8">
                                     <input name="Home" type="text"
                                         class="form-control @error('Home') is-invalid @enderror"
                                         placeholder=" Home"
@@ -198,10 +197,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Country </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Country:</label>
+                                <div class="col-sm-8">
                                     <select name="Country"
-                                        class="form-control @error('Country') is-invalid @enderror"
+                                        class="form-control @error('Country') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -218,10 +217,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Zip/Postal Code </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Zip/Postal Code:</label>
+                                <div class="col-sm-8">
                                     <input name="Zip_Code" type="text"
-                                        class="form-control @error('Zip_Code') is-invalid @enderror"
+                                        class="form-control @error('Zip_Code') is-invalid @enderror text-black"
                                         placeholder=" Zip/Postal Code"
                                         value="{{ old('Zip_Code') ?? ($investor->Zip_Code ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
@@ -233,8 +232,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Employer Name</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Employer Name:</label>
+                                <div class="col-sm-8">
                                     <input name="Employer_Name" type="text"
                                         class="form-control @error('Employer_Name') is-invalid @enderror"
                                         placeholder=" investor's employer_name"
@@ -246,25 +245,25 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Date of Contact </label>
-                                    <div class="col-sm-9">
-                                        <input name="Date_of_Contract" type="date"
-                                            class="form-control @error('Date_of_Contract') is-invalid @enderror"
-                                            placeholder=""
-                                            value="{{ old('Date_of_Contract') ?? ((isset($investor->Date_of_Contract) ? $investor->Date_of_Contract->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
-                                            required>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label text-right">Date of Contact:</label>
+                                <div class="col-sm-8">
+                                    <input name="Date_of_Contract" type="date"
+                                        class="form-control @error('Date_of_Contract') is-invalid @enderror"
+                                        placeholder=" "
+                                        value="{{ old('Date_of_Contract') ?? ((isset($investor->Date_of_Contract) ? $investor->Date_of_Contract->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}"
+                                        required>
                                         @error('Date_of_Contract')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
                                         @enderror
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Employer Address </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Employer Address:</label>
+                                <div class="col-sm-8">
                                     <input name="Employer_Address" type="text"
                                         class="form-control @error('Employer_Address') is-invalid @enderror"
                                         placeholder=" investor's employer_address"
@@ -278,10 +277,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Employer Nationality </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Employer Nationality:</label>
+                                <div class="col-sm-8">
                                     <select name="Employer_Nationality"
-                                        class="form-control @error('Employer_Nationality') is-invalid @enderror"
+                                        class="form-control @error('Employer_Nationality') is-invalid @enderror text-black"
                                         required>
                                         <option value="">Select a country</option>
                                         @foreach ($countries as $country)
@@ -298,8 +297,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Email of Future Contact </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
+                                <div class="col-sm-8">
                                     <input name="Email_of_Future_Contact" type="text"
                                         class="form-control @error('Email_of_Future_Contact') is-invalid @enderror"
                                         placeholder=" investor's Email of Future Contact"
@@ -313,8 +312,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Date of Commencement </label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label text-right">Commencement Date:</label>
+                                <div class="col-sm-8">
                                     <input name="Date_of_Commencement" type="date"
                                         class="form-control @error('Date_of_Commencement') is-invalid @enderror"
                                         placeholder=" "

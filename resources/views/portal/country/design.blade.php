@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card">
-    <x-forms.country.design :countries="$countries" :attorneys="$attorneys" :paralegals="$paralegals" />
+    <x-forms.country.design :countries="$countries" :users="$users" :paralegals="$paralegals" />
     <div class="card-body">
         <h4 class="card-title">Design Record's</h4>
         <div class="tab-content" id="pills-tabContent">

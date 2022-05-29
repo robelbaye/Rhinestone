@@ -15,31 +15,20 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function patent()
+    public function index()
     {
-        $usersl = User::all();
-        
-        $status = config('settings.invention_status');
-        
-        $countries = Country::all();
-    }
+        // Fetch all invenstion disclosures
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function design()
-    {
-        $attorneys = User::all();
+        //  Get manager users
+        $users = User::all();
 
         //  Get trainer users
         $paralegals = User::all();
 
+        // Get Country
         $countries = Country::all();
-        return \view('portal.country.design', compact('countries','attorneys','paralegals'));
-    }
 
+    }
     /**
      * Show the form for creating a new resource.
      *

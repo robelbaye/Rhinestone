@@ -32,7 +32,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-agent-tab" data-bs-toggle="pill" href="#pills-agent"
-                    role="tab" aria-controls="pills-agent" aria-selected="false"><b> Agent/External Counsel </b></a>
+                    role="tab" aria-controls="pills-agent" aria-selected="false"><b> Agents/Counsel </b></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-paralegal-tab" data-bs-toggle="pill" href="#pills-paralegal"

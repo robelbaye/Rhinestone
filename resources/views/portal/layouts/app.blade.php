@@ -18,6 +18,8 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="../../assets/css/horizontal-layout-light/style.css">
     <link rel="stylesheet" href="../../../../css/bs_fix.css">
+    <link rel="stylesheet" href="../../../../css/nucleo-icons.css">
+    <link rel="stylesheet" href="../../../../css/nucleo-svg.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
 
@@ -27,6 +29,8 @@
 
     <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- base:css -->
   <!-- endinject -->
   <!-- plugin css for this page -->
@@ -73,6 +77,10 @@
     <!-- Custom js for this page-->
     <script src="../../assets/js/dashboard.js"></script>
     <script src="../../assets/js/todolist.js"></script>
+    <script src="../../js/customchart.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- plugin js for this page -->
     <script src="../../../../assets/vendors/datatables.net/jquery.dataTables.js"></script>

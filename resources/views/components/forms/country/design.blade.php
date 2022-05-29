@@ -1,4 +1,4 @@
-@props(['countries','attorneys', 'paralegals'])
+@props(['users', 'countries', 'paralegals'])
 
 <div class="accordion accordion-bordered" id="accordion-4" role="tablist">
     <div class="card">
@@ -51,12 +51,12 @@
                                 @enderror
                                 <label class="col-sm-2 col-form-label text-right">Primary Attorney: </label>
                                     <div class="col-md-2">
-                                        <select name="secondary_paralegal"
-                                            class="form-control @error('secondary_paralegal') is-invalid @enderror text-dark" required>
+                                        <select name="primary_attorney"
+                                            class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
                                             <option value="">Primary Attorney</option>
-                                            @foreach ($attorneys as $attorneys)
+                                            @foreach ($users as $attorneys)
                                             <option value="{{ $attorneys->id }}"
-                                            {{ old('secondary_paralegal') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
                                             {{ $attorneys->name }}</option>
                                             @endforeach
                                         </select>
@@ -82,11 +82,14 @@
                                     </div>
                                 <label class="col-sm-2 col-form-label text-right">Secondary Attorney: </label>
                                     <div class="col-md-2">
-                                        <select name="agreement_in_place"
-                                            class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                            <option selected>Select option</option>
-                                            <option value="Design">Sample-1</option>
-                                            <option value="Design">Sample-2</option>
+                                        <select name="secondary_attorney"
+                                            class="form-control @error('secondary_attorney') is-invalid @enderror text-dark" required>
+                                            <option value="">Secondary Attorney</option>
+                                            @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}"
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ $attorneys->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                             </div>
@@ -107,9 +110,12 @@
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                            <option selected>Select option</option>
-                                            <option value="Design">Sample-1</option>
-                                            <option value="Design">Sample-2</option>
+                                            <option selected>Primary Paralegal</option>
+                                            @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}"
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ $attorneys->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                             </div>
@@ -145,9 +151,12 @@
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                            <option selected>Select option</option>
-                                            <option value="Design">Sample-1</option>
-                                            <option value="Design">Sample-2</option>
+                                            <option selected>Secondary Paralegal</option>
+                                            @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}"
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ $attorneys->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 @error('reference_number')
@@ -186,9 +195,12 @@
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                            <option selected>Select option</option>
-                                            <option value="Design">Sample-1</option>
-                                            <option value="Design">Sample-2</option>
+                                            <option selected>Select Agent</option>
+                                            @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}"
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ $attorneys->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 @error('reference_number')
@@ -283,9 +295,12 @@
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                            <option selected>Select option</option>
-                                            <option value="Design">Sample-1</option>
-                                            <option value="Design">Sample-2</option>
+                                            <option selected>Select Agent-2</option>
+                                            @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}"
+                                            {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                            {{ $attorneys->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 @error('reference_number')

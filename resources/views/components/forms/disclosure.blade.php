@@ -26,8 +26,8 @@
                                     @csrf
                                     <div class="col-4">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">IDs Ref. No.: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">IDs Ref. No.: </label>
+                                            <div class="col-sm-8">
                                                 <input name="reference_number" type="text"
                                                     class="form-control @error('reference_number') is-invalid @enderror"
                                                     placeholder=" IDs Ref. No"
@@ -41,8 +41,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Title: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Title: </label>
+                                            <div class="col-sm-8">
                                                 <input name="title" type="title" class="form-control"
                                                     placeholder=" Title"
                                                     value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}"
@@ -55,10 +55,10 @@
                                             @enderror
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Status: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Status: </label>
+                                            <div class="col-sm-8">
                                                 <select name="status"
-                                                    class="form-control @error('status') is-invalid @enderror" required>
+                                                    class="form-control @error('status') is-invalid @enderror text-black" required>
                                                     <option value="">Select application status</option>
                                                     @foreach ($status as $status)
                                                         <option value="{{ $status }}"
@@ -69,11 +69,11 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Is there an Agreement in place?:
+                                            <label class="col-sm-4 col-form-label text-right">Is there an Agreement:
                                             </label>
-                                            <div class="col-sm-9">
+                                            <div class="col-sm-8">
                                                 <select name="agreement_in_place"
-                                                    class="form-control @error('agreement_in_place') is-invalid @enderror"
+                                                    class="form-control @error('agreement_in_place') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select option</option>
                                                     <option value="YES">YES</option>
@@ -84,8 +84,8 @@
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Date File Opened: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Date File Opened: </label>
+                                            <div class="col-sm-8">
                                                 <input name="file_open_date" type="date"
                                                     class="form-control @error('file_open_date') is-invalid @enderror"
                                                     placeholder=" 72"
@@ -94,8 +94,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Date of Invention: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Date of Invention: </label>
+                                            <div class="col-sm-8">
                                                 <input name="date_of_invention" type="date"
                                                     class="form-control @error('date_of_invention') is-invalid @enderror"
                                                     placeholder=" 72"
@@ -104,8 +104,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Keyword: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Keyword: </label>
+                                            <div class="col-sm-8">
                                                 <input name="keyword" type="text"
                                                     class="form-control @error('keyword') is-invalid @enderror"
                                                     placeholder=" Keywords"
@@ -114,17 +114,17 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Business Unit: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Business Unit: </label>
+                                            <div class="col-sm-8">
                                                 <input name="cost_center" type="cost_center" class="form-control"
-                                                    placeholder=" Center 1"
+                                                    placeholder="Business Unit"
                                                     value="{{ old('cost_center') ?? ($user->cost_center ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Joint Venture: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Joint Venture: </label>
+                                            <div class="col-sm-8">
                                                 <select name="joint_venture"
                                                     class="form-control @error('joint_venture') is-invalid @enderror"
                                                     required>
@@ -137,10 +137,10 @@
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Primary Attorney: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Primary Attorney: </label>
+                                            <div class="col-sm-8">
                                                 <select name="primary_attorney"
-                                                    class="form-control @error('primary_attorney') is-invalid @enderror"
+                                                    class="form-control @error('primary_attorney') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select a primary attorney</option>
                                                     @foreach ($attorneys as $attorney)
@@ -152,10 +152,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Secondary Attorney: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Secondary Attorney: </label>
+                                            <div class="col-sm-8">
                                                 <select name="primary_attorney"
-                                                    class="form-control @error('primary_attorney') is-invalid @enderror"
+                                                    class="form-control @error('primary_attorney') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select a secondary attorney</option>
                                                     @foreach ($attorneys as $attorney)
@@ -167,10 +167,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Primary Paralegal: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Primary Paralegal: </label>
+                                            <div class="col-sm-8">
                                                 <select name="primary_attorney"
-                                                    class="form-control @error('primary_attorney') is-invalid @enderror"
+                                                    class="form-control @error('primary_attorney') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select a primary paralegal</option>
                                                     @foreach ($attorneys as $attorney)
@@ -182,10 +182,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Secondary Attorney: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Secondary Attorney: </label>
+                                            <div class="col-sm-8">
                                                 <select name="primary_attorney"
-                                                    class="form-control @error('primary_attorney') is-invalid @enderror"
+                                                    class="form-control @error('primary_attorney') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select a secondary attorney</option>
                                                     @foreach ($attorneys as $attorney)
@@ -197,10 +197,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Business Unit Code: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Business Unit Code: </label>
+                                            <div class="col-sm-8">
                                                 <input name="center_code" type="center_code" class="form-control"
-                                                    placeholder=" 100"
+                                                    placeholder="Business Unit Code"
                                                     value="{{ old('center_code') ?? ($user->center_code ?? (app()->environment('local') ? '' : '')) }}"
                                                     required>
                                             </div>
@@ -208,24 +208,24 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Invention Description: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Invention Description: </label>
+                                            <div class="col-sm-8">
                                                 <textarea class="form-control" id="invention_notes"
                                                     placeholder="Invention description" name="invention_notes"
                                                     placeholder="Invention description">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">General Notes: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">General Notes: </label>
+                                            <div class="col-sm-8">
                                                 <textarea class="form-control" id="invention_notes"
                                                     placeholder="Invention description" name="invention_notes"
                                                     placeholder="Invention description">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Confirmed Inventors: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Confirmed Inventors: </label>
+                                            <div class="col-sm-8">
                                                 <textarea cols="600" rows="3" class="form-control"
                                                     id="proposed_investors" name="proposed_investors"
                                                     placeholder="Proposed Investor">{{ $evaluation->suggestion ?? '' }}</textarea>
@@ -234,10 +234,10 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Approved for Filing: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Approved for Filing: </label>
+                                            <div class="col-sm-8">
                                                 <select name="approved_for_filing"
-                                                    class="form-control @error('approved_for_filing') is-invalid @enderror"
+                                                    class="form-control @error('approved_for_filing') is-invalid @enderror text-black"
                                                     required>
                                                     <option value="">Select option</option>
                                                     <option value="YES">YES</option>
@@ -246,17 +246,17 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Reasons of Approval or Rejection:
+                                            <label class="col-sm-4 col-form-label text-right">Reasons of Approval or Rejection:
                                             </label>
-                                            <div class="col-sm-9">
+                                            <div class="col-sm-8">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
                                                     placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Approved By: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Approved By: </label>
+                                            <div class="col-sm-8">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
                                                     placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
@@ -265,8 +265,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Approval Date: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Approval Date: </label>
+                                            <div class="col-sm-8">
                                                 <input name="date_of_invention" type="date"
                                                     class="form-control @error('date_of_invention') is-invalid @enderror"
                                                     placeholder=""
@@ -275,8 +275,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Proposed Inventors: </label>
-                                            <div class="col-sm-9">
+                                            <label class="col-sm-4 col-form-label text-right">Proposed Inventors: </label>
+                                            <div class="col-sm-8">
                                                 <textarea cols="600" rows="3" class="form-control" id="reason"
                                                     name="reason"
                                                     placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>

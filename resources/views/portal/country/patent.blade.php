@@ -7,13 +7,6 @@
         <h4 class="card-title">Patent Record's</h4>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-patent" role="tabpanel" aria-labelledby="pills-patent-tab">
-                <!-- <x-forms.country.patent
-                    id="create-patent-modal"
-                    class="btn btn-primary btn-sm"
-                    :countries="$countries"
-                    :users="$users"
-                    title="Create patent"
-                /> -->
                 <div class="table-responsive">
                     <table id="Devropatent" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
