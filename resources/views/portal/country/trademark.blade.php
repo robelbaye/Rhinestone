@@ -2,25 +2,32 @@
 
 @section('content')
 <div class="card">
-    <x-forms.country.design :countries="$countries" :users="$users" :paralegals="$paralegals" />
+  <x-forms.country.trademark :users="$users" :countries="$countries" :paralegals="$paralegals" />
     <div class="card-body">
-        <h4 class="card-title">Design Record's</h4>
+        <h4 class="card-title">Trademark Record's</h4>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-design" role="tabpanel" aria-labelledby="pills-patent-tab">
+            <div class="tab-pane fade show active" id="pills-patent" role="tabpanel" aria-labelledby="pills-patent-tab">
                 <div class="table-responsive">
-                    <table id="Devrodesign" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devropatent" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
+                                <th>Family No</th>
+                                <th>Internal Title</th>
+                                <th>Formal Title</th>
+                                <th>Type of Filing</th>
+                                <th>Status</th>
                                 <th>Action</th>
-                                <th>Designers</th>
-                                <th>Applicants</th>
-                                <th>Figures</th>
-                                <th>Notes</th>
-                                <th>Attributes</th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
                             <tr>
+                                <td>013/2022</td>
+                                <td>Auto Fill Title</td>
+                                <td>Test Title</td>
+                                <td>Trademark</td>
+                                <td>
+                                    <label class="badge badge-info">Opened</label>
+                                </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
@@ -35,13 +42,6 @@
                                         Delete
                                     </a>
                                 </td>
-                                 <td>Devro</td>
-                                <td>Devro</td>
-                                <td>Figures</td>
-                                <td>Design</td>
-                                <td>
-                                    <label class="badge badge-info">Opened</label>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -53,6 +53,6 @@
 @endsection
 <script>
     $(document).ready(function() {
-        $('#Devrodesign').DataTable();
+        $('#Devropatent').DataTable();
     });
 </script>

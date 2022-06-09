@@ -10,8 +10,47 @@
                 </a>
             </h6>
         </div>
+        
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10"
             data-bs-parent="#accordion-4">
+            <table id="Devropatent" align="center" cellpadding="20px">
+            
+            <tr >
+                <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Audit trial
+                                    </a></td>
+                <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Copy
+                                    </a></td>
+                <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Customer special instruction
+                                    </a></td>
+                <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#"><img src="../../../../assets/images/back icon.png" height="35px" width="35px">
+                 </a>
+                </td>
+                <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#"><img src="../../../../assets/images/forward.png" height="35px" width="35px" alt="">
+                                    </a></td>
+                 <td>
+                     <a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Save
+                                    </a>
+                 </td>
+                  <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Print
+                                    </a></td>
+                   <td><a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        Delete
+                                    </a></td>
+            </tr>
+        </table>
             <div class="card">
                 <div class="card-body row">
                     <form class="row card-body" id="design-form"
@@ -20,7 +59,7 @@
 
                         <div class="col-12">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Case No: </label>
+                                <label class="col-sm-1 col-form-label text-right">Case No: </label>
                                     <div class="col-md-2">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Cost No"
@@ -31,7 +70,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Country: </label>
+                                <label class="col-sm-1 col-form-label text-right">Country: </label>
                                     <div class="col-md-2">
                                         <select name="Country"
                                             class="form-control @error('Country') is-invalid @enderror text-black"
@@ -40,7 +79,7 @@
                                                     @foreach ($countries as $country)
                                             <option value="{{ $country->id }}"
                                                 {{ old('primary_attorney') == $country->id ? 'selected' : '' }}>
-                                                {{ $country->name }}</option>
+                                                {{ $country->code }}</option>
                                                     @endforeach
                                         </select>
                                     </div>
@@ -49,7 +88,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Primary Attorney: </label>
+                                <label class="col-sm-1 col-form-label text-right">Primary Attorney: </label>
                                     <div class="col-md-2">
                                         <select name="primary_attorney"
                                             class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
@@ -67,9 +106,10 @@
                                     </div>
                                 @enderror
                             </div>
+
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Internal Title: </label>
-                                    <div class="col-sm-6">
+                                <label class="col-sm-1 col-form-label text-right">Internal Title: </label>
+                                    <div class="col-sm-5">
                                         <input name="applicant_ID" type="applicant_ID" class="form-control"
                                             placeholder=" Internal Title"
                                             value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}"
@@ -80,7 +120,7 @@
                                             </div>
                                         @enderror
                                     </div>
-                                <label class="col-sm-2 col-form-label text-right">Secondary Attorney: </label>
+                                <label class="col-sm-1 col-form-label text-right">Secondary Attorney: </label>
                                     <div class="col-md-2">
                                         <select name="secondary_attorney"
                                             class="form-control @error('secondary_attorney') is-invalid @enderror text-dark" required>
@@ -94,8 +134,8 @@
                                     </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Formal Title: </label>
-                                    <div class="col-sm-6">
+                                <label class="col-sm-1 col-form-label text-right">Formal Title: </label>
+                                    <div class="col-sm-5">
                                         <input name="applicant_ID" type="applicant_ID" class="form-control"
                                             placeholder=" Formal Title"
                                             value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}"
@@ -106,7 +146,7 @@
                                             </div>
                                         @enderror
                                     </div>
-                                <label class="col-sm-2 col-form-label text-right">Primary Paralegal: </label>
+                                <label class="col-sm-1 col-form-label text-right">Primary Paralegal: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -120,7 +160,7 @@
                                     </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Type Of Filing: </label>
+                                <label class="col-sm-1 col-form-label text-right">Type Of Filing: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -133,7 +173,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Cost Center / Business Unit: </label>
+                                <label class="col-sm-1 col-form-label text-right">Cost Center / Business Unit: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -147,7 +187,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Secondary Paralegal: </label>
+                                <label class="col-sm-1 col-form-label text-right">Secondary Paralegal: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -166,7 +206,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Sub Filing Type: </label>
+                                <label class="col-sm-1 col-form-label text-right">Sub Filing Type: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -180,7 +220,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Cost Center Code: </label>
+                                <label class="col-sm-1 col-form-label text-right">Cost Center Code: </label>
                                     <div class="col-md-2">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Cost Center Code"
@@ -191,7 +231,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Agent: </label>
+                                <label class="col-sm-1 col-form-label text-right">Agent: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -210,7 +250,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Status: </label>
+                                <label class="col-sm-1 col-form-label text-right">Status: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -232,7 +272,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Licence: </label>
+                                <label class="col-sm-1 col-form-label text-right">Licence: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -246,7 +286,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Agent Ref: </label>
+                                <label class="col-sm-1 col-form-label text-right">Agent Ref: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -262,7 +302,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Sub Status: </label>
+                                <label class="col-sm-1 col-form-label text-right">Sub Status: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -278,7 +318,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Next Tax Date: </label>
+                                <label class="col-sm-1 col-form-label text-right">Next Tax Date: </label>
                                     <div class="col-md-2">
                                         <input name="file_open_date" type="date"
                                             class="form-control @error('file_open_date') is-invalid @enderror"
@@ -291,7 +331,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Agent-2: </label>
+                                <label class="col-sm-1 col-form-label text-right">Agent-2: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -310,7 +350,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Taxs Paid By: </label>
+                                <label class="col-sm-1 col-form-label text-right">Taxs Paid By: </label>
                                     <div class="col-md-2">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Taxs Paid By"
@@ -321,7 +361,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Next Annualy No: </label>
+                                <label class="col-sm-1 col-form-label text-right">Next Annualy No: </label>
                                     <div class="col-md-2">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Next Annualy No"
@@ -332,7 +372,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">Agent-2 Ref: </label>
+                                <label class="col-sm-1 col-form-label text-right">Agent-2 Ref: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -348,7 +388,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Expired Date: </label>
+                                <label class="col-sm-1 col-form-label text-right">Expired Date: </label>
                                     <div class="col-md-2">
                                         <input name="file_open_date" type="date"
                                             class="form-control @error('file_open_date') is-invalid @enderror"
@@ -361,7 +401,7 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
-                                <label class="col-sm-2 col-form-label text-right">No Of Drawings: </label>
+                                <label class="col-sm-1 col-form-label text-right">No Of Drawings: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -384,7 +424,7 @@
                                     </div>
                                 @enderror
 
-                                <label class="col-sm-2 col-form-label text-right">No Of View: </label>
+                                <label class="col-sm-1 col-form-label text-right">No Of View: </label>
                                     <div class="col-md-2">
                                         <select name="agreement_in_place"
                                             class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
@@ -408,17 +448,22 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div>
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5249.98325970342!2d2.294481!3d48.85837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1654769449818!5m2!1sen!2sus" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <div class="footer">
                             <div class="float-right">
                                 <button form="design-form" type="submit" class="btn btn-primary">
                                     Save Details
                                 </button>
                             </div>
+
                         </div>
+
                     </form>
                 </div>
             </div>
+           
         </div>
     </div>
 </div>

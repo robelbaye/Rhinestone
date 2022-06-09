@@ -24,7 +24,7 @@
                     <ul class="submenu-item">
                         <li class="nav-item"><a class="nav-link" href="{{ route('patent') }}"><b>Patent</b></a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('design') }}"><b>Design</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Trademark</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('trademark') }}"><b>Trademark</b></a></li>
                     </ul>
                 </div>
             </li>
