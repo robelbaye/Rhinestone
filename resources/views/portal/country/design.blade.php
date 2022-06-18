@@ -11,16 +11,23 @@
                     <table id="Devrodesign" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
+                                <th>Case No</th>
+                                <th>Country</th>
+                                <th>Formal Title</th>
+                                <th>Type Of Filing</th>
+                                <th>Status</th>
                                 <th>Action</th>
-                                <th>Designers</th>
-                                <th>Applicants</th>
-                                <th>Figures</th>
-                                <th>Notes</th>
-                                <th>Attributes</th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
                             <tr>
+                                <td>012/2022</td>
+                                <td>Ethiopia</td>
+                                <td>Test Title</td>
+                                <td>Design</td>
+                                <td>
+                                    <label class="badge badge-info">Opened</label>
+                                </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
@@ -34,13 +41,6 @@
                                         href="#">
                                         Delete
                                     </a>
-                                </td>
-                                 <td>Devro</td>
-                                <td>Devro</td>
-                                <td>Figures</td>
-                                <td>Design</td>
-                                <td>
-                                    <label class="badge badge-info">Opened</label>
                                 </td>
                             </tr>
                         </tbody>

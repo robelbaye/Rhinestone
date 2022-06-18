@@ -44,7 +44,7 @@ class PatentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
     public function show($inventionDisclosure)
@@ -55,7 +55,7 @@ class PatentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
     public function edit(Request $request)
@@ -67,7 +67,7 @@ class PatentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
@@ -78,7 +78,7 @@ class PatentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request)

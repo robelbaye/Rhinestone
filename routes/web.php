@@ -60,10 +60,6 @@ Route::name('design-crud.')->prefix('design-crud')->group(function(){
 Route::resource('patent-crud', PatentController::class)->only(['index', 'store', 'show', 'update', 'delete']);
 Route::name('patent-crud.')->prefix('patent-crud')->group(function(){
 });
-//trade-mark
-Route::resource('trade-mark-crud', TrademarkController::class)->only(['index', 'store', 'show', 'update', 'delete']);
-Route::name('trade-mark-crud.')->prefix('trade-mark-crud')->group(function(){
-});
 
 // Applicant
 Route::resource('applicant-crud', ApplicantController::class)->only(['index', 'store', 'show', 'update', 'delete']);
@@ -101,7 +97,7 @@ Route::resource('settings', SettingController::class)->only(['index', 'store', '
 Route::name('settings.')->prefix('settings')->group(function(){
 });
 
-//  Values Routes
+//Values Routes
 Route::name('values.')->prefix('values')->group(function(){
     Route::get('/{settingValue}', [ SettingValueController::class, 'show' ])->name('show');
     Route::patch('/{settingValue}', [ SettingValueController::class, 'update' ])->name('update');

@@ -32,7 +32,7 @@
                  </a>
                 </td>
                 <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#"><img src="../../../../assets/images/forward.png" height="35px" width="35px" alt="">
+                                        href="design"><img src="../../../../assets/images/forward.png" height="35px" width="35px" alt="">
                                     </a></td>
                  <td>
                      <a class="btn btn-outline-primary btn-sm"
