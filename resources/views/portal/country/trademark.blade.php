@@ -8,7 +8,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-patent" role="tabpanel" aria-labelledby="pills-patent-tab">
                 <div class="table-responsive">
-                    <table id="Devropatent" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devrotrademark" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Family No</th>
@@ -21,25 +21,25 @@
                         </thead>
                         <tbody class="text-center">
                             <tr>
-                                <td>013/2022</td>
-                                <td>Auto Fill Title</td>
-                                <td>Test Title</td>
-                                <td>Trademark</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td>
-                                    <label class="badge badge-info">Opened</label>
+                                    <label class="badge badge-info"></label>
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -53,6 +53,6 @@
 @endsection
 <script>
     $(document).ready(function() {
-        $('#Devropatent').DataTable();
+        $('#Devrotrademark').DataTable();
     });
 </script>

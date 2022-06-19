@@ -190,8 +190,8 @@
 						</div>
 						<div class="footer">
 							<div class="float-right">
-								<button form="agent-form" type="submit" class="btn btn-primary">
-									Save Details
+								<button form="agent-form" type="submit" class="btn btn-primary text-center">
+									Save Agents
 								</button>
 							</div>
 						</div>

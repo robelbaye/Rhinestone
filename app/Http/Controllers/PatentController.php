@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Patent;
 use App\Models\Country;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PatentController extends Controller
 {
@@ -17,7 +19,7 @@ class PatentController extends Controller
     public function index()
     {
         // Fetch all invenstion disclosures
-
+        $patents = Patent::all();
         //  Get manager users
         $users = User::all();
 
@@ -27,7 +29,7 @@ class PatentController extends Controller
         // Get Country
         $countries = Country::all();
         
-        return \view('portal.country.patent', compact('countries','users', 'paralegals'));
+        return \view('portal.country.patent', compact('patents','countries','users', 'paralegals'));
     }
 
     /**
@@ -38,7 +40,12 @@ class PatentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $paten = DB::transaction(function() use($request) {
+            $patent = Patent::create((array) $request->all());
+        });
+
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+        return back()->with($paten);
     }
 
     /**
@@ -47,7 +54,7 @@ class PatentController extends Controller
      * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
-    public function show($inventionDisclosure)
+    public function show($patent)
     {
         //
     }

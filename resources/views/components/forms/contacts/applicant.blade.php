@@ -172,8 +172,8 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="applicant-form" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="applicant-form" type="submit" class="btn btn-primary text-center">
+                                    Save Applicant
                                 </button>
                             </div>
                         </div>

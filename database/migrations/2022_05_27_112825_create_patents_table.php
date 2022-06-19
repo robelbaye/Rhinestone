@@ -15,6 +15,21 @@ class CreatePatentsTable extends Migration
     {
         Schema::create('patents', function (Blueprint $table) {
             $table->id();
+            $table->string("FamilyNo")->unique();
+            $table->string("InternalTitle")->unique();
+            $table->string("FormalTitle")->unique();
+            $table->string("Status");
+            $table->string("Substatus");
+            $table->string("TypeofFiling");
+            $table->string("TypeofSubFiling");
+            $table->string("Attorney1");
+            $table->string("Attorney2");
+            $table->string("Paralegal1");
+            $table->string("Paralegal2");
+            $table->string("isLicenced");
+            $table->string("Licensor");
+            $table->string("CostCenter");
+            $table->string("CostCenterCode");
             $table->timestamps();
         });
     }

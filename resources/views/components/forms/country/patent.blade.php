@@ -12,58 +12,61 @@
         </div>
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10"
             data-bs-parent="#accordion-4">
-            <table id="Devropatent" align="center" cellpadding="20px">
-            
-            <tr >
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Audit trial
-                                    </a></td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Copy
-                                    </a></td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Customer special instruction
-                                    </a></td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="invention-disclosures"><img src="../../../../assets/images/back icon.png" height="35px" width="35px">
-                 </a>
-                </td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="design"><img src="../../../../assets/images/forward.png" height="35px" width="35px" alt="">
-                                    </a></td>
-                 <td>
-                     <a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Save
-                                    </a>
-                 </td>
-                  <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Print
-                                    </a></td>
-                   <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        Delete
-                                    </a></td>
-            </tr>
-        </table>
+            <table align="center" cellpadding="20px">
+                <tr >
+                    <td><a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Audit trial
+                                        </a></td>
+                    <td><a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Copy
+                                        </a></td>
+                    <td><a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Customer special instruction
+                                        </a></td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm" href="invention-disclosures">
+                            <span class="material-icons">arrow_back</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm" href="design">
+                            <span class="material-icons">arrow_forward</span>
+                        </a>
+                    </td>
+                    <!-- <td>
+                        <a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Save
+                                        </a>
+                    </td> -->
+                    <td><a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Print
+                                        </a></td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm"
+                                            href="#">
+                                            Create Patent country
+                                        </a></td>
+                </tr>
+            </table>
             <div class="card">
                 <div class="card-body row">
                     <form class="row card-body" id="patent"
-                        action="{{ route('applicant-crud.store') }}" method="POST">
+                        action="{{ route('patent-crud.store') }}" method="POST">
                         @csrf
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label text-right">Family No: </label>
-                                <div class="col-sm-4">
-                                    <input name="applicant_ID" type="applicant_ID" class="form-control"
-                                        placeholder=" Family No."
-                                        value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}"
+                                <div class="col-sm-8">
+                                    <input name="FamilyNo" type="FamilyNo" class="form-control"
+                                        placeholder=" Family No"
+                                        value="{{ old('FamilyNo') ?? ($patents->FamilyNo ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('applicant_ID')
+                                    @error('FamilyNo')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>
@@ -71,62 +74,10 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Internal Title: </label>
-                                    <div class="col-sm-4">
-                                        <input name="title" type="title" class="form-control"
-                                            placeholder=" Free text field"
-                                            value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
-                                    </div>
-                                @error('reference_number')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                          <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Formal Title : </label>
-                                    <div class="col-sm-4">
-                                        <input name="title" type="title" class="form-control"
-                                            placeholder=" Free text field"
-                                            value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
-                                    </div>
-                                @error('reference_number')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-                        <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Type of Filing:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place"
-                                        class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">Patent</option>
-                                        <option value="Pending">Design</option>
-                                        <option value="Filed">Trademark</option>
-                                        <option value="Abandoned">Copyright</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Sub-Type of Filing:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place"
-                                        class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">Sample-1</option>
-                                        <option value="Pending">Sample-2</option>
-                                        <option value="Filed">Sample-3</option>
-                                        <option value="Abandoned">Sample-4</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-sm-3 col-form-label text-right">Status:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place"
-                                        class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
+                                <div class="col-sm-5">
+                                    <select name="Status"
+                                        class="form-control @error('Status') is-invalid @enderror text-black" required>
                                         <option selected>Select option</option>
                                         <option value="Open">Open</option>
                                         <option value="Pending">Pending</option>
@@ -141,9 +92,9 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label text-right">Sub-Status:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place"
-                                        class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
+                                <div class="col-sm-5">
+                                    <select name="Substatus"
+                                        class="form-control @error('Substatus') is-invalid @enderror text-black" required>
                                         <option selected>Select option</option>
                                         <option value="Open">Open</option>
                                         <option value="Pending">Pending</option>
@@ -157,30 +108,68 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                            <label class="col-sm-3 col-form-label text-right">Country: </label>
-                                    <div class="col-md-4">
-                                        <select name="Country"
-                                            class="form-control @error('Country') is-invalid @enderror text-black"
-                                                    required>
-                                            <option value="">Country</option>
-                                                    @foreach ($countries as $country)
-                                            <option value="{{ $country->id }}"
-                                                {{ old('primary_attorney') == $country->id ? 'selected' : '' }}>
-                                                {{ $country->name }}</option>
-                                                    @endforeach
-                                        </select>
-                                    </div></div>
+                                <label class="col-sm-3 col-form-label text-right">Type of Filing:</label>
+                                <div class="col-sm-5">
+                                    <select name="TypeofFiling"
+                                        class="form-control @error('TypeofFiling') is-invalid @enderror text-black" required>
+                                        <option selected>Select option</option>
+                                        <option value="Open">Patent</option>
+                                        <option value="Pending">Design</option>
+                                        <option value="Filed">Trademark</option>
+                                        <option value="Abandoned">Copyright</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Sub Filing Type:</label>
+                                <div class="col-sm-5">
+                                    <select name="TypeofSubFiling"
+                                        class="form-control @error('TypeofSubFiling') is-invalid @enderror text-black" required>
+                                        <option selected>Select option</option>
+                                        <option value="Open">Sample-1</option>
+                                        <option value="Pending">Sample-2</option>
+                                        <option value="Filed">Sample-3</option>
+                                        <option value="Abandoned">Sample-4</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-8">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label text-right">Internal Title: </label>
+                                    <div class="col-sm-8">
+                                        <input name="InternalTitle" type="InternalTitle" class="form-control"
+                                            placeholder=" Internal Title"
+                                            value="{{ old('title') ?? ($patents->InternalTitle ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    </div>
+                                @error('InternalTitle')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label text-right">Formal Title : </label>
+                                    <div class="col-sm-8">
+                                        <input name="FormalTitle" type="FormalTitle" class="form-control"
+                                            placeholder=" Formal Title"
+                                            value="{{ old('FormalTitle') ?? ($patents->FormalTitle ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    </div>
+                                @error('FormalTitle')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Attorney-1:</label>
                                 <div class="col-md-4">
-                                    <select name="primary_attorney"
-                                        class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="Attorney1"
+                                        class="form-control @error('Attorney1') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-1</option>
                                         @foreach ($users as $userslist)
                                         <option value="{{ $userslist->id }}"
-                                        {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        {{ old('Attorney1') == $userslist->id ? 'selected' : '' }}>
                                         {{ $userslist->name }}</option>
                                         @endforeach
                                     </select>
@@ -189,12 +178,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Attorney-2:</label>
                                 <div class="col-md-4">
-                                    <select name="primary_attorney"
-                                        class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="Attorney2"
+                                        class="form-control @error('Attorney2') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-2</option>
                                         @foreach ($users as $userslist)
                                         <option value="{{ $userslist->id }}"
-                                        {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        {{ old('Attorney2') == $userslist->id ? 'selected' : '' }}>
                                         {{ $userslist->name }}</option>
                                         @endforeach
                                     </select>
@@ -203,12 +192,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Paralegal-1:</label>
                                 <div class="col-md-4">
-                                    <select name="primary_attorney"
-                                        class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="Paralegal1"
+                                        class="form-control @error('Paralegal1') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-1</option>
                                         @foreach ($users as $userslist)
                                         <option value="{{ $userslist->id }}"
-                                        {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        {{ old('Paralegal1') == $userslist->id ? 'selected' : '' }}>
                                         {{ $userslist->name }}</option>
                                         @endforeach
                                     </select>
@@ -217,12 +206,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Paralegal-2:</label>
                                 <div class="col-md-4">
-                                    <select name="primary_attorney"
-                                        class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="Paralegal2"
+                                        class="form-control @error('Paralegal2') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-2</option>
                                         @foreach ($users as $userslist)
                                         <option value="{{ $userslist->id }}"
-                                        {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        {{ old('Paralegal2') == $userslist->id ? 'selected' : '' }}>
                                         {{ $userslist->name }}</option>
                                         @endforeach
                                     </select>
@@ -231,23 +220,21 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Licenced :</label>
                                 <div class="col-sm-3">
-                                    <select name="agreement_in_place"
-                                        class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
+                                    <select name="isLicenced"
+                                        class="form-control @error('isLicenced') is-invalid @enderror text-black" required>
                                         <option selected>Select option</option>
-                                        <option value="Open">Sample-1</option>
-                                        <option value="Pending">Sample-2</option>
-                                        <option value="Filed">Sample-3</option>
-                                        <option value="Abandoned">Sample-4</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label text-right">Licensor:</label>
                                 <div class="col-sm-3">
-                                    <select name="primary_attorney"
-                                        class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="Licensor"
+                                        class="form-control @error('Licensor') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Licensor</option>
                                         @foreach ($users as $userslist)
                                         <option value="{{ $userslist->id }}"
-                                        {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        {{ old('Licensor') == $userslist->id ? 'selected' : '' }}>
                                         {{ $userslist->name }}</option>
                                         @endforeach
                                     </select>
@@ -257,22 +244,22 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Cost Center Code: </label>
                                     <div class="col-md-3">
-                                        <input name="title" type="title" class="form-control"
+                                        <input name="CostCenter" type="CostCenter" class="form-control"
                                             placeholder=" Cost Code"
-                                            value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                            value="{{ old('CostCenter') ?? ($patents->CostCenter ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>
-                                @error('reference_number')
+                                @error('CostCenter')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                 @enderror
                                 <label class="col-sm-2 col-form-label text-right">Cost Center No: </label>
                                     <div class="col-md-3">
-                                        <input name="title" type="title" class="form-control"
+                                        <input name="CostCenterCode" type="CostCenterCode" class="form-control"
                                             placeholder=" Cost No"
-                                            value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                            value="{{ old('CostCenterCode') ?? ($patents->CostCenterCode ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>
-                                @error('reference_number')
+                                @error('CostCenterCode')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -281,8 +268,8 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="patent" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="patent" type="submit" class="btn btn-primary text-center">
+                                    Save Patent
                                 </button>
                             </div>
                         </div>

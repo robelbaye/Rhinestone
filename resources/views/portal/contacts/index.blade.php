@@ -74,15 +74,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -124,15 +124,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -174,15 +174,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -219,15 +219,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -273,15 +273,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>

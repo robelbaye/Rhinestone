@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\User;
+use App\Models\Design;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DesignController extends Controller
 {
@@ -18,7 +20,7 @@ class DesignController extends Controller
     {
         // Fetch all invenstion disclosures
         // $designitems = DesignController::all();
-
+        $designs = Design::all();
         //  Get manager users
         $users = User::all();
 
@@ -28,7 +30,7 @@ class DesignController extends Controller
         // Get Country List
         $countries = Country::all();
         
-        return \view('portal.country.design', compact('countries', 'users', 'paralegals'));
+        return \view('portal.country.design', compact('designs','countries', 'users', 'paralegals'));
     }
 
     /**
@@ -39,7 +41,12 @@ class DesignController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $desgn = DB::transaction(function() use($request) {
+            $design = Design::create((array) $request->all());
+        });
+
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+        return back()->with($desgn);
     }
 
     /**
@@ -48,7 +55,7 @@ class DesignController extends Controller
      * @param  \App\Models\InventionDisclosure  $inventionDisclosure
      * @return \Illuminate\Http\Response
      */
-    public function show($inventionDisclosure)
+    public function show($design)
     {
         //
     }

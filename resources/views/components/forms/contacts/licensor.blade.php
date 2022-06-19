@@ -244,8 +244,8 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="licensor-form" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="licensor-form" type="submit" class="btn btn-primary text-center">
+                                    Save Licensor
                                 </button>
                             </div>
                         </div>

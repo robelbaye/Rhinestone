@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <!-- base:css -->
   <!-- endinject -->
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="../../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -39,6 +39,7 @@
 
 <body>
     <div class="container-scroller">
+        @include('sweetalert::alert')
         @include('portal.layouts.horizontal-menu')
 
         <!-- partial -->
@@ -100,6 +101,7 @@
             $('#Devroagent').DataTable();
             $('#Devropatent').DataTable();
             $('#Devrodesign').DataTable();
+            $('#Devrotrademark').DataTable();
         } );
     </script>
 

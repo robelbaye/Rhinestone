@@ -6,6 +6,7 @@ use App\Models\Licensor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LicensorController extends Controller
 {
@@ -24,12 +25,11 @@ class LicensorController extends Controller
     }
     public function store(Request $request)
     {
-        DB::transaction(function() use($request) {
+        $licens = DB::transaction(function() use($request) {
             $licensor = Licensor::create((array) $request->all());
         });
 
-        return back()->with([
-            'success' => 'Added successfully'
-        ]);
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+        return back()->with($licens);
     }
 }

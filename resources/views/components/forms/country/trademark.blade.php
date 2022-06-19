@@ -12,7 +12,7 @@
         </div>
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10"
             data-bs-parent="#accordion-4">
-            <table id="Devropatent" align="center" cellpadding="20px">
+            <table align="center" cellpadding="20px">
             
             <tr >
                 <td><a class="btn btn-outline-primary btn-sm"
@@ -27,19 +27,22 @@
                                         href="#">
                                         Customer special instruction
                                     </a></td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#"><img src="../../../../assets/images/back icon.png" height="35px" width="35px">
-                 </a>
+                <td>
+                    <a class="btn btn-outline-primary btn-sm" href="design">
+                        <span class="material-icons">arrow_back</span>
+                    </a>
                 </td>
-                <td><a class="btn btn-outline-primary btn-sm"
-                                        href="#"><img src="../../../../assets/images/forward.png" height="35px" width="35px" alt="">
-                                    </a></td>
-                 <td>
+                <td>
+                    <a class="btn btn-outline-primary btn-sm" href="#">
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </td>
+                 <!-- <td>
                      <a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         Save
                                     </a>
-                 </td>
+                 </td> -->
                   <td><a class="btn btn-outline-primary btn-sm"
                                         href="#">
                                         Print
@@ -69,8 +72,8 @@
                                         </div>
                                     @enderror
                                 </div>
-                        <label class="col-sm-4 col-form-label text-right">Country</label>
-                        <div class="col-md-2">
+                                <label class="col-sm-2 col-form-label text-right">Country</label>
+                                <div class="col-md-4">
                                         <select name="Country"
                                             class="form-control @error('Country') is-invalid @enderror text-black"
                                                     required>
@@ -89,7 +92,7 @@
                                 @enderror
                             </div>
                              <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Internal Title : </label>
+                                <label class="col-sm-2 col-form-label text-right">Internal Title: </label>
                                     <div class="col-sm-4">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Internal Title"
@@ -102,7 +105,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Formal Title : </label>
+                                <label class="col-sm-2 col-form-label text-right">Formal Title: </label>
                                     <div class="col-sm-4">
                                         <input name="title" type="title" class="form-control"
                                             placeholder=" Formal Title"
@@ -328,16 +331,15 @@
                                             <option selected>Select option</option>
                                             <option value="Design">Yes</option>
                                             <option value="Design">No</option>
-                                        </select>
+                                    </select>
                                 </div>
-                               
                             </div>
                         </div>
 
                         <div class="footer">
                             <div class="float-right">
-                                <button form="patent" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="patent" type="submit" class="btn btn-primary text-center">
+                                    Save Trademark
                                 </button>
                             </div>
                         </div>

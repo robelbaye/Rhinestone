@@ -156,8 +156,8 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="licensee-form" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="licensee-form" type="submit" class="btn btn-primary text-center">
+                                    Save Licensee
                                 </button>
                             </div>
                         </div>

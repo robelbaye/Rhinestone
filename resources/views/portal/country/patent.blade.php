@@ -20,29 +20,29 @@
                             </tr>
                         </thead>
                         <tbody class="text-center">
+                            @foreach ($patents as $patitem)
                             <tr>
-                                <td>013/2022</td>
-                                <td>Auto Fill Title</td>
-                                <td>Test Title</td>
-                                <td>Patent</td>
-                                <td>
-                                    <label class="badge badge-info">Opened</label>
-                                </td>
+                                <td>{{$patitem->FamilyNo}}</td>
+                                <td>{{$patitem->InternalTitle}}</td>
+                                <td>{{$patitem->FormalTitle}}</td>
+                                <td>{{$patitem->TypeofFiling}}</td>
+                                <td>{{$patitem->Status}}</td>
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        View
+                                        <span class="material-icons">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        Edit
+                                        <span class="material-icons">edit</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        Delete
+                                        <span class="material-icons">delete</span>
                                     </a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

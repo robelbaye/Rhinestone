@@ -329,8 +329,8 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="investor-form" type="submit" class="btn btn-primary">
-                                    Save Details
+                                <button form="investor-form" type="submit" class="btn btn-primary text-center">
+                                    Save Investor
                                 </button>
                             </div>
                         </div>

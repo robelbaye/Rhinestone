@@ -6,6 +6,7 @@ use App\Models\InventionDisclosure;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class InventionDisclosureController extends Controller
 {
@@ -38,13 +39,12 @@ class InventionDisclosureController extends Controller
      */
     public function store(Request $request)
     {
-        DB::transaction(function() use($request) {
+        $invention = DB::transaction(function() use($request) {
             $inventionDisclosure = InventionDisclosure::create((array) $request->all());
         });
 
-        return back()->with([
-            'success' => 'Added successfully'
-        ]);
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+        return back()->with($invention);
     }
 
     /**

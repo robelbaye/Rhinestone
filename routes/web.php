@@ -7,6 +7,7 @@ use App\Http\Controllers\InvestorController;
 use App\Http\Controllers\LicensorController;
 use App\Http\Controllers\LicenseeController;
 use App\Http\Controllers\PatentController;
+use App\Http\Controllers\DesignController;
 use App\Http\Controllers\TrademarkController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\AgentController;

@@ -14,7 +14,7 @@
                 <li class="nav-item nav-profile dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                         id="profileDropdown">
-                        <img src="{{ asset('assets/images/default-avatar.png') }}" alt="profile" />
+                        <img src="{{ asset('assets/images/avatar-default-icon.png') }}" alt="profile" />
                         <span class="nav-profile-name">{{ Auth::user()->name }}</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
@@ -32,7 +32,7 @@
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                 data-toggle="horizontal-menu-toggle">
-                <span class="mdi mdi-menu"></span>
+                <span class="material-icons">menu</span>
             </button>
         </div>
     </div>

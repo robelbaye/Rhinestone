@@ -6,6 +6,7 @@ use App\Models\Applicant;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ApplicantController extends Controller
 {
@@ -29,12 +30,14 @@ class ApplicantController extends Controller
     }
     public function store(Request $request)
     {
-        DB::transaction(function() use($request) {
+        $appli = DB::transaction(function() use($request) {
             $applicant = Applicant::create((array) $request->all());
         });
 
-        return back()->with([
-            'success' => 'Added successfully'
-        ]);
+        // return back()->with([
+        //     'success' => 'Added successfully'
+        // ]);
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
+        return back()->with($appli);
     }
 }
