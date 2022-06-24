@@ -296,7 +296,7 @@
                                 @enderror
                                 <label class="col-sm-1 col-form-label text-right">Cost Center Code: </label>
                                     <div class="col-md-2">
-                                        <input name="CostCenterCode" type="CostCenterCode" class="form-control"
+                                        <input name="CostCenterCode" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
                                             placeholder=" Cost Center Code"
                                             value="{{ old('CostCenterCode') ?? ($designs->CostCenterCode ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>
@@ -466,7 +466,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-1 col-form-label text-right">Design Priority No: </label>
                                     <div class="col-md-2">
-                                        <input name="DesignPriorityNo" type="DesignPriorityNo" class="form-control"
+                                        <input name="DesignPriorityNo" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
                                             placeholder=" Design Priority No"
                                             value="{{ old('DesignPriorityNo') ?? ($designs->DesignPriorityNo ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>
@@ -511,7 +511,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-1 col-form-label text-right">Design App/n No: </label>
                                     <div class="col-md-2">
-                                        <input name="DesignAppNo" type="DesignAppNo" class="form-control"
+                                        <input name="DesignAppNo" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
                                             placeholder=" Design App/n No"
                                             value="{{ old('DesignAppNo') ?? ($designs->DesignAppNo ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>
@@ -556,7 +556,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-1 col-form-label text-right">Registration No: </label>
                                     <div class="col-md-2">
-                                        <input name="RegistrationNo" type="RegistrationNo" class="form-control"
+                                        <input name="RegistrationNo" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
                                             placeholder=" Registration No"
                                             value="{{ old('RegistrationNo') ?? ($designs->RegistrationNo ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>

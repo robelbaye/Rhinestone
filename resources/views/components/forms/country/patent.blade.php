@@ -255,7 +255,7 @@
                                 @enderror
                                 <label class="col-sm-2 col-form-label text-right">Cost Center No: </label>
                                     <div class="col-md-3">
-                                        <input name="CostCenterCode" type="CostCenterCode" class="form-control"
+                                        <input name="CostCenterCode" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
                                             placeholder=" Cost No"
                                             value="{{ old('CostCenterCode') ?? ($patents->CostCenterCode ?? (app()->environment('local') ? '' : '')) }}" required>
                                     </div>

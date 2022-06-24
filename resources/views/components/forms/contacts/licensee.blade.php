@@ -76,9 +76,8 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Phone Number:</label>
                                 <div class="col-sm-8">
-                                    <input name="Licensee_Phone" type="text"
-                                        class="form-control @error('Licensee_Phone') is-invalid @enderror"
-                                        placeholder=" Phone Number"
+                                    <input name="Licensee_Phone" id="licphone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
+                                        class="form-control"
                                         value="{{ old('Licensee_Phone') ?? ($licensee->Licensee_Phone ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
                                     @error('Licensee_Phone')

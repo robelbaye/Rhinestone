@@ -102,17 +102,16 @@
 							<div class="form-group row">
 								<label class="col-sm-3 col-form-label">Telephone Number</label>
 								<div class="col-sm-9">
-									<input name="agent_phone" type="number"
-										class="form-control @error('agent_phone') is-invalid @enderror"
-										placeholder=" Telephone Number"
-										value="{{ old('agent_phone') ?? ($agent->agent_phone ?? (app()->environment('local') ? '' : '')) }}"
-										required>
-									@error('agent_phone')
-										<div class="invalid-feedback">
-											{{ $message }}
-										</div>
-									@enderror
-								</div>
+                                    <input name="agent_phone" id="telphone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
+                                        class="form-control @error('agent_phone') is-invalid @enderror"
+                                        value="{{ old('agent_phone') ?? ($agent->agent_phone ?? (app()->environment('local') ? '' : '')) }}"
+                                        required>
+                                    @error('agent_phone')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
 							</div>
 							<div class="form-group row">
 								<label class="col-sm-3 col-form-label">Email Address</label>

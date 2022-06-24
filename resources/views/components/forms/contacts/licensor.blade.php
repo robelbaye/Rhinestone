@@ -62,11 +62,11 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Phone Number:</label>
                                 <div class="col-sm-8">
-                                    <input name="Phone_Number" type="Phone_Number" class="form-control"
-                                        placeholder=" Phone Number"
+                                    <input name="Phone_Number" id="liphone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
+                                        class="form-control"
                                         value="{{ old('Phone_Number') ?? ($licensor->Phone_Number ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
-                                    @error('name')
+                                    @error('Phone_Number')
                                         <div class="invalid-feedback">
                                             {{ $message }}
                                         </div>

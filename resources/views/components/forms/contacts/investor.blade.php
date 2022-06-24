@@ -85,8 +85,8 @@
                                 <label class="col-sm-4 col-form-label text-right">Investor Phone:
                                 </label>
                                 <div class="col-sm-8">
-                                    <input name="InvestorPhone" type="phone" class="form-control"
-                                        placeholder=" Investor Phone"
+                                    <input name="InvestorPhone" id="phone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
+                                        class="form-control"
                                         value="{{ old('InvestorPhone') ?? ($investor->InvestorPhone ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
                                     @error('InvestorPhone')
