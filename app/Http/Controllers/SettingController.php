@@ -14,7 +14,7 @@ class SettingController extends Controller
     * Display a listing of the resource.
     *
     * @return \Illuminate\Http\Response
-    * @author Nderi Kamau <nderikamau1212@gmail.com>
+    * @author Robel Baye <robelbaye6@gmail.com>
     */
    public function index()
    {
@@ -36,7 +36,7 @@ class SettingController extends Controller
     *
     * @param  int  $id
     * @return \Illuminate\Http\Response
-    * @author Nderi Kamau <nderikamau1212@gmail.com>
+    * @author Robel Baye <robelbaye6@gmail.com>
     */
    public function show(Setting $setting)
    {
@@ -57,7 +57,7 @@ class SettingController extends Controller
     *
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
-    * @author Nderi Kamau <nderikamau1212@gmail.com>
+    * @author Robel Baye <robelbaye6@gmail.com>
     */
 
    public function store(SettingRequest $request)
@@ -95,7 +95,7 @@ class SettingController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @param  int  $id
     * @return \Illuminate\Http\Response
-    * @author Nderi Kamau <nderikamau1212@gmail.com>
+    * @author Robel Baye <robelbaye6@gmail.com>
     */
    public function update(SettingRequest $request, Setting $setting)
    {

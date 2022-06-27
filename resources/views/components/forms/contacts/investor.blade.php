@@ -6,7 +6,7 @@
             <h6 class="font-weight-bold mb-0">
                 <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true"
                     aria-controls="collapse-10">
-                    <center> Add Investor </center>
+                    <center> Add Inventor </center>
                 </a>
             </h6>
         </div>
@@ -19,7 +19,7 @@
                         @csrf
                         <div class="col-6">
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label text-right">Investor ID:</label>
+                                <label class="col-sm-4 col-form-label text-right">Inventor ID:</label>
                                 <div class="col-sm-8">
                                     <input name="InvestorID" type="text"
                                         class="form-control @error('InvestorID') is-invalid @enderror"
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label text-right">Investor Phone:
+                                <label class="col-sm-4 col-form-label text-right">Inventor Phone:
                                 </label>
                                 <div class="col-sm-8">
                                     <input name="InvestorPhone" id="phone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label text-right">Investor e-Mail:
+                                <label class="col-sm-4 col-form-label text-right">Inventor e-Mail:
                                 </label>
                                 <div class="col-sm-8">
                                     <input name="InvestorEmail" type="email" class="form-control"
@@ -219,7 +219,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Zip/Postal Code:</label>
                                 <div class="col-sm-8">
-                                    <input name="Zip_Code" type="text"
+                                    <input name="Zip_Code" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" 
                                         class="form-control @error('Zip_Code') is-invalid @enderror text-black"
                                         placeholder=" Zip/Postal Code"
                                         value="{{ old('Zip_Code') ?? ($investor->Zip_Code ?? (app()->environment('local') ? '' : '')) }}"
@@ -330,7 +330,7 @@
                         <div class="footer">
                             <div class="float-right">
                                 <button form="investor-form" type="submit" class="btn btn-primary text-center">
-                                    Save Investor
+                                    Save Inventor
                                 </button>
                             </div>
                         </div>

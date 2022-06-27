@@ -7,7 +7,7 @@
         <ul class="nav nav-tabs nav-tabs-success" id="pills-tab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link text active" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor"
-                    role="tab" aria-controls="pills-investor" aria-selected="false"><b> Investor(s) </b></a>
+                    role="tab" aria-controls="pills-investor" aria-selected="false"><b> Inventor(s) </b></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-applicant-tab" data-bs-toggle="pill" href="#pills-applicant" role="tab"
@@ -55,11 +55,11 @@
                     <table id="Devroinvestor" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
-                                <th>Investor ID</th>
+                                <th>Inventors ID</th>
                                 <th>Surname</th>
                                 <th>Given Name(s)</th>
                                 <th>Nationality</th>
-                                <th>Investors Phone</th>
+                                <th>Inventors Phone</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
