@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\SettingRequest;
 use App\Models\Setting;
+use App\Models\General;
+use App\Models\User;
+use App\Models\Cost;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SettingController extends Controller
 {
@@ -23,12 +25,14 @@ class SettingController extends Controller
        /**
         * Get all the settings
         */
-       $settings = Setting::all();
+        // $general = General::all();
+        // $cost = Cost::all();
+        $users = User::all();
 
        /**
         * Return the results
         */
-       return view('portal.settings.index', compact('settings'));
+        return \view('portal.settings.index', compact('users'));
    }
 
    /**
@@ -40,16 +44,7 @@ class SettingController extends Controller
     */
    public function show(Setting $setting)
    {
-       /**First, authorization check for user */
-    //    $this->authorize('view', $setting);
 
-       /**
-        * Get specific setting with relationships
-        */
-       $setting = $setting->load(['values']);
-
-       // Return response to view
-       return view('admin.settings.value', compact('setting'));
    }
 
    /**
@@ -62,31 +57,7 @@ class SettingController extends Controller
 
    public function store(SettingRequest $request)
    {
-       //  Authorize the request    
-       
-       // $this->authorize('create', Setting::class);
 
-       //  Get the validated date
-       $data = $request->validated();
-
-       DB::transaction(function() use ($data, $request){
-
-           //create the key from name of settings
-           $key = Str::slug($request->name);
-
-           //  create the setting
-           $setting = Setting::create([
-               'name' => $data['name'],
-               'type' => $request->type,
-               'description' => $data['description'],
-               'key' => $key
-           ]);
-       });
-
-       //  Redirect to the previous page and flash a message
-       return redirect()->back()->with([
-           'success' => trans('alerts.success.setting.created')
-       ]);
    }
 
    /**
@@ -99,22 +70,6 @@ class SettingController extends Controller
     */
    public function update(SettingRequest $request, Setting $setting)
    {
-    //    $this->authorize('update', $setting);
 
-       //validate the request data
-       $data = $request->validated();
-
-       //Update the setting data
-       DB::transaction(function() use ($setting, $data){
-           $setting->update($data);
-       });
-
-       /**
-        * Once updated,
-        * Return response with message and data
-        */
-       return redirect()->back()->with([
-           'success' => trans('alerts.success.setting.updated')
-       ]);
    }
 }

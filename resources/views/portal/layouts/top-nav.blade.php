@@ -19,7 +19,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                         aria-labelledby="profileDropdown">
-                        <a class="dropdown-item">
+                        <a class="dropdown-item" href="/settings">
                             <i class="fa fas-cog text-primary"></i>
                             Settings
                         </a>

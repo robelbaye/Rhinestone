@@ -29,17 +29,17 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/performance">
                     <span class="menu-title"><b>Performance</b></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/invoice">
                     <span class="menu-title"><b>Invoices</b></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/settings">
                     <span class="menu-title"><b>Settings</b></span>
                 </a>
             </li>

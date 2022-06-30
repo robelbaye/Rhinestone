@@ -12,7 +12,8 @@ use App\Http\Controllers\TrademarkController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SettingController;
-use App\Http\Controllers\SettingValueController;
+use App\Http\Controllers\PerformanceController;
+use App\Http\Controllers\InvoicesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -93,18 +94,16 @@ Route::resource('contacts', ContactController::class)->only(['index', 'store', '
 Route::name('contacts.')->prefix('contacts')->group(function(){
 });
 
+//performance Controller
+Route::get('/performance', [App\Http\Controllers\PerformanceController::class, 'index'])->name('performance');
+
 // Settings CRUD
 Route::resource('settings', SettingController::class)->only(['index', 'store', 'show', 'update']);
 Route::name('settings.')->prefix('settings')->group(function(){
 });
 
-//Values Routes
-Route::name('values.')->prefix('values')->group(function(){
-    Route::get('/{settingValue}', [ SettingValueController::class, 'show' ])->name('show');
-    Route::patch('/{settingValue}', [ SettingValueController::class, 'update' ])->name('update');
-    Route::post('/{setting}', [ SettingValueController::class, 'store' ])->name('store');
-    Route::delete('/{settingValue}', [ SettingValueController::class, 'destroy' ])->name('destroy');
-});
+// Settings CRUD
+Route::get('/invoice', [App\Http\Controllers\InvoicesController::class, 'index'])->name('invoice');
 
 Route::get('logout',[App\Http\Controllers\AuthController::class, 'logout']);
 

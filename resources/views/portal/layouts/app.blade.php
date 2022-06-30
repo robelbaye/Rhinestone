@@ -108,7 +108,10 @@
             $('#Devropatent').DataTable();
             $('#Devrodesign').DataTable();
             $('#Devrotrademark').DataTable();
-        } );
+            $('#DevroAccounttype').DataTable();
+            $('#Devrolist').DataTable();
+            $('#Devroutility').DataTable();
+        });
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
         // allowDropdown: false,
@@ -213,6 +216,7 @@
         }
         return true;
         }
+        //Performance
     </script>
 
 </body>
