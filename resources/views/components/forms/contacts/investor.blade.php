@@ -21,11 +21,11 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Inventor ID:</label>
                                 <div class="col-sm-8">
-                                    <input name="InvestorID" type="text"
+                                    <input name="InventorID" type="text"
                                         class="form-control @error('InvestorID') is-invalid @enderror"
-                                        placeholder="Reference Number"
+                                        placeholder="Inventor ID"
                                         value="{{ old('InvestorID') ?? ($investor->InvestorID ?? (app()->environment('local') ? '' : '')) }}"
-                                        required>
+                                        required disabled>
                                     @error('InvestorID')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -101,7 +101,7 @@
                                 </label>
                                 <div class="col-sm-8">
                                     <input name="InvestorEmail" type="email" class="form-control"
-                                        placeholder=" Investor Email"
+                                        placeholder=" Inventor Email"
                                         value="{{ old('InvestorEmail') ?? ($investor->InvestorEmail ?? (app()->environment('local') ? '' : '')) }}"
                                         required>
                                     @error('InvestorEmail')

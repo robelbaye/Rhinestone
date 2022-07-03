@@ -19,9 +19,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                         aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="/settings">
+                        <a class="dropdown-item" href="/myprofile">
                             <i class="fa fas-cog text-primary"></i>
-                            Settings
+                            My Profile
                         </a>
                         <a class="dropdown-item" href="{{route('logout')}}">
                             <i class="fa-solid fa-right-from-bracket"></i>

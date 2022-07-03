@@ -13,6 +13,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\PerformanceController;
+use App\Http\Controllers\MyprofileController;
 use App\Http\Controllers\InvoicesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -100,7 +101,10 @@ Route::get('/performance', [App\Http\Controllers\PerformanceController::class, '
 // Settings CRUD
 Route::resource('settings', SettingController::class)->only(['index', 'store', 'show', 'update']);
 Route::name('settings.')->prefix('settings')->group(function(){
-});
+}); 
+
+//performance Controller
+Route::get('/myprofile', [App\Http\Controllers\MyprofileController::class, 'index'])->name('myprofile');
 
 // Settings CRUD
 Route::get('/invoice', [App\Http\Controllers\InvoicesController::class, 'index'])->name('invoice');
