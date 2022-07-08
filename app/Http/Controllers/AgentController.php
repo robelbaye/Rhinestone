@@ -32,4 +32,12 @@ class AgentController extends Controller
         Alert::success('Congrats', 'You\'ve Successfully Registered');
         return back()->with($appli);
     }
+
+    public function edit($id)
+    {
+        // Fetch all invenstion disclosures
+        $agent = Agent::find($id);
+
+        return \view('portal.contacts.agent_edit', compact('agent'));
+    }
 }

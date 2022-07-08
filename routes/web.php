@@ -15,6 +15,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\MyprofileController;
 use App\Http\Controllers\InvoicesController;
+use App\Http\Controllers\UsersmgtController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -70,17 +71,17 @@ Route::name('applicant-crud.')->prefix('applicant-crud')->group(function(){
 });
 
 // Investor CURD
-Route::resource('investor-crud', InvestorController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::resource('investor-crud', InvestorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
 Route::name('investor-crud.')->prefix('investor-crud')->group(function(){
 });
 
 // Licensee CURD
-Route::resource('licensee-crud', LicenseeController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::resource('licensee-crud', LicenseeController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
 Route::name('licensee-crud.')->prefix('licensee-crud')->group(function(){
 });
 
 // Licensor CRUD
-Route::resource('licensor-crud', LisensorController::class)->only(['index', 'store', 'show', 'update', 'delete']);
+Route::resource('licensor-crud', LisensorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
 Route::name('licensor-crud.')->prefix('licensor-crud')->group(function(){
 });
 
@@ -108,6 +109,24 @@ Route::get('/myprofile', [App\Http\Controllers\MyprofileController::class, 'inde
 
 // Settings CRUD
 Route::get('/invoice', [App\Http\Controllers\InvoicesController::class, 'index'])->name('invoice');
+
+//Account Management
+Route::get('/usersmgt', [App\Http\Controllers\UsersmgtController::class, 'index'])->name('usersmgt');
+
+//Applicant Edit 
+Route::resource('/apptcrud', ApplicantController::class);
+
+//Agent CRUD
+Route::resource('/agentcrud', AgentController::class);
+
+//Licensee CRUD
+Route::resource('/licenseecrud', LicenseeController::class);
+
+//Licensor CRUD
+Route::resource('/licensorcrud', LisensorController::class);
+
+//Invention CRUD
+Route::resource('/inventioncrud', InvestorController::class);
 
 Route::get('logout',[App\Http\Controllers\AuthController::class, 'logout']);
 

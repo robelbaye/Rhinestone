@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendors/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../assets/css/horizontal-layout-light/style.css">

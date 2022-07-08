@@ -32,4 +32,18 @@ class LicensorController extends Controller
         Alert::success('Congrats', 'You\'ve Successfully Registered');
         return back()->with($licens);
     }
+        
+    public function edit($id)
+    {
+        // Fetch all Licensor
+        $licensor = Licensor::all();
+
+        //  Get manager users
+        $attorneys = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+
+        return \view('portal.contacts.licensor_edit', compact('licensor','attorneys','paralegals'));
+    }
 }

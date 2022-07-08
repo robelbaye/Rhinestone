@@ -17,10 +17,6 @@
                 <a class="nav-link" id="pills-accounttype-tab" data-bs-toggle="pill" href="#pills-accounttype" role="tab"
                     aria-controls="pills-accounttype" aria-selected="false"><b> Account Type </b></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-userslist-tab" data-bs-toggle="pill" href="#pills-userslist" role="tab"
-                    aria-controls="pills-userslist" aria-selected="false"><b> Users List </b></a>
-            </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <!-- General Setting -->
@@ -376,46 +372,6 @@
                     </table>
                 </div>
             </div>
-            <!-- accountList -->
-            <div class="tab-pane fade" id="pills-userslist" role="tabpanel" aria-labelledby="pills-userslist-tab">
-                <div class="table-responsive">
-                        <table id="Devrolist" class="table table-striped table-bordered" style="width:100%">
-                            <thead class="text-center">
-                                <tr>
-                                    <th>FirstName</th>
-                                    <th>LastName</th>
-                                    <th>e-Mail</th>
-                                    <th>Phone</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center">
-                                @foreach ($users as $userlist)
-                                <tr>
-                                    <td>{{$userlist->name}}</td>
-                                    <td>{{$userlist->lastname}}</td>
-                                    <td>{{$userlist->email}}</td>
-                                    <td>{{$userlist->phone}}</td>
-                                    <td>
-                                        <a class="btn btn-outline-primary btn-sm"
-                                            href="#">
-                                            <span class="material-icons">visibility</span>
-                                        </a>
-                                        <a class="btn btn-outline-warning btn-sm"
-                                            href="#">
-                                            <span class="material-icons">edit</span>
-                                        </a>
-                                        <a class="btn btn-outline-secondary btn-sm"
-                                            href="#">
-                                            <span class="material-icons">key</span>
-                                        </a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -423,6 +379,5 @@
 <script>
     $(document).ready(function() {
         $('#DevroAccounttype').DataTable();
-        $('#Devrolist').DataTable();
     });
 </script>

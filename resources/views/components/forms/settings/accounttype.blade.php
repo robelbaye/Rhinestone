@@ -4,7 +4,7 @@
 			<h6 class="font-weight-bold mb-0">
 				<a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true"
 					aria-controls="collapse-10">
-					<center> Add New Account Type </center>
+					<span class="btn btn-success">Add New Account Type </span>
 				</a>
 			</h6>
 		</div>

@@ -6,7 +6,7 @@
 			<h6 class="font-weight-bold mb-0">
 				<a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true"
 					aria-controls="collapse-10">
-					<center> Add Invoice </center>
+					<span class="btn btn-success">Add Invoice</span>
 				</a>
 			</h6>
 		</div>

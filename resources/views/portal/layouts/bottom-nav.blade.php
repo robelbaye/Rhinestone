@@ -38,10 +38,40 @@
                     <span class="menu-title"><b>Invoices</b></span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="/settings">
                     <span class="menu-title"><b>Settings</b></span>
                 </a>
+            </li> -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="menu-title"><b>Settings</b></span>
+                    <i class="fa fa-arrow"></i></a>
+                <div class="submenu">
+                    <ul class="submenu-item">
+                        <li class="nav-item"><a class="nav-link" href="/settings"><b>Settings</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/usersmgt"><b>Account Management</b></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="menu-title"><b>Report</b></span>
+                    <i class="fa fa-arrow"></i></a>
+                <div class="submenu">
+                    <ul class="submenu-item">
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Invoices Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventors Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Applicant Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Licencees Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Licensors Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Agents Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Patents Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Designs Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventions Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Performance Report</b></a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>

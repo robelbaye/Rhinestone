@@ -52,7 +52,7 @@
                     title="Create Investor"
                 />
                 <div class="table-responsive">
-                    <table id="Devroinvestor" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devroinvestor" class="table table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Inventors ID</th>
@@ -72,17 +72,17 @@
                                 <td>{{$invsitem->Nationality}}</td>
                                 <td>{{$invsitem->InvestorPhone}}</td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/inventioncrud/' . $invsitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -100,7 +100,7 @@
                     title="Create Applicant"
                 />
                 <div class="table-responsive">
-                    <table id="Devroapplicant" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devroapplicant" class="table table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -122,17 +122,17 @@
                                     <label class="badge badge-info">{{$appsitem->applicant_status}}</label>
                                 </td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/apptcrud/' . $appsitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -152,7 +152,7 @@
                     title="Create Licensor"
                 />
                 <div class="table-responsive">
-                    <table id="Devrolicensor" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devrolicensor" class="table table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -172,17 +172,17 @@
                                 <td>{{$licensoritem->Nationality}}</td>
                                 <td>{{$licensoritem->Date_of_Contract}}</td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/licensorcrud/' . $licensoritem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -199,7 +199,7 @@
                     title="Create Licensee"
                 />
                 <div class="table-responsive">
-                    <table id="Devrolicensee" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devrolicensee" class="table table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -217,17 +217,17 @@
                                 <td>{{$licenseeitem->Licensee_Phone}}</td>
                                 <td>{{$licenseeitem->Nationality}}</td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/licenseecrud/' . $licenseeitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
                                     </a>
                                 </td>
                             </tr>
@@ -249,7 +249,7 @@
                     title="Create Agent"
                 />
                 <div class="table-responsive">
-                    <table id="Devroagent" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devroagent" class="table table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -271,17 +271,17 @@
                                     <label class="badge badge-info">{{$agentitem->agent_status}}</label>
                                 </td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/agentcrud/' . $appsitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
                                     </a>
                                 </td>
                             </tr>

@@ -10,7 +10,7 @@
                             <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true"
                                 aria-controls="collapse-10">
                                 @if (Route::is('invention-disclosures.index'))
-                                    <center><b> Create an Invention Disclosure </b></center>
+                                    <span class="btn btn-success"><b> Create an Invention Disclosure </b></span>
                                 @else
                                     <center><b> Update Invention Disclosure ayu7687/t767/21 </b></center>
                                 @endif
