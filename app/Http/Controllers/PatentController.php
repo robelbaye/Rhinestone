@@ -59,37 +59,49 @@ class PatentController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Request $request)
+    public function edit($id)
     {
-        //
-    }
+        // Fetch all invenstion disclosures
+        $patents = Patent::find($id);
 
+        //fetch all country list
+        $countries = Country::all();
+
+        //  Get manager users
+        $users = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+        return \view('portal.country.patent_edit', compact('patents','countries', 'users', 'paralegals'));
+    }
+    
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $patents = Patent::find($id);
+        $input = $request->all();
+        $patents->update($input);
 
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('patent');
+    }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        //
+        $patents = Patent::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($patents);
     }
 }

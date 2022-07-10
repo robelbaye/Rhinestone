@@ -13,10 +13,6 @@
                 <a class="nav-link" id="pills-cost-tab" data-bs-toggle="pill" href="#pills-cost" role="tab"
                     aria-controls="pills-cost" aria-selected="true"><b> Utility Settings </b></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-accounttype-tab" data-bs-toggle="pill" href="#pills-accounttype" role="tab"
-                    aria-controls="pills-accounttype" aria-selected="false"><b> Account Type </b></a>
-            </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <!-- General Setting -->
@@ -327,57 +323,7 @@
                     </div>
                 </div>
             </div>
-            <!-- accounttype -->
-            <div class="tab-pane fade" id="pills-accounttype" role="tabpanel" aria-labelledby="pills-accounttype-tab">
-                <x-forms.settings.accounttype
-                    id="create-accounttype-modal"
-                    class="btn btn-primary btn-sm"
-                    title="Create Account Type"
-                />
-                <div class="table-responsive">
-                    <table id="DevroAccounttype" class="table table-striped table-bordered" style="width:100%">
-                        <thead class="text-center">
-                            <tr>
-                                <th>No</th>
-                                <th>Account Type</th>
-                                <th>IsActive</th>
-                                <th>Role</th>
-                                <th>Date of Register</th>
-                                <th class="text-center">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <td>1</td>
-                                <td>Administrator</td>
-                                <td>Yes</td>
-                                <td>Super-Admin</td>
-                                <td>30/06/2022</td>
-                                <td>
-                                    <a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
-                                    </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons">delete</span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 @endsection
-<script>
-    $(document).ready(function() {
-        $('#DevroAccounttype').DataTable();
-    });
-</script>

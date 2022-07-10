@@ -29,15 +29,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 15px;">delete</span>
                                     </a>
                                     <a class="btn btn-outline-secondary btn-sm"
                                         href="#">
-                                        <span class="material-icons">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
                                 </td>
                             </tr>
@@ -50,15 +50,15 @@
                                 <td>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 15px;">delete</span>
                                     </a>
                                     <a class="btn btn-outline-secondary btn-sm"
                                         href="#">
-                                        <span class="material-icons">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
                                 </td>
                             </tr>

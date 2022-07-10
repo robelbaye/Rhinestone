@@ -3,10 +3,13 @@
 @section('content')
             <div class="card">
                 <div class="card-body row">
-                    <form class="row card-body" id="applicant-form"
-                        action="{{ url('applicant-crud.edit' . '$applicant->id') }}" method="POST">
-                        @csrf
+                    <form class="row card-body"
+                        action="{{ url('apptcrud/' . $applicant->id) }}" method="POST">
+                        {{ method_field('PATCH') }}
+                        {{ csrf_field() }}
+                        
                         <div class="col-6">
+                            <input type="hidden" name="id" id="id" value="{{$applicant->id}}" id="id"/>
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Applicant ID: </label>
                                 <div class="col-sm-8">
@@ -161,7 +164,7 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="applicant-form" type="submit" class="btn btn-primary text-center">
+                                <button type="submit" class="btn btn-primary text-center">
                                     Update Applicant
                                 </button>
                             </div>

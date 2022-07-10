@@ -29,17 +29,17 @@
                                     <label class="badge badge-info"></label>
                                 </td>
                                 <td>
-                                    <a class="btn btn-outline-primary btn-sm"
-                                        href="#">
-                                        <span class="material-icons">visibility</span>
-                                    </a>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="#">
-                                        <span class="material-icons">edit</span>
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
+                                    </a>
+                                    <a class="btn btn-outline-primary btn-sm"
+                                        href="#">
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
                                     <a class="btn btn-outline-danger btn-sm"
                                         href="#">
-                                        <span class="material-icons">delete</span>
+                                        <span class="material-icons" style="font-size: 15px;">delete</span>
                                     </a>
                                 </td>
                             </tr>

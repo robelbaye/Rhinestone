@@ -28,18 +28,19 @@
                                 <td>{{$patitem->TypeofFiling}}</td>
                                 <td>{{$patitem->Status}}</td>
                                 <td>
+                                    <a class="btn btn-outline-warning btn-sm"
+                                        href="{{ url('/patentcrud/' . $patitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons">visibility</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
-                                        <span class="material-icons">edit</span>
-                                    </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/patentcrud' . '/' . $patitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
+                                        <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Patent" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

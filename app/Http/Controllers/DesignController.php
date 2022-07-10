@@ -60,37 +60,49 @@ class DesignController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Request $request)
+    public function edit($id)
     {
-        //
-    }
+        // Fetch all invenstion disclosures
+        $designs = Design::find($id);
 
+        //fetch all country list
+        $countries = Country::all();
+
+        //  Get manager users
+        $users = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+        return \view('portal.country.design_edit', compact('designs','countries', 'users', 'paralegals'));
+    }
+    
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $designs = Design::find($id);
+        $input = $request->all();
+        $designs->update($input);
 
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('design');
+    }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-        //
+        $designs = Design::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($designs);
     }
 }

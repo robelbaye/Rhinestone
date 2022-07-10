@@ -71,43 +71,49 @@ class InventionDisclosureController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(InventionDisclosure $inventionDisclosure)
+    public function edit($id)
     {
-        //
-    }
+        // Fetch all invenstion disclosures
+        $inventionDisclosures = InventionDisclosure::find($id);
 
+        //fetch all country list
+        $status = config('settings.invention_status');
+
+        //  Get manager users
+        $attorneys = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+        return \view('portal.invention-disclosures.invention_disc_edit', compact('inventionDisclosures','status', 'attorneys', 'paralegals'));
+    }
+    
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, InventionDisclosure $inventionDisclosure)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $inventionDisclosures = InventionDisclosure::find($id);
+        $input = $request->all();
+        $inventionDisclosures->update($input);
 
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('invention-disclosures');
+    }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\InventionDisclosure  $inventionDisclosure
+     * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(InventionDisclosure $inventionDisclosure)
+    public function destroy($id)
     {
-        //
-    }
+        $inventionDisclosures = InventionDisclosure::destroy($id);
 
-    public function open()
-    {
-        dd(1);
-        return \view('portal.invention-disclosures.show');
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($inventionDisclosures);
     }
 }

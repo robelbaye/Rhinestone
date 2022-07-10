@@ -3,10 +3,13 @@
 @section('content')
             <div class="card">
                 <div class="card-body row">
-                    <form class="row card-body" id="licensee-form"
-                        action="{{ url('licensee-crud.edit' . '$licensee->id') }}" method="POST">
-                        @csrf
+                    <form class="row card-body"
+                        action="{{ url('licenseecrud/' .$licensee->id) }}" method="POST">
+						{{ method_field('PATCH') }}
+                        {{ csrf_field() }}
+
                         <div class="col-6">
+                            <input type="hidden" name="id" id="id" value="{{ $licensee->id }}" id="id"/>
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Licensee ID:</label>
                                 <div class="col-sm-8">
@@ -138,13 +141,13 @@
                                 <div class="col-sm-8">
                                     <textarea cols="600" rows="3" class="form-control" id="Notes"
                                         placeholder="Notes" name="Notes"
-                                        placeholder="Enter value here">{{ $licensee->Notes}}</textarea>
+                                        placeholder="Enter value here" required>{{ $licensee->Notes}}</textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="licensee-form" type="submit" class="btn btn-primary text-center">
+                                <button type="submit" class="btn btn-primary text-center">
                                     Update Licensee
                                 </button>
                             </div>

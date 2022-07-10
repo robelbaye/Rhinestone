@@ -71,7 +71,7 @@ Route::name('applicant-crud.')->prefix('applicant-crud')->group(function(){
 });
 
 // Investor CURD
-Route::resource('investor-crud', InvestorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
+Route::resource('investor-crud', InvestorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'destroy']);
 Route::name('investor-crud.')->prefix('investor-crud')->group(function(){
 });
 
@@ -81,7 +81,7 @@ Route::name('licensee-crud.')->prefix('licensee-crud')->group(function(){
 });
 
 // Licensor CRUD
-Route::resource('licensor-crud', LisensorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
+Route::resource('licensor-crud', LicensorController::class)->only(['index', 'edit', 'store', 'show', 'update', 'delete']);
 Route::name('licensor-crud.')->prefix('licensor-crud')->group(function(){
 });
 
@@ -104,6 +104,12 @@ Route::resource('settings', SettingController::class)->only(['index', 'store', '
 Route::name('settings.')->prefix('settings')->group(function(){
 }); 
 
+// Settings CRUD
+Route::resource('usersmgtlist', UsersmgtController::class)->only(['index', 'store', 'show', 'update']);
+Route::name('usersmgtlist.')->prefix('usersmgtlist')->group(function(){
+}); 
+
+
 //performance Controller
 Route::get('/myprofile', [App\Http\Controllers\MyprofileController::class, 'index'])->name('myprofile');
 
@@ -123,10 +129,31 @@ Route::resource('/agentcrud', AgentController::class);
 Route::resource('/licenseecrud', LicenseeController::class);
 
 //Licensor CRUD
-Route::resource('/licensorcrud', LisensorController::class);
+Route::resource('/licensorcrud', LicensorController::class);
 
 //Invention CRUD
 Route::resource('/inventioncrud', InvestorController::class);
+
+//design CRUD
+Route::resource('/designcrud', DesignController::class);
+
+//patent CRUD
+Route::resource('/patentcrud', PatentController::class);
+
+//Invention-disclosure CRUD
+Route::resource('/inventiondiscrud', InventionDisclosureController::class);
+
+//invoice CRUD
+Route::resource('/invoicescrud', InvoicesController::class);
+
+//setting CRUD
+Route::resource('/settingscrud', SettingController::class);
+
+//usersmgt CRUD
+Route::resource('/usersmgtcrud', UsersmgtController::class);
+
+//usersprofile CRUD
+Route::resource('/myprofilecrud', MyprofileController::class);
 
 Route::get('logout',[App\Http\Controllers\AuthController::class, 'logout']);
 

@@ -3,9 +3,11 @@
 @section('content')
             <div class="card">
                 <div class="card-body row">
-                    <form class="row card-body" id="investor-form"
-                        action="{{ url('investor-crud.edit' . '$investor->id') }}" method="POST">
-                        @csrf
+                    <form class="row card-body"
+                        action="{{ url('inventioncrud/'.$investor->id) }}" method="POST">
+                        {{ method_field('PATCH') }}
+                        {{ csrf_field() }}
+                        
                         <div class="col-6">
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Inventor ID:</label>
@@ -318,7 +320,7 @@
                         </div>
                         <div class="footer">
                             <div class="float-right">
-                                <button form="investor-form" type="submit" class="btn btn-primary text-center">
+                                <button type="submit" class="btn btn-primary text-center">
                                     Update Inventor
                                 </button>
                             </div>

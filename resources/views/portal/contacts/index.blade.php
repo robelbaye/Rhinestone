@@ -52,7 +52,7 @@
                     title="Create Investor"
                 />
                 <div class="table-responsive">
-                    <table id="Devroinvestor" class="table table-bordered" style="width:100%">
+                    <table id="Devroinvestor" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Inventors ID</th>
@@ -74,16 +74,17 @@
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ url('/inventioncrud/' . $invsitem->id . '/edit')}}">
-                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/inventioncrud' . '/' . $invsitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Invention" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -100,7 +101,7 @@
                     title="Create Applicant"
                 />
                 <div class="table-responsive">
-                    <table id="Devroapplicant" class="table table-bordered" style="width:100%">
+                    <table id="Devroapplicant" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -124,16 +125,17 @@
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ url('/apptcrud/' . $appsitem->id . '/edit')}}">
-                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/apptcrud' . '/' . $appsitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Applicant" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -152,7 +154,7 @@
                     title="Create Licensor"
                 />
                 <div class="table-responsive">
-                    <table id="Devrolicensor" class="table table-bordered" style="width:100%">
+                    <table id="Devrolicensor" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -174,16 +176,17 @@
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ url('/licensorcrud/' . $licensoritem->id . '/edit')}}">
-                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/licensorcrud' . '/' . $licensoritem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Licensor" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -199,7 +202,7 @@
                     title="Create Licensee"
                 />
                 <div class="table-responsive">
-                    <table id="Devrolicensee" class="table table-bordered" style="width:100%">
+                    <table id="Devrolicensee" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -219,16 +222,17 @@
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
                                         href="{{ url('/licenseecrud/' . $licenseeitem->id . '/edit')}}">
-                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/licenseecrud' . '/' . $licenseeitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Licensee" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
@@ -249,7 +253,7 @@
                     title="Create Agent"
                 />
                 <div class="table-responsive">
-                    <table id="Devroagent" class="table table-bordered" style="width:100%">
+                    <table id="Devroagent" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Name</th>
@@ -272,17 +276,18 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm"
-                                        href="{{ url('/agentcrud/' . $appsitem->id . '/edit')}}">
-                                        <span class="material-icons" style="font-size: 18px !important;">edit</span>
+                                        href="{{ url('/agentcrud/' . $agentitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm"
                                         href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">print</span>
+                                        <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 18px !important;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ url('/agentcrud' . '/' . $agentitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Agent" onclick="return confirm(&quot;Confirm to Delete ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

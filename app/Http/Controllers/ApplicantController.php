@@ -66,19 +66,26 @@ class ApplicantController extends Controller
      * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Applicant $appt)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $applicant = Applicant::find($id);
+        $input = $request->all();
+        $applicant->update($input);
 
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('contacts');
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Usersmgt  $usersmgt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Applicant $appt)
+    public function destroy($id)
     {
-        //
+        $applicant = Applicant::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($applicant);
     }
 }

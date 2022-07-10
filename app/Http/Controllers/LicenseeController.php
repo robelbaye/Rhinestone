@@ -50,4 +50,22 @@ class LicenseeController extends Controller
 
         return \view('portal.contacts.licensee_edit', compact('licensee','countries','attorneys','paralegals'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $licensee = Licensee::find($id);
+        $input = $request->all();
+        $licensee->update($input);
+
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('contacts');
+    }
+
+    public function destroy($id)
+    {
+        $licensee = Licensee::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($licensee);
+    }
 }

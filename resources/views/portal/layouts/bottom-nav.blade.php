@@ -60,16 +60,16 @@
                     <i class="fa fa-arrow"></i></a>
                 <div class="submenu">
                     <ul class="submenu-item">
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Invoices Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventors Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Applicant Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Licencees Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Licensors Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Agents Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Patents Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Designs Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventions Report</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><b>Performance Report</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Invoices</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventors</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Applicant</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Licencees</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Licensors</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Agents</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Patents</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Designs</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Inventions</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><b>Performance</b></a></li>
                     </ul>
                 </div>
             </li>

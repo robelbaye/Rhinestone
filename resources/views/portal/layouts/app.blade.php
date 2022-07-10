@@ -100,17 +100,58 @@
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
-            $('#Devroinvestor').DataTable();
-            $('#Devroapplicant').DataTable();
-            $('#Devrolicensor').DataTable();
-            $('#Devrolicensee').DataTable();
-            $('#Devroagent').DataTable();
+            $('#Devroinvestor').DataTable(
+                "columns": [
+                    { "width": "10%" },
+                    { "width": "20%" },
+                    { "width": "20%" },
+                    { "width": "25%" },
+                    { "width": "10%" },
+                    { "width": "15%" }
+                ]
+            );
+            $('#Devroapplicant').DataTable(
+                  "columns": [
+                    { "width": "15%" },
+                    { "width": "30%" },
+                    { "width": "15%" },
+                    { "width": "30%" },
+                    { "width": "10%" }
+                ]
+            );
+            $('#Devrolicensor').DataTable(
+                "columns": [
+                    { "width": "10%" },
+                    { "width": "30%" },
+                    { "width": "10%" },
+                    { "width": "25%" },
+                    { "width": "10%" },
+                    { "width": "15%" }
+                ]
+            );
+            $('#Devrolicensee').DataTable(
+                "columns": [
+                    { "width": "15%" },
+                    { "width": "30%" },
+                    { "width": "15%" },
+                    { "width": "30%" },
+                    { "width": "10%" }
+                ]
+            );
+            $('#Devroagent').DataTable(
+                "columns": [
+                    { "width": "15%" },
+                    { "width": "25%" },
+                    { "width": "15%" },
+                    { "width": "20%" },
+                    { "width": "10%" },
+                    { "width": "15%" }
+                ]
+            );
             $('#Devropatent').DataTable();
             $('#Devrodesign').DataTable();
             $('#Devrotrademark').DataTable();
-            $('#DevroAccounttype').DataTable();
             $('#Devrolist').DataTable();
-            $('#Devroutility').DataTable();
         });
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {

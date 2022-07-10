@@ -21,7 +21,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Inventor ID:</label>
                                 <div class="col-sm-8">
-                                    <input name="InventorID" type="text"
+                                    <input name="InvestorID" type="InvestorID"
                                         class="form-control @error('InvestorID') is-invalid @enderror"
                                         placeholder="Inventor ID"
                                         value="{{ old('InvestorID') ?? ($investor->InvestorID ?? (app()->environment('local') ? '' : '')) }}"

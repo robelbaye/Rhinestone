@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agent;
 use App\Models\User;
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -25,12 +26,12 @@ class AgentController extends Controller
     }
     public function store(Request $request)
     {
-        DB::transaction(function() use($request) {
+        $agents = DB::transaction(function() use($request) {
             $agent = Agent::create((array) $request->all());
         });
 
         Alert::success('Congrats', 'You\'ve Successfully Registered');
-        return back()->with($appli);
+        return back()->with($agents);
     }
 
     public function edit($id)
@@ -38,6 +39,27 @@ class AgentController extends Controller
         // Fetch all invenstion disclosures
         $agent = Agent::find($id);
 
-        return \view('portal.contacts.agent_edit', compact('agent'));
+       //fetch all country list
+        $countries = Country::all();
+
+        return \view('portal.contacts.agent_edit', compact('agent','countries'));
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $agent = Agent::find($id);
+        $input = $request->all();
+        $agent->update($input);
+
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect('contacts');
+    }
+
+    public function destroy($id)
+    {
+        $agent = Agent::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($agent);
     }
 }
