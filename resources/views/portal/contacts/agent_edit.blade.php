@@ -58,7 +58,7 @@
 								<div class="col-sm-9">
 									<select name="agent_nationality"
 										class="form-control @error('agent_nationality') is-invalid @enderror">
-										<option value="">{{$agent->agent_nationality}}</option>
+										<option value="{{$agent->agent_nationality}}">{{$agent->agent_nationality}}</option>
 										@foreach ($countries as $country)
 											<option value="{{ $country->name }}"
 												{{ old('agent_nationality') == $country->name ? 'selected' : '' }}>
@@ -170,7 +170,7 @@
 								<div class="col-sm-9">
 									<select name="agent_status"
 										class="form-control @error('agent_status') is-invalid @enderror">
-										<option value="">{{$agent->agent_status}}</option>
+										<option value="{{$agent->agent_status}}">{{$agent->agent_status}}</option>
 										<option value="Active">Active</option>
 										<option value="Deactive">Deactive</option>
 									</select>

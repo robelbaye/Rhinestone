@@ -30,7 +30,7 @@
                                     <select name="title"
                                         class="form-control @error('title') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{ $investor->title }}</option>
+                                        <option value="{{ $investor->title }}">{{ $investor->title }}</option>
                                         <option value="Mr.">Mr.</option>
                                         <option value="Mrs.">Mrs.</option>
                                         <option value="Miss.">Miss.</option>
@@ -163,7 +163,7 @@
                                     <select name="Nationality"
                                         class="form-control @error('Nationality') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{ $investor->Nationality }}</option>
+                                        <option value="{{ $investor->Nationality }}">{{ $investor->Nationality }}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country') == $country->name ? 'selected' : '' }}>
@@ -193,7 +193,7 @@
                                     <select name="Country"
                                         class="form-control @error('Country') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{ $investor->Country }}</option>
+                                        <option value="{{ $investor->Country }}">{{ $investor->Country }}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country') == $country->name ? 'selected' : '' }}>
@@ -273,7 +273,7 @@
                                     <select name="Employer_Nationality"
                                         class="form-control @error('Employer_Nationality') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{ $investor->Employer_Nationality }}</option>
+                                        <option value="{{ $investor->Employer_Nationality }}">{{ $investor->Employer_Nationality }}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country') == $country->name ? 'selected' : '' }}>

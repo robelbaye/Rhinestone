@@ -21,7 +21,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset ('vendors/plugins/jqvmap/jqvmap.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset ('vendors/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="../assets/vendors/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset ('vendors/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="{{ asset ('vendors/plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
+<body>
+    <div class="wrapper" style="padding-right: 300px;">
         <!-- Content Wrapper. Contains page content -->
         <div class="content">
             <!-- Content Header (Page header) -->
@@ -176,7 +176,7 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="{{ asset ('vendors/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="../assets/vendors/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="{{ asset ('vendors/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -184,7 +184,7 @@
         $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
-    <script src="{{ asset ('vendors/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="../assets/vendors/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- ChartJS -->
     <script src="{{ asset ('vendors/plugins/chart.js/Chart.min.js') }}"></script>
     <!-- Sparkline -->

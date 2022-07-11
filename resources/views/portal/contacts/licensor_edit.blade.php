@@ -71,7 +71,7 @@
                                 <div class="col-sm-8">
                                     <select name="Nationality"
                                         class="form-control @error('Nationality') is-invalid @enderror text-black" required>
-                                        <option value="">{{ $licensor->Nationality }}</option>
+                                        <option value="{{ $licensor->Nationality }}">{{ $licensor->Nationality }}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country') == $country->name ? 'selected' : '' }}>
@@ -120,7 +120,7 @@
                                 <div class="col-sm-8">
                                     <select name="Employer_Address"
                                         class="form-control @error('Employer_Address') is-invalid @enderror text-black" required>
-                                        <option value="">{{ $licensor->Employer_Address }}</option>
+                                        <option value="{{ $licensor->Employer_Address }}">{{ $licensor->Employer_Address }}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country') == $country->name ? 'selected' : '' }}>

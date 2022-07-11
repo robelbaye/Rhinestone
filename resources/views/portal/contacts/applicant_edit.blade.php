@@ -74,7 +74,7 @@
                                     <select name="applicant_nationality"
                                         class="form-control @error('applicant_nationality') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{$applicant->applicant_nationality}}</option>
+                                        <option value="{{$applicant->applicant_nationality}}">{{$applicant->applicant_nationality}}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('applicant_nationality') == $country->name ? 'selected' : '' }}>
@@ -96,7 +96,7 @@
                                     <select name="country_of_registration"
                                         class="form-control @error('country_of_registration') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{$applicant->country_of_registration}}</option>
+                                        <option value="{{$applicant->country_of_registration}}">{{$applicant->country_of_registration}}</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ $country->name }}"
                                                 {{ old('country_of_registration') == $country->name ? 'selected' : '' }}>
@@ -155,7 +155,7 @@
                                     <select name="applicant_status"
                                         class="form-control @error('applicant_status') is-invalid @enderror text-black"
                                         required>
-                                        <option value="">{{$applicant->applicant_status}}</option>
+                                        <option value="{{$applicant->applicant_status}}">{{$applicant->applicant_status}}</option>
                                         <option value="Active">Active</option>
                                         <option value="Deactive">Deactive</option>
                                     </select>
