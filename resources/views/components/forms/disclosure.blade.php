@@ -120,9 +120,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label text-right">Business Unit: </label>
-                                            <div class="col-sm-8">
-                                                <input name="cost_center" type="cost_center" class="form-control" placeholder="Business Unit" value="{{ old('cost_center') ?? ($user->cost_center ?? (app()->environment('local') ? '' : '')) }}" required>
+                                            <label class="col-sm-3 col-form-label text-right">Business Unit Code: </label>
+                                            <div class="col-sm-3">
+                                                <input name="center_code" type="center_code" class="form-control" value="{{ old('center_code') ?? ($user->center_code ?? (app()->environment('local') ? '' : '')) }}" required>
+                                            </div>
+                                            <label class="col-sm-3 col-form-label text-right">Business Unit: </label>
+                                            <div class="col-sm-3">
+                                                <input name="cost_center" type="cost_center" class="form-control" value="{{ old('cost_center') ?? ($user->cost_center ?? (app()->environment('local') ? '' : '')) }}" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -189,12 +193,6 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label text-right">Business Unit Code: </label>
-                                            <div class="col-sm-8">
-                                                <input name="center_code" type="center_code" class="form-control" placeholder="Business Unit Code" value="{{ old('center_code') ?? ($user->center_code ?? (app()->environment('local') ? '' : '')) }}" required>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group row">
@@ -256,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div class="float-right">
-                                        <button form="disclosure-form" type="submit" class="btn btn-success text-center" style="width: 200px; margin-top: -92.3%; margin-left: 83%;">
+                                        <button form="disclosure-form" type="submit" class="btn btn-success text-center" style="width: 200px; margin-top: -73.3%; margin-left: 83%;">
                                             Create Patent Family
                                         </button>
                                     </div>

@@ -144,7 +144,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Contractor:</label>
                                 <div class="col-sm-8">
-                                    <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Applicant's Contractor" value="{{ old('Contractor') ?? ($licensor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Licensor's Contractor" value="{{ old('Contractor') ?? ($licensor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('Contractor')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -155,7 +155,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Contractor Type:</label>
                                 <div class="col-sm-8">
-                                    <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Applicant's Contractor Type" value="{{ old('ContractorType') ?? ($licensor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Licensor's Contractor Type" value="{{ old('ContractorType') ?? ($licensor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('ContractorType')
                                     <div class="invalid-feedback">
                                         {{ $message }}

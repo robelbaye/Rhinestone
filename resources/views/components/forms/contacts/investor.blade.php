@@ -93,7 +93,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Contract:</label>
                                 <div class="col-sm-8">
-                                    <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Investor's Contract" value="{{ old('Contractor') ?? ($investor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Inventor's Contract" value="{{ old('Contractor') ?? ($investor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('Contractor')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -104,7 +104,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Type of Contract:</label>
                                 <div class="col-sm-8">
-                                    <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Investor's Contract Type" value="{{ old('ContractorType') ?? ($investor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Inventor's Contract Type" value="{{ old('ContractorType') ?? ($investor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('ContractorType')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -187,7 +187,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Employer Name:</label>
                                 <div class="col-sm-8">
-                                    <input name="Employer_Name" type="text" class="form-control @error('Employer_Name') is-invalid @enderror" placeholder=" investor's employer_name" value="{{ old('Employer_Name') ?? ($investor->Employer_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="Employer_Name" type="text" class="form-control @error('Employer_Name') is-invalid @enderror" placeholder=" Inventor's Employer Name" value="{{ old('Employer_Name') ?? ($investor->Employer_Name ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('Employer_Name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -209,7 +209,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Employer Address:</label>
                                 <div class="col-sm-8">
-                                    <input name="Employer_Address" type="text" class="form-control @error('Employer_Address') is-invalid @enderror" placeholder=" investor's employer_address" value="{{ old('Employer_Address') ?? ($investor->Employer_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="Employer_Address" type="text" class="form-control @error('Employer_Address') is-invalid @enderror" placeholder=" Inventor's Employer Address" value="{{ old('Employer_Address') ?? ($investor->Employer_Address ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('Employer_Address')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -238,7 +238,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
                                 <div class="col-sm-8">
-                                    <input name="Email_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" investor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="Email_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Inventor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
                                     @error('Email_of_Future_Contact')
                                     <div class="invalid-feedback">
                                         {{ $message }}

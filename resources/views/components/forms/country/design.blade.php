@@ -283,7 +283,7 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
-                                <label class="col-sm-1 col-form-label text-right">Next Tax Date: </label>
+                                <label class="col-sm-1 col-form-label text-right">Next Taxes Date: </label>
                                 <div class="col-md-2">
                                     <input name="NextTaxDate" type="date" class="form-control @error('NextTaxDate') is-invalid @enderror" placeholder=" 72" value="{{ old('NextTaxDate') ?? ((isset($sow->NextTaxDate) ? $sow->NextTaxDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
                                 </div>
@@ -385,9 +385,9 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
-                                <label class="col-sm-1 col-form-label text-right">Taxs Paid By: </label>
+                                <label class="col-sm-1 col-form-label text-right">Taxes Paid By: </label>
                                 <div class="col-md-2">
-                                    <input name="TaxPaidBy" type="TaxPaidBy" class="form-control" placeholder=" Taxs Paid By" value="{{ old('TaxPaidBy') ?? ($designs->TaxPaidBy ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="TaxPaidBy" type="TaxPaidBy" class="form-control" placeholder=" Taxes Paid By" value="{{ old('TaxPaidBy') ?? ($designs->TaxPaidBy ?? (app()->environment('local') ? '' : '')) }}" required>
                                 </div>
                                 @error('TaxPaidBy')
                                 <div class="invalid-feedback">

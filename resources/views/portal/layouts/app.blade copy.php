@@ -18,7 +18,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="../../assets/css/horizontal-layout-light/style.css">
     <link rel="stylesheet" href="../../../../css/bs_fix.css">
-    <link rel="stylesheet" href="../../css/intlTelInput.css">
+    <link rel="stylesheet" href="../../../../css/intlTelInput.css">
     <link rel="stylesheet" href="../../../../css/style.css">
     <link rel="stylesheet" href="../../../../css/nucleo-icons.css">
     <link rel="stylesheet" href="../../../../css/nucleo-svg.css">
@@ -95,8 +95,8 @@
     <!-- Custom js for this page-->
     <script src="../../../../assets/js/data-table.js"></script>
     <!-- End custom js for this page-->
-    <script src="../../js/intlTelInput.js"></script>
-    <script src="../../js/intlTelInput-jquery.min.js"></script>
+    <script src="../../../../js/intlTelInput.js"></script>
+    <script src="../../../../js/intlTelInput-jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
@@ -226,7 +226,7 @@
             // placeholderNumberType: "MOBILE",
             // preferredCountries: ['cn', 'jp'],
             // separateDialCode: true,
-            utilsScript: "../../js/utils.js",
+            utilsScript: "../../../../js/utils.js",
         });
         var input = document.querySelector("#liphone");
         window.intlTelInput(input, {
@@ -250,7 +250,7 @@
             // placeholderNumberType: "MOBILE",
             // preferredCountries: ['cn', 'jp'],
             // separateDialCode: true,
-            utilsScript: "../../js/utils.js",
+            utilsScript: "../../../../js/utils.js",
         });
         var input = document.querySelector("#licphone");
         window.intlTelInput(input, {

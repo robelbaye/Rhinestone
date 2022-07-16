@@ -40,7 +40,7 @@
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label text-right">Foreign Associate Address: </label>
 								<div class="col-sm-8">
-									<input name="agent_address" type="text" class="form-control @error('agent_address') is-invalid @enderror" placeholder=" applicant's address" value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}" required>
+									<input name="agent_address" type="text" class="form-control @error('agent_address') is-invalid @enderror" placeholder=" Agent's address" value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}" required>
 									@error('agent_address')
 									<div class="invalid-feedback">
 										{{ $message }}
@@ -127,7 +127,7 @@
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label text-right">Email of Future Contact: </label>
 								<div class="col-sm-8">
-									<input name="agent_future_email" type="email" class="form-control @error('agent_future_email') is-invalid @enderror" placeholder=" investor's email_of_future_contact" value="{{ old('agent_future_email') ?? ($agent->agent_future_email ?? (app()->environment('local') ? '' : '')) }}" required>
+									<input name="agent_future_email" type="email" class="form-control @error('agent_future_email') is-invalid @enderror" placeholder=" Agents's email_of_future_contact" value="{{ old('agent_future_email') ?? ($agent->agent_future_email ?? (app()->environment('local') ? '' : '')) }}" required>
 									@error('agent_future_email')
 									<div class="invalid-feedback">
 										{{ $message }}

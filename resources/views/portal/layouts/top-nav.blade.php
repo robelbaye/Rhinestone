@@ -19,11 +19,11 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                         aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="/myprofile">
+                        <a class="dropdown-item text-black" href="/myprofile">
                             <i class="fa fas-cog text-primary"></i>
                             My Profile
                         </a>
-                        <a class="dropdown-item" href="{{route('logout')}}">
+                        <a class="dropdown-item text-black" href="{{route('logout')}}">
                             <i class="fa-solid fa-right-from-bracket"></i>
                             Logout
                         </a>
