@@ -51,6 +51,23 @@ class LicensorController extends Controller
         return \view('portal.contacts.licensor_edit', compact('licensor','countries','attorneys','paralegals'));
     }
 
+    public function show($id)
+    {
+        // Fetch all Licensor
+        $licensor = Licensor::find($id);
+
+        //  Get manager users
+        $attorneys = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+
+        //fetch all country list
+        $countries = Country::all();
+
+        return \view('portal.contacts.licensor_add', compact('licensor', 'countries', 'attorneys', 'paralegals'));
+    }
+
     public function update(Request $request, $id)
     {
         $licensor = Licensor::find($id);

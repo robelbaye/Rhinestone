@@ -10,7 +10,7 @@
 		</div>
 		<div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10"
 			data-bs-parent="#accordion-4">
-			<div class="card">
+			<div class="card" style="margin-bottom: -80px;">
 				<div class="card-body row">
 					<form class="row card-body" id="agent-form"
 						action="{{ route('agent-crud.store') }}" method="POST">
