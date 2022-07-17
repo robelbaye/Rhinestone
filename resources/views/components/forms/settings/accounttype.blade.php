@@ -20,7 +20,7 @@
 								<label class="col-sm-3 col-form-label">Account Type Name </label>
 								<div class="col-sm-9">
 									<input name="agent_ID" type="agent_ID" class="form-control"
-										placeholder=" Agent ID"
+										placeholder=""
 										value="{{ old('agent_ID') ?? ($agent->agent_ID ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_ID')
@@ -47,7 +47,7 @@
 								<div class="col-sm-9">
 									<input name="agent_address" type="text"
 										class="form-control @error('agent_address') is-invalid @enderror"
-										placeholder=" applicant's address"
+										placeholder=""
 										value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_address')

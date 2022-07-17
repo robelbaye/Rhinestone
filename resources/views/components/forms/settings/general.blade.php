@@ -20,7 +20,7 @@
 								<label class="col-sm-3 col-form-label">Company Name </label>
 								<div class="col-sm-9">
 									<input name="agent_ID" type="agent_ID" class="form-control"
-										placeholder=" Agent ID"
+										placeholder=""
 										value="{{ old('agent_ID') ?? ($agent->agent_ID ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_ID')
@@ -34,7 +34,7 @@
 								<label class="col-sm-3 col-form-label">Company Address </label>
 								<div class="col-sm-9">
 									<input name="agent_name" type="agent_name" class="form-control"
-										placeholder=" Agent Name"
+										placeholder=""
 										value="{{ old('agent_name') ?? ($agent->agent_name ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_name')
@@ -49,7 +49,7 @@
 								<div class="col-sm-9">
 									<input name="agent_address" type="text"
 										class="form-control @error('agent_address') is-invalid @enderror"
-										placeholder=" applicant's address"
+										placeholder=""
 										value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_address')
@@ -64,7 +64,7 @@
 								<div class="col-sm-9">
 									<input name="agent_contact_person" type="text"
 										class="form-control @error('agent_contact_person') is-invalid @enderror"
-										placeholder=" Contact person"
+										placeholder=""
 										value="{{ old('agent_contact_person') ?? ($agent->agent_contact_person ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_contact_person')
@@ -96,7 +96,7 @@
 								<div class="col-sm-9">
 									<input name="agent_email" type="email"
 										class="form-control @error('agent_email') is-invalid @enderror"
-										placeholder=" Agent's e-Mail"
+										placeholder=""
 										value="{{ old('agent_email') ?? ($agent->email ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_email')
@@ -111,7 +111,7 @@
 								<div class="col-sm-9">
 								<input name="agent_fax_number" type="agent_fax_number"
 									class="form-control @error('agent_fax_number') is-invalid @enderror"
-									placeholder=" Agent's Fax Number"
+									placeholder=""
 									value="{{ old('agent_fax_number') ?? ($agent->agent_fax_number ?? (app()->environment('local') ? '' : '')) }}"
 									required>
 								@error('agent_fax_number')
@@ -126,7 +126,7 @@
 								<div class="col-sm-9">
 									<input name="agent_office_phone" type="phone"
 										class="form-control @error('agent_office_phone') is-invalid @enderror"
-										placeholder=" agent's office_contact"
+										placeholder=""
 										value="{{ old('agent_office_phone') ?? ($agent->agent_office_phone ?? (app()->environment('local') ? '' : '')) }}"
 										required>
 									@error('agent_office_phone')
