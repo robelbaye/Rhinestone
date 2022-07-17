@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Investor</p>
+                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Inventor</p>
                                         <h5 class="font-weight-bolder mb-0">
                                             2,300
                                             <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -123,7 +123,7 @@
                           </g>
                         </svg>
                                             </div>
-                                            <p class="text-xs mt-1 mb-0 font-weight-bold">Investors</p>
+                                            <p class="text-xs mt-1 mb-0 font-weight-bold">Inventor's</p>
                                         </div>
                                         <h4 class="font-weight-bolder">3K</h4>
                                         <div class="progress w-75">

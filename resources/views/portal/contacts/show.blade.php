@@ -50,7 +50,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Investor ID</th>
+                                    <th>Inventor ID</th>
                                     <th>Surname</th>
                                     <th>Given Name(s)</th>
                                     <th>Nationality</th>

@@ -154,7 +154,7 @@
 								<div class="col-sm-9">
 									<input name="agent_future_email" type="email"
 										class="form-control @error('agent_future_email') is-invalid @enderror"
-										placeholder=" investor's email_of_future_contact"
+										placeholder=" Inventor's email_of_future_contact"
 										value="{{$agent->agent_future_email}}"
 										required>
 									@error('agent_future_email')

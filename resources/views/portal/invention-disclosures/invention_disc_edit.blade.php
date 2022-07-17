@@ -209,7 +209,7 @@
                                             <div class="col-sm-8">
                                                 <textarea cols="600" rows="3" class="form-control"
                                                     id="confirmed_investors" name="confirmed_investors"
-                                                    placeholder="Proposed Investor">{{ $inventiondis->confirmed_investors }}</textarea>
+                                                    placeholder="Proposed Inventor">{{ $inventiondis->confirmed_investors }}</textarea>
                                             </div>
                                         </div>
                                     </div>

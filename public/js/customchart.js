@@ -96,7 +96,7 @@
              maxBarThickness: 6
 
          }, {
-             label: "Investor's",
+             label: "Inventors's",
              tension: 0.4,
              borderWidth: 0,
              pointRadius: 0,

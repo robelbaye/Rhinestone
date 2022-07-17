@@ -107,7 +107,7 @@
                                 <div class="col-sm-8">
                                     <input name="Contractor" type="text"
                                         class="form-control @error('Contractor') is-invalid @enderror"
-                                        placeholder=" Investor's Contract"
+                                        placeholder=" Inventor's Contract"
                                         value="{{ $investor->Contractor }}"
                                         required>
                                     @error('Contractor')
@@ -122,7 +122,7 @@
                                 <div class="col-sm-8">
                                     <input name="ContractorType" type="text"
                                         class="form-control @error('ContractorType') is-invalid @enderror"
-                                        placeholder=" Investor's Contract Type"
+                                        placeholder=" Inventor's Contract Type"
                                         value="{{ $investor->ContractorType }}"
                                         required>
                                     @error('ContractorType')
@@ -227,7 +227,7 @@
                                 <div class="col-sm-8">
                                     <input name="Employer_Name" type="text"
                                         class="form-control @error('Employer_Name') is-invalid @enderror"
-                                        placeholder=" investor's employer_name"
+                                        placeholder=" Inventor's employer_name"
                                         value="{{ $investor->Employer_Name }}"
                                         required>
                                     @error('Employer_Name')
@@ -257,7 +257,7 @@
                                 <div class="col-sm-8">
                                     <input name="Employer_Address" type="text"
                                         class="form-control @error('Employer_Address') is-invalid @enderror"
-                                        placeholder=" investor's employer_address"
+                                        placeholder=" Inventor's employer_address"
                                         value="{{ $investor->Employer_Address }}"
                                         required>
                                     @error('Employer_Address')
@@ -292,7 +292,7 @@
                                 <div class="col-sm-8">
                                     <input name="Email_of_Future_Contact" type="text"
                                         class="form-control @error('Email_of_Future_Contact') is-invalid @enderror"
-                                        placeholder=" investor's Email of Future Contact"
+                                        placeholder=" Inventor's Email of Future Contact"
                                         value="{{ $investor->Email_of_Future_Contact }}"
                                         required>
                                     @error('Email_of_Future_Contact')

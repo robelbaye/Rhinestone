@@ -21,7 +21,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor"
-                        role="tab" aria-controls="pills-investor" aria-selected="false">Investor(s)</a>
+                        role="tab" aria-controls="pills-investor" aria-selected="false">Inventor(s)</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-compensation-tab" data-bs-toggle="pill" href="#pills-compensation"
@@ -138,7 +138,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Investor ID</th>
+                                        <th>Inventor ID</th>
                                         <th>Surname</th>
                                         <th>Given Name(s)</th>
                                         <th>Nationality</th>
@@ -165,7 +165,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Investor Name</th>
+                                        <th>Inventor Name</th>
                                         <th>Contribution</th>
                                         <th>Compensation Calculation</th>
                                         <th>Compensation Towards</th>

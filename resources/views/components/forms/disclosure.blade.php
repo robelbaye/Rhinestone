@@ -210,7 +210,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label text-right">Confirmed Inventors: </label>
                                             <div class="col-sm-8">
-                                                <textarea cols="600" rows="3" class="form-control" id="proposed_investors" name="proposed_investors" placeholder="Proposed Investor">{{ $evaluation->suggestion ?? '' }}</textarea>
+                                                <textarea cols="600" rows="3" class="form-control" id="proposed_investors" name="proposed_investors" placeholder="Proposed Inventors">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -254,8 +254,8 @@
                                         </div>
                                     </div>
                                     <div class="float-right">
-                                        <button form="disclosure-form" type="submit" class="btn btn-success text-center" style="width: 200px; margin-top: -73.3%; margin-left: 83%;">
-                                            Create Patent Family
+                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -73.3%; margin-left: 83%;">
+                                            Save Patent Family
                                         </button>
                                     </div>
                                 </form>
