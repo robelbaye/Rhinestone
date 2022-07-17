@@ -1,8 +1,6 @@
 @extends('portal.layouts.app')
 
 @section('content')   
-    <x-forms.disclosure :status="$status" :attorneys="$attorneys" :paralegals="$paralegals" />
-
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">Title: Invention Disclosure | Reference Number: ayu7687/t767/21</h4>

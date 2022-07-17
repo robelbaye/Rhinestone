@@ -64,6 +64,9 @@
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/inventioncrud/' . $invsitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
                                     </a>
+                                    <a class="btn btn-outline-primary btn-sm" href="/showc">
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
@@ -110,7 +113,7 @@
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/apptcrud/' . $appsitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
                                     </a>
-                                    <a class="btn btn-outline-primary btn-sm" href="#">
+                                    <a class="btn btn-outline-primary btn-sm" href="/showc">
                                         <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
@@ -160,7 +163,7 @@
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/licensorcrud/' . $licensoritem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
                                     </a>
-                                    <a class="btn btn-outline-primary btn-sm" href="#">
+                                    <a class="btn btn-outline-primary btn-sm" href="/showc">
                                         <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
@@ -204,6 +207,9 @@
                                     </a>
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/licenseecrud/' . $licenseeitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
+                                    </a>
+                                    <a class="btn btn-outline-primary btn-sm" href="/showc">
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>
@@ -255,6 +261,9 @@
                                     </a>
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/agentcrud/' . $agentitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
+                                    </a>
+                                    <a class="btn btn-outline-primary btn-sm" href="/showc">
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
                                     </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>

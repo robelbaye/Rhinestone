@@ -63,11 +63,16 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($contact)
+    public function show()
     {
-        return \view('portal.contacts.show', [
-            'contact' => $contact
-        ]);
+        $countries = Country::all();
+        $applicant = Applicant::all();
+        $investor = Investor::all();
+        $licensor = Licensor::all();
+        $licensee = Licensee::all();
+        $agent = Agent::all();
+        return \view(
+        'portal.contacts.show', compact(['countries', 'applicant', 'investor', 'licensor', 'agent', 'licensee']));
     }
 
     /**

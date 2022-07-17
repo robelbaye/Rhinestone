@@ -49,6 +49,8 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 Route::get('/patent', [App\Http\Controllers\PatentController::class, 'index'])->name('patent');
 Route::get('/design', [App\Http\Controllers\DesignController::class, 'index'])->name('design');
 Route::get('/trademark', [App\Http\Controllers\TrademarkController::class, 'index'])->name('trademark');
+Route::get('/show', [App\Http\Controllers\InventionDisclosureController::class, 'show'])->name('show');
+Route::get('/showc', [App\Http\Controllers\ContactController::class, 'show'])->name('showc');
 
 // Invention Disclosures
 Route::resource('invention-disclosures', InventionDisclosureController::class)->only(['index', 'store', 'show', 'update', 'delete']);

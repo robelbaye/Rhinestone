@@ -53,8 +53,10 @@ class InventionDisclosureController extends Controller
      * @param  \App\Models\InventionDisclosure  $inventionDisclosure
      * @return \Illuminate\Http\Response
      */
-    public function show($inventionDisclosure)
+    public function show()
     {
+        // Fetch all invenstion disclosures
+        $inventionDisclosures = InventionDisclosure::all();
         $status = config('settings.invention_status');
 
         //  Get manager users
@@ -64,7 +66,7 @@ class InventionDisclosureController extends Controller
         $paralegals = User::all();
 
         return \view('portal.invention-disclosures.show', [
-            'inventionDisclosure' => $inventionDisclosure,
+            'inventionDisclosure' => $inventionDisclosures,
             'status' => $status,
             'attorneys' => $attorneys,
             'paralegals' => $paralegals

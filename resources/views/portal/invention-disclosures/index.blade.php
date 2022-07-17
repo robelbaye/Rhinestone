@@ -33,6 +33,9 @@
                                     <a class="btn btn-outline-secondary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">copy_all</span>
                                     </a>
+                                    <a class="btn btn-outline-primary btn-sm" href="/show">
+                                        <span class="material-icons" style="font-size: 15px;">visibility</span>
+                                    </a>
                                     <a class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>

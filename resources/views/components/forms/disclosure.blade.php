@@ -8,11 +8,7 @@
                     <div class="card-header" role="tab" id="heading-10">
                         <h6 class="font-weight-bold mb-0">
                             <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
-                                @if (Route::is('invention-disclosures.index'))
                                 <span class="btn btn-success"><b> Create Patent Family </b></span>
-                                @else
-                                <center><b> Update Invention Disclosure ayu7687/t767/21 </b></center>
-                                @endif
                             </a>
                         </h6>
                     </div>
@@ -254,7 +250,7 @@
                                         </div>
                                     </div>
                                     <div class="float-right">
-                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -955px; margin-left: 83%;">
+                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -1015px; margin-left: 83%;">
                                             Save Patent Family
                                         </button>
                                     </div>
