@@ -9,7 +9,7 @@
                         <h6 class="font-weight-bold mb-0">
                             <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
                                 @if (Route::is('invention-disclosures.index'))
-                                <span class="btn btn-success"><b> Create an Invention Disclosure </b></span>
+                                <span class="btn btn-success"><b> Create Patent Family </b></span>
                                 @else
                                 <center><b> Update Invention Disclosure ayu7687/t767/21 </b></center>
                                 @endif
@@ -241,7 +241,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label text-right">Approval Date: </label>
+                                            <label class="col-sm-4 col-form-label text-right">Approval or Rejection Date: </label>
                                             <div class="col-sm-8">
                                                 <input name="date_of_invention" type="date" class="form-control @error('date_of_invention') is-invalid @enderror" placeholder="" value="{{ old('date_of_invention') ?? ((isset($sow->date_of_invention) ? $sow->date_of_invention->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
                                             </div>
