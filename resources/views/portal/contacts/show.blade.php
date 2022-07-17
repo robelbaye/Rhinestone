@@ -3,44 +3,35 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Address Book</h4>
+        <h4 class="card-title"><button onclick="history.back()" class="btn btn-success text-center">Go Back</button> Address Book</h4>
         <ul class="nav nav-pills nav-pills-success" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor"
-                    role="tab" aria-controls="pills-investor" aria-selected="false">Investor(s)</a>
+                <a class="nav-link active" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor" role="tab" aria-controls="pills-investor" aria-selected="true">Investor(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" id="pills-applicant-tab" data-bs-toggle="pill" href="#pills-applicant" role="tab"
-                    aria-controls="pills-applicant" aria-selected="true">Applicant</a>
+                <a class="nav-link" id="pills-applicant-tab" data-bs-toggle="pill" href="#pills-applicant" role="tab" aria-controls="pills-applicant" aria-selected="false">Applicant</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-owner-tab" data-bs-toggle="pill" href="#pills-owner" role="tab"
-                    aria-controls="pills-owner" aria-selected="false">Prior Art/owner Doc(s)</a>
+                <a class="nav-link" id="pills-owner-tab" data-bs-toggle="pill" href="#pills-owner" role="tab" aria-controls="pills-owner" aria-selected="false">Prior Art/owner Doc(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-licensor-tab" data-bs-toggle="pill" href="#pills-licensor" role="tab"
-                    aria-controls="pills-licensor" aria-selected="false">licensor(s)</a>
+                <a class="nav-link" id="pills-licensor-tab" data-bs-toggle="pill" href="#pills-licensor" role="tab" aria-controls="pills-licensor" aria-selected="false">licensor(s)</a>
             </li>
-            
+
             <li class="nav-item">
-                <a class="nav-link" id="pills-licensee-tab" data-bs-toggle="pill" href="#pills-licensee"
-                    role="tab" aria-controls="pills-licensee" aria-selected="false">Licensee(s)</a>
+                <a class="nav-link" id="pills-licensee-tab" data-bs-toggle="pill" href="#pills-licensee" role="tab" aria-controls="pills-licensee" aria-selected="false">Licensee(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-consultant-tab" data-bs-toggle="pill" href="#pills-consultant"
-                    role="tab" aria-controls="pills-consultant" aria-selected="false">Consultant(s)</a>
+                <a class="nav-link" id="pills-consultant-tab" data-bs-toggle="pill" href="#pills-consultant" role="tab" aria-controls="pills-consultant" aria-selected="false">Consultant(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-agent-tab" data-bs-toggle="pill" href="#pills-agent"
-                    role="tab" aria-controls="pills-agent" aria-selected="false">Agent/External Counsel</a>
+                <a class="nav-link" id="pills-agent-tab" data-bs-toggle="pill" href="#pills-agent" role="tab" aria-controls="pills-agent" aria-selected="false">Agent/External Counsel</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-paralegal-tab" data-bs-toggle="pill" href="#pills-paralegal"
-                    role="tab" aria-controls="pills-paralegal" aria-selected="false">Paralegal(s)</a>
+                <a class="nav-link" id="pills-paralegal-tab" data-bs-toggle="pill" href="#pills-paralegal" role="tab" aria-controls="pills-paralegal" aria-selected="false">Paralegal(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-attorney-tab" data-bs-toggle="pill" href="#pills-attorney"
-                    role="tab" aria-controls="pills-attorney" aria-selected="false">Attorney(s)</a>
+                <a class="nav-link" id="pills-attorney-tab" data-bs-toggle="pill" href="#pills-attorney" role="tab" aria-controls="pills-attorney" aria-selected="false">Attorney(s)</a>
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
@@ -70,8 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-applicant" role="tabpanel"
-                aria-labelledby="pills-applicant-tab">
+            <div class="tab-pane fade" id="pills-applicant" role="tabpanel" aria-labelledby="pills-applicant-tab">
                 <div class="media">
                     <div class="table-responsive">
                         <table class="table">
@@ -93,8 +83,7 @@
                                     <td>Canada</td>
                                     <td>Approved</td>
                                     <td class="text-center">
-                                        <a class="btn btn-outline-primary btn-sm"
-                                            href="#">
+                                        <a class="btn btn-outline-primary btn-sm" href="#">
                                             View
                                         </a>
                                     </td>
@@ -131,8 +120,7 @@
                                     <td>Canada</td>
                                     <td>Approved</td>
                                     <td class="text-center">
-                                        <a class="btn btn-outline-primary btn-sm"
-                                            href="#">
+                                        <a class="btn btn-outline-primary btn-sm" href="#">
                                             View
                                         </a>
                                     </td>
@@ -164,8 +152,7 @@
                                     <td>Canada</td>
                                     <td>Approved</td>
                                     <td class="text-center">
-                                        <a class="btn btn-outline-primary btn-sm"
-                                            href="#">
+                                        <a class="btn btn-outline-primary btn-sm" href="#">
                                             View
                                         </a>
                                     </td>
@@ -202,8 +189,7 @@
                                     <td>Canada</td>
                                     <td>Approved</td>
                                     <td class="text-center">
-                                        <a class="btn btn-outline-primary btn-sm"
-                                            href="#">
+                                        <a class="btn btn-outline-primary btn-sm" href="#">
                                             View
                                         </a>
                                     </td>
