@@ -193,7 +193,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="licensor-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -52%; margin-left: 90%;">
+                            <button form="licensor-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -555px; margin-left: 90%;">
                                 Save
                             </button>
                         </div>

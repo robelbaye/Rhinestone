@@ -259,7 +259,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="investor-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -67%; margin-left: 90%;">
+                            <button form="investor-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -715px; margin-left: 90%;">
                                 Save
                             </button>
                         </div>

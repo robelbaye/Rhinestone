@@ -11,7 +11,7 @@
         </div>
 
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10" data-bs-parent="#accordion-4">
-            <table align="center" cellpadding="20px" style="margin-top: -7%; margin-bottom: 2%;">
+            <table align="center" cellpadding="10px" style="margin-top: -40px; margin-bottom: 2%;">
                 <tr>
                     <td><a class="btn btn-outline-primary btn-sm" href="#">
                             Audit trail
@@ -523,7 +523,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="design-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -87%; margin-left: 90%;">
+                            <button form="design-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -1045px; margin-left: 90%;">
                                 Save
                             </button>
                         </div>

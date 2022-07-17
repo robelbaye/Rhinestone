@@ -10,7 +10,7 @@
             </h6>
         </div>
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10" data-bs-parent="#accordion-4">
-            <table align="center" cellpadding="20px" style="margin-top: -7%; margin-bottom: 2%;">
+            <table align="center" cellpadding="10px" style="margin-top: -40px; margin-bottom: 2%;">
                 <tr>
                     <td><a class="btn btn-outline-primary btn-sm" href="#">
                             Audit trail
@@ -230,7 +230,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="patent" type="submit" class="btn btn-success text-center" style="width: 220px; margin-top: -50%; margin-left: 85%;">
+                            <button form="patent" type="submit" class="btn btn-success text-center" style="width: 220px; margin-top: -610px; margin-left: 85%;">
                                 Create Patent Country
                             </button>
                         </div>

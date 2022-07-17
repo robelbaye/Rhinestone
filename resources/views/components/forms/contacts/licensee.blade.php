@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="licensee-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -40.5%; margin-left: 90%;">
+                            <button form="licensee-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -430px; margin-left: 90%;">
                                 Save
                             </button>
                         </div>

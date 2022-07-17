@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="float-right">
-                            <button form="applicant-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -38.7%; margin-left: 90%;">
+                            <button form="applicant-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -415px; margin-left: 90%;">
                                 Save
                             </button>
                         </div>
