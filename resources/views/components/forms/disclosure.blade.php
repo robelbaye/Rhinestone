@@ -254,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div class="float-right">
-                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -73.3%; margin-left: 83%;">
+                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -90.3%; margin-left: 83%;">
                                             Save Patent Family
                                         </button>
                                     </div>
