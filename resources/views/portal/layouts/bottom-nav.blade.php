@@ -6,10 +6,21 @@
                     <span class="menu-title"><b>Dashboard</b></span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link {{ Route::is('contacts.*') ? 'active' : '' }}" href="{{ route('contacts.index') }}">
                     <span class="menu-title"><b>Contacts</b></span>
                 </a>
+            </li> -->
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="menu-title"><b>Contacts</b></span>
+                    <i class="fa fa-arrow"></i></a>
+                <div class="submenu">
+                    <ul class="submenu-item">
+                        <li class="nav-item"><a class="nav-link {{ Route::is('contacts.*') ? 'active' : '' }}" href="{{ route('contacts.index') }}"><b>Old Contact</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/merged"><b>Merged Contact</b></a></li>
+                    </ul>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link  {{ Route::is('invention-disclosures.*') ? 'active' : '' }}" href="{{ route('invention-disclosures.index') }}">

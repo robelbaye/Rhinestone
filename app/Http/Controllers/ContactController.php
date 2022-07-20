@@ -10,6 +10,7 @@ use App\Models\Investor;
 use App\Models\Agent;
 use App\Models\Licensee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
@@ -75,6 +76,25 @@ class ContactController extends Controller
         'portal.contacts.show', compact(['countries', 'applicant', 'investor', 'licensor', 'agent', 'licensee']));
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Contact  $contact
+     * @return \Illuminate\Http\Response
+     */
+    public function merged()
+    {
+        $countries = Country::all();
+        $applicant = Applicant::all();
+        $investor = Investor::all();
+        $licensor = Licensor::all();
+        $licensee = Licensee::all();
+        $agent = Agent::all();
+        return \view(
+            'portal.contacts.merged',
+            compact(['countries', 'applicant', 'investor', 'licensor', 'agent', 'licensee'])
+        );
+    }
     /**
      * Show the form for editing the specified resource.
      *
