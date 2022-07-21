@@ -13,7 +13,7 @@
     <!-- endinject -->
     <!-- Icons -->
     <link rel="stylesheet" href="../assets/vendors/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/fontawesome.min.css" type="text/css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../assets/css/horizontal-layout-light/style.css">
@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css">
-
-    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,7 +35,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- endinject -->
     <!-- plugin css for this page -->
-    <link rel="stylesheet" href="../../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
 </head>
 
 <body>
@@ -63,7 +61,9 @@
     <!-- container-scroller -->
 
     <!-- base:js -->
-    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../../assets/js/jquery-3.5.1.js"></script>
+    <script src="../../assets/js/bootstrap3-typeahead.min.js"></script>
+    <!-- <script src="../../assets/vendors/js/vendor.bundle.base.js"></script> -->
     <!-- endinject -->
     <!-- Plugin js for this page-->
     <script src="../../assets/vendors/chart.js/Chart.min.js"></script>
@@ -89,19 +89,46 @@
 
     <!-- plugin js for this page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="../../../../assets/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="../../../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="../../assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- End plugin js for this page -->
     <!-- Custom js for this page-->
-    <script src="../../../../assets/js/data-table.js"></script>
+    <script src="../../assets/js/data-table.js"></script>
     <!-- End custom js for this page-->
     <script src="../../js/intlTelInput.js"></script>
     <script src="../../js/intlTelInput-jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            $('#rocountry_name').keyup(function(){
+                var query = $(this).val();
+                if(query != '')
+                {
+                    var _token = $('input[name="_token"]').val();
+                    $.ajax({
+                        url:"{{ route('autofill.fetch') }}",
+                        method:"POST",
+                        data:{query:query, _token:_token},
+                        success:function(data){
+                            $('#rocountryList').fadeIn();
+                            $('#rocountryList').html(data);
+                        }
+                    });
+                }
+            });
+
+            $(document).on('click', 'li', function(){
+                $('#rocountry_name').val($(this).text());
+                $('#rocountryList').fadeOut();
+            });
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
             $('#Devroinvestor').DataTable(
-                "columns": [{
+                "columns": [
+                    {
                         "width": "10%"
                     },
                     {

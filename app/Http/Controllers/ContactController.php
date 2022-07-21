@@ -31,6 +31,31 @@ class ContactController extends Controller
         return \view('portal.contacts.index', compact(['countries','applicant','investor','licensor','agent','licensee']));
     }
 
+    public function fetch(Request $request)
+    {
+        // if($request->get('country'))
+        // {
+        //     $query = $request->get('country');
+        //     $data = DB::table('countries')->where('name','LIKE','%{$query}%')->get();
+        //     $output = '<ul class="dropdown-menu" style="display:block; position:relative;">';
+        //     foreach($data as $row)
+        //     {
+        //         $output .= '<li><a href="#">.$row->name.</a></li>';
+        //     }
+        //     $output .='</ul>';
+        //     echo $output;
+        // }
+
+        $data = $request->all();
+
+        $query = $data['query'];
+
+        $filter_data = Country::select('name')
+                                ->where('name', 'LIKE', '%'.$query.'%')
+                                ->get();
+        return response()->json($filter_data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

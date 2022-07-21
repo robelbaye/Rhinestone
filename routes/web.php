@@ -13,6 +13,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\PerformanceController;
+use App\Http\Controllers\AutofillController;
 use App\Http\Controllers\MyprofileController;
 use App\Http\Controllers\InvoicesController;
 use App\Http\Controllers\UsersmgtController;
@@ -51,7 +52,9 @@ Route::get('/design', [App\Http\Controllers\DesignController::class, 'index'])->
 Route::get('/trademark', [App\Http\Controllers\TrademarkController::class, 'index'])->name('trademark');
 Route::get('/show', [App\Http\Controllers\InventionDisclosureController::class, 'show'])->name('show');
 Route::get('/showc', [ App\Http\Controllers\ContactController::class, 'show'])->name('showc');
-Route::get('/merged', [App\Http\Controllers\ContactController::class, 'merged'])->name('merged');
+Route::get('/merged', [ App\Http\Controllers\ContactController::class, 'merged'])->name('merged');
+Route::get('/autofill', [App\Http\Controllers\AutofillController::class, 'index'])->name('autofill');
+Route::post('/autofill/fetch', [App\Http\Controllers\AutofillController::class, 'fetch'])->name('autofill.fetch');
 
 // Invention Disclosures
 Route::resource('invention-disclosures', InventionDisclosureController::class)->only(['index', 'store', 'show', 'update', 'delete']);
