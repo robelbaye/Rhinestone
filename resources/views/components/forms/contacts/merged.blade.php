@@ -50,7 +50,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Surname:</label>
                                     <div class="col-sm-8">
-                                        <input name="InvestorLastName" type="name" class="form-control" placeholder=" Surname" value="{{ old('InvestorLastName') ?? ($investor->InvestorLastName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="InvestorLastName" id="InvestorLastName" type="name" class="form-control" placeholder=" Surname" value="{{ old('InvestorLastName') ?? ($investor->InvestorLastName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="InvestorLastNameList"></div>
                                         @error('InvestorLastName')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -61,7 +62,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Given name(s):</label>
                                     <div class="col-sm-8">
-                                        <input name="InvestorGivenName" type="InvestorGivenName" class="form-control" placeholder=" Given name" value="{{ old('InvestorGivenName') ?? ($investor->InvestorGivenName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="InvestorGivenName" id="InvestorGivenName" type="InvestorGivenName" class="form-control" placeholder=" Given name" value="{{ old('InvestorGivenName') ?? ($investor->InvestorGivenName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="InvestorGivenNameList"></div>
                                         @error('InvestorGivenName')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -74,6 +76,7 @@
                                     </label>
                                     <div class="col-sm-8">
                                         <input name="InvestorPhone" id="phone" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" class="form-control" value="{{ old('InvestorPhone') ?? ($investor->InvestorPhone ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="InvestorPhoneList"></div>
                                         @error('InvestorPhone')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -85,7 +88,8 @@
                                     <label class="col-sm-4 col-form-label text-right">Inventor e-Mail:
                                     </label>
                                     <div class="col-sm-8">
-                                        <input name="InvestorEmail" type="email" class="form-control" placeholder=" Inventor Email" value="{{ old('InvestorEmail') ?? ($investor->InvestorEmail ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="InvestorEmail" id="InvestorEmail" type="email" class="form-control" placeholder=" Inventor Email" value="{{ old('InvestorEmail') ?? ($investor->InvestorEmail ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="InvestorEmailList"></div>
                                         @error('InvestorEmail')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -96,7 +100,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Contract:</label>
                                     <div class="col-sm-8">
-                                        <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Inventor's Contract" value="{{ old('Contractor') ?? ($investor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Contractor" id="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Inventor's Contract" value="{{ old('Contractor') ?? ($investor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="ContractorList"></div>
                                         @error('Contractor')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -107,7 +112,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Type of Contract:</label>
                                     <div class="col-sm-8">
-                                        <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Inventor's Contract Type" value="{{ old('ContractorType') ?? ($investor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="ContractorType" id="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Inventor's Contract Type" value="{{ old('ContractorType') ?? ($investor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="ContractorTypeList"></div>
                                         @error('ContractorType')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -150,7 +156,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Home:</label>
                                     <div class="col-sm-8">
-                                        <input name="Home" type="text" class="form-control @error('Home') is-invalid @enderror" placeholder=" Home" value="{{ old('Home') ?? ($investor->Home ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Home" id="Home" type="text" class="form-control @error('Home') is-invalid @enderror" placeholder=" Home" value="{{ old('Home') ?? ($investor->Home ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="HomeList"></div>
                                         @error('Home')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -179,7 +186,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Zip/Postal Code:</label>
                                     <div class="col-sm-8">
-                                        <input name="Zip_Code" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" class="form-control @error('Zip_Code') is-invalid @enderror text-black" placeholder=" Zip/Postal Code" value="{{ old('Zip_Code') ?? ($investor->Zip_Code ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Zip_Code" id="Zip_Code" type="text" pattern="\d*" maxlength="13" onkeypress="return isNumber(event)" onpaste="return false;" class="form-control @error('Zip_Code') is-invalid @enderror text-black" placeholder=" Zip/Postal Code" value="{{ old('Zip_Code') ?? ($investor->Zip_Code ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Zip_CodeList"></div>
                                         @error('Zip_Code')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -190,7 +198,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Employer Name:</label>
                                     <div class="col-sm-8">
-                                        <input name="Employer_Name" type="text" class="form-control @error('Employer_Name') is-invalid @enderror" placeholder=" Inventor's Employer Name" value="{{ old('Employer_Name') ?? ($investor->Employer_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Employer_Name" id="Employer_Name" type="text" class="form-control @error('Employer_Name') is-invalid @enderror" placeholder=" Inventor's Employer Name" value="{{ old('Employer_Name') ?? ($investor->Employer_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Employer_NameList"></div>
                                         @error('Employer_Name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -212,7 +221,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Employer Address:</label>
                                     <div class="col-sm-8">
-                                        <input name="Employer_Address" type="text" class="form-control @error('Employer_Address') is-invalid @enderror" placeholder=" Inventor's Employer Address" value="{{ old('Employer_Address') ?? ($investor->Employer_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Employer_Address" id="Employer_Address" type="text" class="form-control @error('Employer_Address') is-invalid @enderror" placeholder=" Inventor's Employer Address" value="{{ old('Employer_Address') ?? ($investor->Employer_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Employer_AddressList"></div>
                                         @error('Employer_Address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -241,7 +251,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
                                     <div class="col-sm-8">
-                                        <input name="Email_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Inventor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Email_of_Future_Contact" id="Email_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Inventor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Email_of_Future_ContactList"></div>
                                         @error('Email_of_Future_Contact')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -273,7 +284,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Applicant ID: </label>
                                     <div class="col-sm-8">
-                                        <input name="applicant_ID" type="applicant_ID" class="form-control" placeholder=" Applicant ID" value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="applicant_ID" id="applicant_ID" type="applicant_ID" class="form-control" placeholder=" Applicant ID" value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="applicant_IDList"></div>
                                         @error('applicant_ID')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -284,7 +296,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Applicant Name </label>
                                     <div class="col-sm-8">
-                                        <input name="applicant_name" type="applicant_name" class="form-control" placeholder=" Applicant Name" value="{{ old('applicant_name') ?? ($applicant->applicant_name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="applicant_name" id="applicant_name" type="applicant_name" class="form-control" placeholder=" Applicant Name" value="{{ old('applicant_name') ?? ($applicant->applicant_name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="applicant_nameList"></div>
                                         @error('applicant_name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -295,7 +308,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Applicant's Address</label>
                                     <div class="col-sm-8">
-                                        <input name="applicant_address" type="text" class="form-control @error('applicant_address') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_address') ?? ($applicant->applicant_address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="applicant_address" id="applicant_address" type="text" class="form-control @error('applicant_address') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_address') ?? ($applicant->applicant_address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="applicant_addressList"></div>
                                         @error('applicant_address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -306,7 +320,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Applicant's Phone</label>
                                     <div class="col-sm-8">
-                                        <input name="applicant_phone" type="number" class="form-control @error('applicant_phone') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_phone') ?? ($applicant->applicant_phone ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="applicant_phone" id="applicant_phone" type="number" class="form-control @error('applicant_phone') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_phone') ?? ($applicant->applicant_phone ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="applicant_phoneList"></div>
                                         @error('applicant_phone')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -372,7 +387,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Applicant's e-Mail</label>
                                     <div class="col-sm-8">
-                                        <input name="applicant_email" type="email" class="form-control @error('applicant_email') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_email') ?? ($sow->applicant_email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="applicant_email" id="applicant_email" type="email" class="form-control @error('applicant_email') is-invalid @enderror" placeholder=" Applicant's Address" value="{{ old('applicant_email') ?? ($sow->applicant_email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="applicant_emailList"></div>
                                         @error('applicant_email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -404,7 +420,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Licensee ID:</label>
                                     <div class="col-sm-8">
-                                        <input name="Licensee_ID" type="Licensee_ID" class="form-control" placeholder=" Licensee ID" value="{{ old('Licensee_ID') ?? ( $investor->Licensee_ID ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
+                                        <input name="Licensee_ID" id="Licensee_ID" type="Licensee_ID" class="form-control" placeholder=" Licensee ID" value="{{ old('Licensee_ID') ?? ( $investor->Licensee_ID ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
+                                        <div id="Licensee_IDList"></div>
                                         @error('Licensee_ID')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -415,7 +432,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Licensee Name:</label>
                                     <div class="col-sm-8">
-                                        <input name="Licensee_Name" type="Licensee_Name" class="form-control" placeholder=" Licensee Name" value="{{ old('Licensee_Name') ?? ( $licencee->Licensee_Name ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
+                                        <input name="Licensee_Name" id="Licensee_Name" type="Licensee_Name" class="form-control" placeholder=" Licensee Name" value="{{ old('Licensee_Name') ?? ( $licencee->Licensee_Name ?? ( app()->environment('local') ? '' : '' ) ) }}" required>
+                                        <div id="Licensee_NameList"></div>
                                         @error('Licensee_Name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -426,7 +444,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Licensee's Address:</label>
                                     <div class="col-sm-8">
-                                        <input name="Licensee_Address" type="text" class="form-control @error('Licensee_Address') is-invalid @enderror" placeholder=" Licensee's Address" value="{{ old('Licensee_Address') ?? ($licensee->Licensee_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Licensee_Address" id="Licensee_Address" type="text" class="form-control @error('Licensee_Address') is-invalid @enderror" placeholder=" Licensee's Address" value="{{ old('Licensee_Address') ?? ($licensee->Licensee_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Licensee_AddressList"></div>
                                         @error('Licensee_Address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -437,7 +456,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Licensee's e-Mail:</label>
                                     <div class="col-sm-8">
-                                        <input name="Licensee_Email" type="email" class="form-control @error('Licensee_Email') is-invalid @enderror" placeholder=" Licensee's e-Mail" value="{{ old('Licensee_Email') ?? ($licensee->Licensee_Email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Licensee_Email" id="Licensee_Email" type="email" class="form-control @error('Licensee_Email') is-invalid @enderror" placeholder=" Licensee's e-Mail" value="{{ old('Licensee_Email') ?? ($licensee->Licensee_Email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Licensee_EmailList"></div>
                                         @error('Licensee_Email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -524,7 +544,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Licensor ID:</label>
                                     <div class="col-sm-8">
-                                        <input name="Licensor_ID" type="Licensor_ID" class="form-control" placeholder=" Licensor ID" value="{{ old('Licensor_ID') ?? ($licensor->Licensor_ID ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Licensor_ID" id="Licensor_ID" type="Licensor_ID" class="form-control" placeholder=" Licensor ID" value="{{ old('Licensor_ID') ?? ($licensor->Licensor_ID ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Licensor_IDList"></div>
                                         @error('Licensor_ID')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -535,7 +556,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Surname:</label>
                                     <div class="col-sm-8">
-                                        <input name="Last_Name" type="Last_Name" class="form-control" placeholder=" Surname" value="{{ old('Last_Name') ?? ($licensor->Last_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Last_Name" id="Last_Name" type="Last_Name" class="form-control" placeholder=" Surname" value="{{ old('Last_Name') ?? ($licensor->Last_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Last_NameList"></div>
                                         @error('Last_Name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -546,7 +568,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Given Name:</label>
                                     <div class="col-sm-8">
-                                        <input name="Given_Name" type="Given_Name" class="form-control" placeholder=" Given Name" value="{{ old('Given_Name') ?? ($licensor->Given_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Given_Name" id="Given_Name" type="Given_Name" class="form-control" placeholder=" Given Name" value="{{ old('Given_Name') ?? ($licensor->Given_Name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Given_NameList"></div>
                                         @error('Given_Name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -586,7 +609,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Home Address:</label>
                                     <div class="col-sm-8">
-                                        <input name="Home_Address" type="text" class="form-control @error('Home_Address') is-invalid @enderror" placeholder=" Home Address" value="{{ old('Home_Address') ?? ($licensor->Home_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Home_Address" id="Home_Address" type="text" class="form-control @error('Home_Address') is-invalid @enderror" placeholder=" Home Address" value="{{ old('Home_Address') ?? ($licensor->Home_Address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Home_AddressList"></div>
                                         @error('Home_Address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -597,7 +621,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Employer Name:</label>
                                     <div class="col-sm-8">
-                                        <input name="Employer" type="text" class="form-control @error('Employer') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Employer') ?? ($licensor->Employer ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Employer" id="Employer" type="text" class="form-control @error('Employer') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Employer') ?? ($licensor->Employer ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="EmployerList"></div>
                                         @error('Employer')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -650,7 +675,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Contractor:</label>
                                     <div class="col-sm-8">
-                                        <input name="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Licensor's Contractor" value="{{ old('Contractor') ?? ($licensor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Contractor" id="Contractor" type="text" class="form-control @error('Contractor') is-invalid @enderror" placeholder=" Licensor's Contractor" value="{{ old('Contractor') ?? ($licensor->Contractor ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="ContractorList"></div>
                                         @error('Contractor')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -661,7 +687,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Contractor Type:</label>
                                     <div class="col-sm-8">
-                                        <input name="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Licensor's Contractor Type" value="{{ old('ContractorType') ?? ($licensor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="ContractorType" id="ContractorType" type="text" class="form-control @error('ContractorType') is-invalid @enderror" placeholder=" Licensor's Contractor Type" value="{{ old('ContractorType') ?? ($licensor->ContractorType ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="ContractorTypeList"></div>
                                         @error('ContractorType')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -683,7 +710,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
                                     <div class="col-sm-8">
-                                        <input name="Email_of_Future_Contact" type="email" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Email_of_Future_Contact') ?? ($licensor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="Email_of_Future_Contact" id="Email_of_Future_Contact" type="email" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Email_of_Future_Contact') ?? ($licensor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="Email_of_Future_ContactList"></div>
                                         @error('Email_of_Future_Contact')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -721,7 +749,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Agent Name: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_name" type="agent_name" class="form-control" placeholder=" Agent Name" value="{{ old('agent_name') ?? ($agent->agent_name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_name" id="agent_name" type="agent_name" class="form-control" placeholder=" Agent Name" value="{{ old('agent_name') ?? ($agent->agent_name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_nameList"></div>
                                         @error('agent_name')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -732,7 +761,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Foreign Associate Address: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_address" type="text" class="form-control @error('agent_address') is-invalid @enderror" placeholder=" Agent's address" value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_address" id="agent_address" type="text" class="form-control @error('agent_address') is-invalid @enderror" placeholder=" Agent's address" value="{{ old('agent_address') ?? ($agent->agent_address ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_addressList"></div>
                                         @error('agent_address')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -761,7 +791,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Contact Person: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_contact_person" type="text" class="form-control @error('agent_contact_person') is-invalid @enderror" placeholder=" Contact person" value="{{ old('agent_contact_person') ?? ($agent->agent_contact_person ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_contact_person" id="agent_contact_person" type="text" class="form-control @error('agent_contact_person') is-invalid @enderror" placeholder=" Contact person" value="{{ old('agent_contact_person') ?? ($agent->agent_contact_person ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_contact_personList"></div>
                                         @error('agent_contact_person')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -786,7 +817,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email Address: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_email" type="email" class="form-control @error('agent_email') is-invalid @enderror" placeholder=" Agent's e-Mail" value="{{ old('agent_email') ?? ($agent->email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_email" id="agent_email" type="email" class="form-control @error('agent_email') is-invalid @enderror" placeholder=" Agent's e-Mail" value="{{ old('agent_email') ?? ($agent->email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_emailList"></div>
                                         @error('agent_email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -797,7 +829,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Fax Number: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_fax_number" type="agent_fax_number" class="form-control @error('agent_fax_number') is-invalid @enderror" placeholder=" Agent's Fax Number" value="{{ old('agent_fax_number') ?? ($agent->agent_fax_number ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_fax_number" id="agent_fax_number" type="agent_fax_number" class="form-control @error('agent_fax_number') is-invalid @enderror" placeholder=" Agent's Fax Number" value="{{ old('agent_fax_number') ?? ($agent->agent_fax_number ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_fax_numberList"></div>
                                         @error('agent_fax_number')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -808,7 +841,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Office Contact: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_office_phone" type="phone" class="form-control @error('agent_office_phone') is-invalid @enderror" placeholder=" agent's office_contact" value="{{ old('agent_office_phone') ?? ($agent->agent_office_phone ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_office_phone" id="agent_office_phone" type="phone" class="form-control @error('agent_office_phone') is-invalid @enderror" placeholder=" agent's office_contact" value="{{ old('agent_office_phone') ?? ($agent->agent_office_phone ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_office_phoneList"></div>
                                         @error('agent_office_phone')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -819,7 +853,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email of Future Contact: </label>
                                     <div class="col-sm-8">
-                                        <input name="agent_future_email" type="email" class="form-control @error('agent_future_email') is-invalid @enderror" placeholder=" Agents's email_of_future_contact" value="{{ old('agent_future_email') ?? ($agent->agent_future_email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="agent_future_email" id="agent_future_email" type="email" class="form-control @error('agent_future_email') is-invalid @enderror" placeholder=" Agents's email_of_future_contact" value="{{ old('agent_future_email') ?? ($agent->agent_future_email ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="agent_future_emailList"></div>
                                         @error('agent_future_email')
                                         <div class="invalid-feedback">
                                             {{ $message }}

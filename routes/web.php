@@ -53,7 +53,7 @@ Route::get('/trademark', [App\Http\Controllers\TrademarkController::class, 'inde
 Route::get('/show', [App\Http\Controllers\InventionDisclosureController::class, 'show'])->name('show');
 Route::get('/showc', [ App\Http\Controllers\ContactController::class, 'show'])->name('showc');
 Route::get('/merged', [ App\Http\Controllers\ContactController::class, 'merged'])->name('merged');
-Route::get('/autofill', [App\Http\Controllers\AutofillController::class, 'index'])->name('autofill');
+Route::get('/family', [App\Http\Controllers\AutofillController::class, 'index'])->name('Family');
 Route::post('/autofill/fetch', [App\Http\Controllers\AutofillController::class, 'fetch'])->name('autofill.fetch');
 
 // Invention Disclosures
