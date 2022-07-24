@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class AutofillController extends Controller
 {
@@ -19,22 +19,6 @@ class AutofillController extends Controller
 
     public function fetch(Request $request)
     {
-        if($request->get('country'))
-        {
-            $query = $request->get('country');
-            $data = DB::table('countries')
-                    ->where('name','LIKE',"%{$query}%")
-                    ->get();
-            $output = '<ul class="dropdown-menu" style="display:block; position:relative; width:100%;">';
-            foreach($data as $row)
-            {
-                $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->name.'</a></li>
-                ';
-            }
-            $output .= '</ul>';
-            echo $output;
-        }
         // Inventor Search Starts Hear
         if($request->get('inventorname'))
         {
@@ -46,7 +30,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invInvestorLastName"><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -63,7 +47,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invInvestorGivenName"><a class="dropdown-item" href="#">'.$row->InvestorGivenName.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -80,7 +64,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invInvestorPhone"><a class="dropdown-item" href="#">'.$row->InvestorPhone.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -97,7 +81,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invInvestorEmail"><a class="dropdown-item" href="#">'.$row->InvestorEmail.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -114,7 +98,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invContractor"><a class="dropdown-item" href="#">'.$row->Contractor.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -131,7 +115,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invContractorType"><a class="dropdown-item" href="#">'.$row->ContractorType.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -148,7 +132,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invHome"><a class="dropdown-item" href="#">'.$row->Home.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -165,7 +149,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invZip_Code"><a class="dropdown-item" href="#">'.$row->Zip_Code.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -182,7 +166,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invEmployer_Name"><a class="dropdown-item" href="#">'.$row->Employer_Name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -199,7 +183,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invEmployer_Address"><a class="dropdown-item" href="#">'.$row->Employer_Address.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -216,7 +200,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="invEmail_of_Future_Contact"><a class="dropdown-item" href="#">'.$row->Email_of_Future_Contact.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -236,7 +220,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="appapplicant_ID"><a class="dropdown-item" href="#">'.$row->applicant_ID.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -253,7 +237,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="appapplicant_name"><a class="dropdown-item" href="#">'.$row->applicant_name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -270,7 +254,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="appapplicant_address"><a class="dropdown-item" href="#">'.$row->applicant_address.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -287,7 +271,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="appapplicant_phone"><a class="dropdown-item" href="#">'.$row->applicant_phone.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -304,7 +288,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="appapplicant_email"><a class="dropdown-item" href="#">'.$row->applicant_email.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -324,7 +308,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="licLicensee_ID"><a class="dropdown-item" href="#">'.$row->Licensee_ID.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -341,7 +325,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="licLicensee_Name"><a class="dropdown-item" href="#">'.$row->Licensee_Name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -358,7 +342,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="licLicensee_Address"><a class="dropdown-item" href="#">'.$row->Licensee_Address.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -375,7 +359,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="licLicensee_Email"><a class="dropdown-item" href="#">'.$row->Licensee_Email.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -395,7 +379,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseLicensor_ID"><a class="dropdown-item" href="#">'.$row->Licensor_ID.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -412,7 +396,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseLast_Name"><a class="dropdown-item" href="#">'.$row->Last_Name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -429,7 +413,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseGiven_Name"><a class="dropdown-item" href="#">'.$row->Given_Name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -446,7 +430,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <liid="liseHome_Address"><a class="dropdown-item" href="#">'.$row->Home_Address.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -463,7 +447,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseEmployer"><a class="dropdown-item" href="#">'.$row->Employer.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -480,7 +464,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseContractor"><a class="dropdown-item" href="#">'.$row->Contractor.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -497,7 +481,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseContractorType"><a class="dropdown-item" href="#">'.$row->ContractorType.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -514,7 +498,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="liseEmail_of_Future_Contact"><a class="dropdown-item" href="#">'.$row->Email_of_Future_Contact.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -534,7 +518,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_name"><a class="dropdown-item" href="#">'.$row->agent_name.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -551,7 +535,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_address"><a class="dropdown-item" href="#">'.$row->agent_address.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -568,7 +552,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_contact_person"><a class="dropdown-item" href="#">'.$row->agent_contact_person.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -585,7 +569,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_email"><a class="dropdown-item" href="#">'.$row->agent_email.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -602,7 +586,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_fax_number"><a class="dropdown-item" href="#">'.$row->agent_fax_number.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -619,7 +603,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_office_phone"><a class="dropdown-item" href="#">'.$row->agent_office_phone.'</a></li>
                 ';
             }
             $output .= '</ul>';
@@ -636,7 +620,7 @@ class AutofillController extends Controller
             foreach($data as $row)
             {
                 $output .= '
-                <li><a class="dropdown-item" href="#">'.$row->InvestorLastName.'</a></li>
+                <li id="agtagent_future_email"><a class="dropdown-item" href="#">'.$row->agent_future_email.'</a></li>
                 ';
             }
             $output .= '</ul>';

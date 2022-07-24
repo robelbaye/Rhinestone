@@ -12,7 +12,6 @@
         <div id="collapse-10" class="collapse hidden" role="tabpanel" aria-labelledby="heading-10" data-bs-parent="#accordion-4">
             <div class="card">
                 <form class="row card-body" id="agent-form" action="{{ route('agent-crud.store') }}" method="POST">
-                    @csrf
                     <!-- Invention Starts Hear -->
                     <fieldset>
                         <legend>Invention</legend>
@@ -88,7 +87,7 @@
                                     <label class="col-sm-4 col-form-label text-right">Inventor e-Mail:
                                     </label>
                                     <div class="col-sm-8">
-                                        <input name="InvestorEmail" id="InvestorEmail" type="email" class="form-control" placeholder=" Inventor Email" value="{{ old('InvestorEmail') ?? ($investor->InvestorEmail ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <input name="InvestorEmail" id="InvestorEmail" type="email" class="form-control" placeholder=" Inventor Email" required>
                                         <div id="InvestorEmailList"></div>
                                         @error('InvestorEmail')
                                         <div class="invalid-feedback">
@@ -251,8 +250,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
                                     <div class="col-sm-8">
-                                        <input name="Email_of_Future_Contact" id="Email_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Inventor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
-                                        <div id="Email_of_Future_ContactList"></div>
+                                        <input name="Email_of_Future_Contact" id="invEmail_of_Future_Contact" type="text" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Inventor's Email of Future Contact" value="{{ old('Email_of_Future_Contact') ?? ($investor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="invEmail_of_Future_ContactList"></div>
                                         @error('Email_of_Future_Contact')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -710,8 +709,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label text-right">Email of Future Contact:</label>
                                     <div class="col-sm-8">
-                                        <input name="Email_of_Future_Contact" id="Email_of_Future_Contact" type="email" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Email_of_Future_Contact') ?? ($licensor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
-                                        <div id="Email_of_Future_ContactList"></div>
+                                        <input name="liseEmail_of_Future_Contact" id="Email_of_Future_Contact" type="email" class="form-control @error('Email_of_Future_Contact') is-invalid @enderror" placeholder=" Licensors Employer Name" value="{{ old('Email_of_Future_Contact') ?? ($licensor->Email_of_Future_Contact ?? (app()->environment('local') ? '' : '')) }}" required>
+                                        <div id="liseEmail_of_Future_ContactList"></div>
                                         @error('Email_of_Future_Contact')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -885,6 +884,7 @@
                         </div>
                     </div>
                 </form>
+                {{ csrf_field() }}
             </div>
         </div>
     </div>

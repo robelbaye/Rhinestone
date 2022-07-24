@@ -287,7 +287,7 @@
                 }
             });
 
-            $('#Email_of_Future_Contact').keyup(function(){
+            $('#invEmail_of_Future_Contact').keyup(function(){
                 var inventoremailoffuture = $(this).val();
                 if(inventoremailoffuture != '')
                 {
@@ -297,8 +297,8 @@
                         method:"POST",
                         data:{inventoremailoffuture:inventoremailoffuture, _token:_token},
                         success:function(data){
-                            $('#Email_of_Future_ContactList').fadeIn();
-                            $('#Email_of_Future_ContactList').html(data);
+                            $('#invEmail_of_Future_ContactList').fadeIn();
+                            $('#invEmail_of_Future_ContactList').html(data);
                         }
                     });
                 }
@@ -582,7 +582,7 @@
                 }
             }); 
 
-            $('#Email_of_Future_Contact').keyup(function(){
+            $('#liseEmail_of_Future_Contact').keyup(function(){
                 var licensoremailoffuture = $(this).val();
                 if(licensoremailoffuture != '')
                 {
@@ -592,8 +592,8 @@
                         method:"POST",
                         data:{licensoremailoffuture:licensoremailoffuture, _token:_token},
                         success:function(data){
-                            $('#Email_of_Future_ContactList').fadeIn();
-                            $('#Email_of_Future_ContactList').html(data);
+                            $('#liseEmail_of_Future_ContactList').fadeIn();
+                            $('#liseEmail_of_Future_ContactList').html(data);
                         }
                     });
                 }
@@ -721,77 +721,75 @@
             }); 
 // Devro Agent Ends Hear
             $(document).on('click', 'li', function(){
-                $('#rocountry_name').val($(this).text());
-                $('#rocountryList').fadeOut();
-                $('#InvestorLastName').val($(this).text());
+                $('#InvestorLastName').val($('#invInvestorLastName').text());
                 $('#InvestorLastNameList').fadeOut();
-                $('#InvestorGivenName').val($(this).text());
+                $('#InvestorGivenName').val($('#invInvestorGivenName').text());
                 $('#InvestorGivenNameList').fadeOut();
-                $('#phone').val($(this).text());
+                $('#phone').val($('#invInvestorPhone').text());
                 $('#InvestorPhoneList').fadeOut();
-                $('#InvestorEmail').val($(this).text());
+                $('#InvestorEmail').val($('#invInvestorEmail').text());
                 $('#InvestorEmailList').fadeOut();
-                $('#Contractor').val($(this).text());
+                $('#Contractor').val($('#invContractor').text());
                 $('#ContractorList').fadeOut();
-                $('#ContractorType').val($(this).text());
+                $('#ContractorType').val($('#invContractorType').text());
                 $('#ContractorTypeList').fadeOut();
-                $('#Home').val($(this).text());
+                $('#Home').val($('#invHome').text());
                 $('#HomeList').fadeOut();
-                $('#Zip_Code').val($(this).text());
+                $('#Zip_Code').val($('#invZip_Code').text());
                 $('#Zip_CodeList').fadeOut();
-                $('#Employer_Name').val($(this).text());
+                $('#Employer_Name').val($('#invEmployer_Name').text());
                 $('#Employer_NameList').fadeOut();
-                $('#Employer_Address').val($(this).text());
+                $('#Employer_Address').val($('#invEmployer_Address').text());
                 $('#Employer_AddressList').fadeOut();
-                $('#Email_of_Future_Contact').val($(this).text());
-                $('#Email_of_Future_ContactList').fadeOut();
-                $('#applicant_ID').val($(this).text());
+                $('#invEmail_of_Future_Contact').val($('#invEmail_of_Future_Contact').text());
+                $('#invEmail_of_Future_ContactList').fadeOut();
+                $('#applicant_ID').val($('#appapplicant_ID').text());
                 $('#applicant_IDList').fadeOut();
-                $('#applicant_name').val($(this).text());
+                $('#applicant_name').val($('#appapplicant_name').text());
                 $('#applicant_nameList').fadeOut();
-                $('#applicant_address').val($(this).text());
+                $('#applicant_address').val($('#appapplicant_address').text());
                 $('#applicant_addressList').fadeOut();
-                $('#applicant_phone').val($(this).text());
+                $('#applicant_phone').val($('#appapplicant_phone').text());
                 $('#applicant_phoneList').fadeOut();
-                $('#applicant_email').val($(this).text());
+                $('#applicant_email').val($('#appapplicant_email').text());
                 $('#applicant_emailList').fadeOut();
-                $('#Licensee_ID').val($(this).text());
+                $('#Licensee_ID').val($('#licLicensee_ID').text());
                 $('#Licensee_IDList').fadeOut();
-                $('#Licensee_Name').val($(this).text());
+                $('#Licensee_Name').val($('#licLicensee_Name').text());
                 $('#Licensee_NameList').fadeOut();
-                $('#Licensee_Address').val($(this).text());
+                $('#Licensee_Address').val($('#licLicensee_Address').text());
                 $('#Licensee_AddressList').fadeOut();
-                $('#Licensee_Email').val($(this).text());
+                $('#Licensee_Email').val($('#licLicensee_Email').text());
                 $('#Licensee_EmailList').fadeOut();
-                $('#Licensor_ID').val($(this).text());
+                $('#Licensor_ID').val($('#liseLicensor_ID').text());
                 $('#Licensor_IDList').fadeOut();
-                $('#Last_Name').val($(this).text());
+                $('#Last_Name').val($('#liseLast_Name').text());
                 $('#Last_NameList').fadeOut();
-                $('#Given_Name').val($(this).text());
+                $('#Given_Name').val($('#liseGiven_Name').text());
                 $('#Given_NameList').fadeOut();
-                $('#Home_Address').val($(this).text());
+                $('#Home_Address').val($('#liseHome_Address').text());
                 $('#Home_AddressList').fadeOut();
-                $('#Employer').val($(this).text());
+                $('#Employer').val($('#liseEmployer').text());
                 $('#EmployerList').fadeOut();
-                $('#Contractor').val($(this).text());
+                $('#Contractor').val($('#liseContractor').text());
                 $('#ContractorList').fadeOut();
-                $('#ContractorType').val($(this).text());
+                $('#ContractorType').val($('#liseContractorType').text());
                 $('#ContractorTypeList').fadeOut();
-                $('#Email_of_Future_Contact').val($(this).text());
-                $('#Email_of_Future_ContactList').fadeOut();
-                $('#agent_name').val($(this).text());
+                $('#liseEmail_of_Future_Contact').val($('#liseEmail_of_Future_Contact').text());
+                $('#liseEmail_of_Future_ContactList').fadeOut();
+                $('#agent_name').val($('#agtagent_name').text());
                 $('#agent_nameList').fadeOut();
-                $('#agent_address').val($(this).text());
+                $('#agent_address').val($('#agtagent_address').text());
                 $('#agent_addressList').fadeOut();
-                $('#agent_contact_person').val($(this).text());
+                $('#agent_contact_person').val($('#agtagent_contact_person').text());
                 $('#agent_contact_personList').fadeOut();
-                $('#agent_email').val($(this).text());
+                $('#agent_email').val($('#agtagent_email').text());
                 $('#agent_emailList').fadeOut();
-                $('#agent_fax_number').val($(this).text());
+                $('#agent_fax_number').val($('#agtagent_fax_number').text());
                 $('#agent_fax_numberList').fadeOut();
-                $('#agent_office_phone').val($(this).text());
+                $('#agent_office_phone').val($('#agtagent_office_phone').text());
                 $('#agent_office_phoneList').fadeOut();
-                $('#agent_future_email').val($(this).text());
+                $('#agent_future_email').val($('#agtagent_future_email').text());
                 $('#agent_future_emailList').fadeOut();
             });
         });
@@ -900,6 +898,7 @@
                 ]
             );
             $('#Devropatent').DataTable();
+            $('#Devrofamily').DataTable();
             $('#Devrodesign').DataTable();
             $('#Devrotrademark').DataTable();
             $('#Devrolist').DataTable();
