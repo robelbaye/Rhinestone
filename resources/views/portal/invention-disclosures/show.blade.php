@@ -15,7 +15,7 @@
                 <a class="nav-link" id="pills-related-tab" data-bs-toggle="pill" href="#pills-related" role="tab" aria-controls="pills-related" aria-selected="false">Related Link(s)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor" role="tab" aria-controls="pills-investor" aria-selected="false">Inventor(s)</a>
+                <a class="nav-link" id="pills-Inventors-tab" data-bs-toggle="pill" href="#pills-Inventors" role="tab" aria-controls="pills-Inventors" aria-selected="false">Inventor(s)</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-compensation-tab" data-bs-toggle="pill" href="#pills-compensation" role="tab" aria-controls="pills-compensation" aria-selected="false">Inventor Compensation</a>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-investor" role="tabpanel" aria-labelledby="pills-investor-tab">
+            <div class="tab-pane fade" id="pills-Inventors" role="tabpanel" aria-labelledby="pills-Inventors-tab">
                 <div class="media">
                     <div class="table-responsive">
                         <table class="table">

@@ -6,7 +6,7 @@
         <h4 class="card-title"><button onclick="history.back()" class="btn btn-success text-center">Go Back</button> Address Book</h4>
         <ul class="nav nav-pills nav-pills-success" id="pills-tab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="pills-investor-tab" data-bs-toggle="pill" href="#pills-investor" role="tab" aria-controls="pills-investor" aria-selected="true">Investor(s)</a>
+                <a class="nav-link active" id="pills-Inventors-tab" data-bs-toggle="pill" href="#pills-Inventors" role="tab" aria-controls="pills-Inventors" aria-selected="true">Inventors(s)</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-applicant-tab" data-bs-toggle="pill" href="#pills-applicant" role="tab" aria-controls="pills-applicant" aria-selected="false">Applicant</a>
@@ -35,7 +35,7 @@
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-investor" role="tabpanel" aria-labelledby="pills-investor-tab">
+            <div class="tab-pane fade show active" id="pills-Inventors" role="tabpanel" aria-labelledby="pills-Inventors-tab">
                 <div class="media">
                     <div class="table-responsive">
                         <table class="table">
