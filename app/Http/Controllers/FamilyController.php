@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\Licensor;
+use App\Models\Applicant;
+use App\Models\Investor;
+use App\Models\Agent;
+use App\Models\Licensee;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -53,12 +58,19 @@ class FamilyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $countries = Country::all();
+        $applicant = Applicant::all();
+        $investor = Investor::all();
+        $licensor = Licensor::all();
+        $licensee = Licensee::all();
+        $agent = Agent::all();
+        return \view(
+        'portal.country.Familyshow', compact(['countries', 'applicant', 'investor', 'licensor', 'agent', 'licensee']));
     }
 
     /**

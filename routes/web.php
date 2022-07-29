@@ -53,6 +53,7 @@ Route::get('/design', [App\Http\Controllers\DesignController::class, 'index'])->
 Route::get('/trademark', [App\Http\Controllers\TrademarkController::class, 'index'])->name('trademark');
 Route::get('/show', [App\Http\Controllers\InventionDisclosureController::class, 'show'])->name('show');
 Route::get('/showc', [ App\Http\Controllers\ContactController::class, 'show'])->name('showc');
+Route::get('/showvis', [ App\Http\Controllers\FamilyController::class, 'show'])->name('show');
 Route::get('/merged', [ App\Http\Controllers\ContactController::class, 'merged'])->name('merged');
 Route::get('/family', [App\Http\Controllers\FamilyController::class, 'index'])->name('Family');
 Route::post('/autofill/fetch', [App\Http\Controllers\AutofillController::class, 'fetch'])->name('autofill.fetch');

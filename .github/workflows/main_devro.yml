@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'devro'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F5B01800C26425CA34E9D6C759025F6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3612F819691E4D83B177B97842A26989 }}
           package: .
