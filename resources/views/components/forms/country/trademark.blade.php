@@ -3,8 +3,11 @@
 <div class="accordion accordion-bordered" id="accordion-4" role="tablist">
     <div class="card">
         <div class="card-header" role="tab" id="heading-10">
+            <button form="Trademark" type="submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
+                Create Trademark
+            </button>
             <h6 class="font-weight-bold mb-0">
-                <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
+                <a data-bs-toggle="collapse" href="#collapse-10,#create-btn" aria-expanded="true" aria-controls="collapse-10">
                     <span class="btn btn-success">Add Trademark</span>
                 </a>
             </h6>
@@ -292,11 +295,6 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="float-right">
-                            <button form="patent" type="submit" class="btn btn-success text-center" style="width: 220px; margin-top: -640px; margin-left: 85%;">
-                                Create Trademark
-                            </button>
                         </div>
                     </form>
                 </div>
