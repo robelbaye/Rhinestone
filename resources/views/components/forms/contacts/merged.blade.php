@@ -2,9 +2,12 @@
 
 <div class="accordion accordion-bordered" id="accordion-4" role="tablist">
     <div class="card">
-        <div class="card-header" role="tab" id="heading-10">
+        <div class="card-header mb-2" role="tab" id="heading-10">
+            <button form="agent-form" type="submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
+                Save
+            </button>
             <h6 class="font-weight-bold mb-0">
-                <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
+                <a data-bs-toggle="collapse" href="#collapse-10,#create-btn" aria-expanded="true" aria-controls="collapse-10">
                     <span class="btn btn-success">Add Address Book(s) </span>
                 </a>
             </h6>
@@ -875,14 +878,6 @@
                             </div>
                         </div>
                     </fieldset>
-                    <!-- Agent Ends Hear -->
-                    <div class="header">
-                        <div class="float-right float-top">
-                            <button type="submit" class="btn btn-success text-center">
-                                Save
-                            </button>
-                        </div>
-                    </div>
                 </form>
                 {{ csrf_field() }}
             </div>

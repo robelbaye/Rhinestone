@@ -20,7 +20,7 @@ class CreateAgentsTable extends Migration
             $table->string('agent_address');
             $table->string('agent_nationality');
             $table->string('agent_contact_person');
-            $table->string('agent_phone');
+            $table->string('agent_phone')->unique();
             $table->string('agent_email')->unique();
             $table->string('agent_fax_number');
             $table->string('agent_office_phone');

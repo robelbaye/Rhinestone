@@ -2,9 +2,12 @@
 
 <div class="accordion accordion-bordered" $="accordion-4" role="tablist">
 	<div class="card">
-		<div class="card-header" role="tab" id="heading-10">
-			<h6 class="font-weight-bold mb-0">
-				<a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
+        <div class="card-header mb-2" role="tab" id="heading-10">
+            <button form="licensor-form" type="submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
+                Invoice
+            </button>
+            <h6 class="font-weight-bold mb-0">
+                <a data-bs-toggle="collapse" href="#collapse-10,#create-btn" aria-expanded="true" aria-controls="collapse-10">
 					<span class="btn btn-success">Add Invoice</span>
 				</a>
 			</h6>
@@ -107,11 +110,6 @@
 									</select>
 								</div>
 							</div>
-						</div>
-						<div class="float-right">
-							<button form="agent-form" type="submit" class="btn btn-success text-center" style="width: 100px; margin-top: -310px; margin-left: 90%;">
-								Save
-							</button>
 						</div>
 					</form>
 				</div>
