@@ -45,21 +45,22 @@
                 <div class="card-body row">
                     <form class="row card-body" id="Trademark" action="{{ route('applicant-crud.store') }}" method="POST">
                         @csrf
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Case No: </label>
+                                <label class="col-sm-2 col-form-label ">Case No: </label>
                                 <div class="col-sm-4">
-                                    <input name="applicant_ID" type="applicant_ID" class="form-control" placeholder=" Case no" value="{{ old('applicant_ID') ?? ($applicant->applicant_ID ?? (app()->environment('local') ? '' : '')) }}" required>
-                                    @error('applicant_ID')
+                                    <input name="CaseNo" class="form-control" placeholder=" Case no" value="{{ old('CaseNo') ?? ($applicant->CaseNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('CaseNo')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
                                     @enderror
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Country</label>
+
+                                <label class="col-sm-2 col-form-label ">Country</label>
                                 <div class="col-md-4">
                                     <select name="Country" class="form-control @error('Country') is-invalid @enderror text-black" required>
-                                        <option value="">Country</option>
+                                        <option value="">Select Country</option>
                                         @foreach ($countries as $country)
                                         <option value="{{ $country->id }}" {{ old('primary_attorney') == $country->id ? 'selected' : '' }}>
                                             {{ $country->name }}
@@ -67,109 +68,53 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                @error('reference_number')
+                                @error('Country')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="form-group row ">
+                                <label class="col-sm-2 col-form-label ">Trademark Name: </label>
+                                <div class="col-sm-4 col-md-10">
+                                    <input name="TrademarkName" type="title" class="form-control" placeholder=" Trademark Name " value="{{ old('TrademarkName') ?? ($user->TrademarkName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                </div>
+                                @error('TrademarkName')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Internal Title: </label>
-                                <div class="col-sm-4">
-                                    <input name="title" type="title" class="form-control" placeholder=" Internal Title" value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
+                                <label class="col-sm-2 col-form-label ">Formal Title: </label>
+                                <div class="col-sm-4 col-md-10">
+                                    <input name="Trademark" type="file" accept="image/*" class="form-control" placeholder=" Trademark" value="{{ old('TrademarkName') ?? ($user->TrademarkName ?? (app()->environment('local') ? '' : '')) }}" required>
                                 </div>
-                                @error('reference_number')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Formal Title: </label>
-                                <div class="col-sm-4">
-                                    <input name="title" type="title" class="form-control" placeholder=" Formal Title" value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
-                                </div>
-                                @error('reference_number')
+                                @error('Trademark')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Type of Filing:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">Patent</option>
-                                        <option value="Pending">Design</option>
-                                        <option value="Filed">Trademark</option>
-                                        <option value="Abandoned">Copyright</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Sub-Type of Filing:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">1</option>
-                                        <option value="Pending">2</option>
-                                        <option value="Filed">3</option>
-                                        <option value="Abandoned">4</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Status:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">Open</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Filed">Filed</option>
-                                        <option value="Abandoned">Abandoned</option>
-                                        <option value="Sold">Sold</option>
-                                        <option value="Licenced">Licenced</option>
-                                        <option value="OnHold">OnHold</option>
-                                        <option value="Opposed">Opposed</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Sub-Status:</label>
-                                <div class="col-sm-4">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Open">Open</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Filed">Filed</option>
-                                        <option value="Abandoned">Abandoned</option>
-                                        <option value="Sold">Sold</option>
-                                        <option value="Licenced">Licenced</option>
-                                        <option value="OnHold">OnHold</option>
-                                        <option value="Opposed">Opposed</option>
-                                    </select>
-                                </div>
-                            </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-sm-12 col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Attorney-1:</label>
+                                <label class="col-sm-3 col-form-label ">Attorney-1:</label>
                                 <div class="col-md-3">
-                                    <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="PrimaryAttorney" class="form-control @error('PrimaryAttorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-1</option>
                                         @foreach ($users as $userslist)
-                                        <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
-                                            {{ $userslist->name }}
-                                        </option>
+                                            <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                                {{ $userslist->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Agent: </label>
+                                <label class="col-sm-2 col-form-label ">Agent: </label>
                                 <div class="col-md-3">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
+                                    <select name="Agent" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
                                         <option selected>Select Agent</option>
                                         @foreach ($users as $attorneys)
                                         <option value="{{ $attorneys->id }}" {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
@@ -185,7 +130,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Attorney-2:</label>
+                                <label class="col-sm-3 col-form-label ">Attorney-2:</label>
                                 <div class="col-md-3">
                                     <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-2</option>
@@ -196,12 +141,15 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Agent Ref: </label>
+                                <label class="col-sm-2 col-form-label ">Agent-2: </label>
                                 <div class="col-md-3">
                                     <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Design">demo</option>
-                                        <option value="Design">testuser</option>
+                                        <option selected>Select Agent-2</option>
+                                        @foreach ($users as $attorneys)
+                                            <option value="{{ $attorneys->id }}" {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                                {{ $attorneys->name }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 @error('reference_number')
@@ -211,7 +159,7 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Paralegal-1:</label>
+                                <label class="col-sm-3 col-form-label ">Paralegal-1:</label>
                                 <div class="col-md-3">
                                     <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-1</option>
@@ -222,25 +170,10 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Agent-2: </label>
-                                <div class="col-md-3">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select Agent-2</option>
-                                        @foreach ($users as $attorneys)
-                                        <option value="{{ $attorneys->id }}" {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
-                                            {{ $attorneys->name }}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                @error('reference_number')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
+
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Paralegal-2:</label>
+                                <label class="col-sm-3 col-form-label ">Paralegal-2:</label>
                                 <div class="col-md-3">
                                     <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-2</option>
@@ -251,50 +184,133 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Agent-2 Ref: </label>
-                                <div class="col-md-3">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Design">demo</option>
-                                        <option value="Design">testuser</option>
-                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <div class=" row ">
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-5 col-form-label">Trademark Priority No: </label>
+                                    <input class="col-md-7  form-control" name="TrademarkPriorityNo" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;" placeholder="Priority No " value="{{ old('TrademarkPriorityNo') ?? ($designs->TrademarkPriorityNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkPriorityNo')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
-                                @error('reference_number')
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-3 col-form-label">Date: </label>
+                                    <input class="col-md-9 mr-0 w-100 form-control @error('TrademarkPriorityDate') is-invalid @enderror"  name="TrademarkPriorityDate" type="date" placeholder=" 72" value="{{ old('TrademarkPriorityDate') ?? ((isset($sow->TrademarkPriorityDate) ? $sow->TrademarkPriorityDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkPriorityDate')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class=" row ">
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-5 col-form-label">Trademark Application No: </label>
+                                    <input class="col-md-7  form-control" name="TrademarkApplicationNo"
+                                           type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)"
+                                           onpaste="return false;" placeholder="Application No"
+                                           value="{{ old('TrademarkPriorityNo') ?? ($designs->TrademarkApplicationNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkApplicationNo')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-3 col-form-label">Date: </label>
+                                    <input class="col-md-9 mr-0 w-100 form-control @error('TrademarkApplicationDate') is-invalid @enderror"
+                                           name="TrademarkApplicationDate" type="date" placeholder=" 72"
+                                           value="{{ old('TrademarkApplicationDate') ?? ((isset($sow->TrademarkApplicationDate) ? $sow->TrademarkApplicationDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkApplicationDate')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class=" row ">
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-5 col-form-label">Trademark Registration No: </label>
+                                    <input class="col-md-7  form-control" name="TrademarkRegistrationNo" type="text"
+                                           pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"
+                                           placeholder="Registration No"
+                                           value="{{ old('TrademarkPriorityNo') ?? ($designs->TrademarkPriorityNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkRegistrationNo')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="form-group row col-md-6">
+                                    <label class="col-md-3 col-form-label">Date: </label>
+                                    <input class="col-md-9 mr-0 w-100 form-control @error('TrademarkRegistrationDate') is-invalid @enderror"
+                                           name="TrademarkRegistrationDate" type="date"
+                                           value="{{ old('TrademarkRegistrationDate') ?? ((isset($sow->TrademarkRegistrationDate) ? $sow->TrademarkRegistrationDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    @error('TrademarkRegistrationDate')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Next Tax Date: </label>
+                                <input name="NextTaxDate" type="date" class="col-md-9 form-control @error('NextTaxDate') is-invalid @enderror" placeholder=" 72" value="{{ old('NextTaxDate') ?? ((isset($sow->ExpireDate) ? $sow->ExpireDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                @error('NextTaxDate')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Cost Center No: </label>
-                                <div class="col-md-3">
-                                    <input name="title" type="title" class="form-control" placeholder=" Cost No" value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
-                                </div>
-                                @error('reference_number')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
-                                <label class="col-sm-2 col-form-label text-right">Cost Center Code: </label>
-                                <div class="col-md-3">
-                                    <input name="title" type="title" class="form-control" placeholder=" Cost Code" value="{{ old('title') ?? ($user->name ?? (app()->environment('local') ? '' : '')) }}" required>
-                                </div>
-                                @error('reference_number')
+                                <label class="col-md-3 col-form-label">Taxes Paid By: </label>
+                                <input name="TaxPaidBy" type="TaxPaidBy" class="col-md-9 form-control" placeholder=" Taxes Paid By"
+                                       value="{{ old('TaxPaidBy') ?? ($designs->TaxPaidBy ?? (app()->environment('local') ? '' : '')) }}" required>
+                                @error('TaxPaidBy')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
                             </div>
+
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label text-right">Licence:</label>
-                                <div class="col-sm-3">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select option</option>
-                                        <option value="Design">Yes</option>
-                                        <option value="Design">No</option>
-                                    </select>
-                                </div>
+                                <label class="col-md-3 col-form-label">Does it expire? </label>
+                                <select name="DoesItExpire" id="doesItExpire" class="col-md-9 form-control @error('Country') is-invalid @enderror text-black" required>
+                                    <option value="false">No</option>
+                                    <option value="true">Yes</option>
+                                </select>
                             </div>
+
+                            <div class="form-group row" style="display: none" id="expireDateInputGroup">
+                                <label class="col-md-3 col-form-label">Expired Date: </label>
+                                <input name="ExpireDate" id="expireDateInput" type="date" class="col-md-9 form-control @error('ExpireDate') is-invalid @enderror"
+                                       value="{{ old('ExpireDate') ?? ((isset($sow->ExpireDate) ? $sow->ExpireDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                @error('ExpireDate')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <script type="text/javascript">
+                                var doesitexpire = document.getElementById('doesItExpire');
+                                var expireDateInputGroup = document.getElementById('expireDateInputGroup');
+                                var expireDateInput = document.getElementById('expireDateInput');
+                                doesitexpire.addEventListener('change',function(){
+                                    if(doesItExpire.value=='true'){
+                                        expireDateInputGroup.style.display='flex';
+                                    }else{
+                                        expireDateInputGroup.style.display='none';
+                                        expireDateInput.value=undefined;
+                                    }
+                                })
+                            </script>
                         </div>
                     </form>
                 </div>
