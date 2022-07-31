@@ -3,7 +3,7 @@
 <div class="accordion accordion-bordered" id="accordion-4" role="tablist">
     <div class="card">
         <div class="card-header" role="tab" id="heading-10">
-            <button form="Trademark" type="submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
+            <button form="Trademark" type="submit" value="Submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
                 Create Trademark
             </button>
             <h6 class="font-weight-bold mb-0">
@@ -43,7 +43,7 @@
             </table>
             <div class="card">
                 <div class="card-body row">
-                    <form class="row card-body" id="Trademark" action="{{ route('applicant-crud.store') }}" method="POST">
+                    <form class="row card-body" id="Trademark" name="Trademark" action="{{ route('trademark.store') }}" method="POST">
                         @csrf
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group row">
@@ -62,7 +62,7 @@
                                     <select name="Country" class="form-control @error('Country') is-invalid @enderror text-black" required>
                                         <option value="">Select Country</option>
                                         @foreach ($countries as $country)
-                                        <option value="{{ $country->id }}" {{ old('primary_attorney') == $country->id ? 'selected' : '' }}>
+                                        <option value="{{ $country->id }}" {{ old('Country') == $country->id ? 'selected' : '' }}>
                                             {{ $country->name }}
                                         </option>
                                         @endforeach
@@ -86,9 +86,31 @@
                                 @enderror
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label ">Formal Title: </label>
+                                <label class="col-sm-2 col-form-label ">Trademark: </label>
                                 <div class="col-sm-4 col-md-10">
-                                    <input name="Trademark" type="file" accept="image/*" class="form-control" placeholder=" Trademark" value="{{ old('TrademarkName') ?? ($user->TrademarkName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input id="imageInput" type="file" accept="image/*" class="form-control" placeholder=" Trademark" value="{{ old('TrademarkName') ?? ($user->TrademarkName ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <img id="preview" class="m-2" style="max-width: 98%;max-height: 50vh;display:none;" src="#" alt="patent preview" />
+                                    <input type="hidden" name="Trademark" id="trademarkValue"/>
+                                    <script type="text/javascript">
+                                        document.getElementById('imageInput').addEventListener("change", function(){
+                                            const input = document.getElementById('imageInput');
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    var preview = document.getElementById('preview');
+                                                    var trademarkValue = document.getElementById('trademarkValue');
+                                                    preview.setAttribute('src', e.target.result);
+                                                    trademarkValue.setAttribute('value',e.target.result);
+                                                    preview.style.display='block';
+
+                                                }
+
+                                                reader.readAsDataURL(input.files[0]);
+
+                                            }
+                                        });
+                                    </script>
                                 </div>
                                 @error('Trademark')
                                 <div class="invalid-feedback">
@@ -106,24 +128,30 @@
                                     <select name="PrimaryAttorney" class="form-control @error('PrimaryAttorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-1</option>
                                         @foreach ($users as $userslist)
-                                            <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                            <option value="{{ $userslist->id }}" {{ old('PrimaryAttorney') == $userslist->id ? 'selected' : '' }}>
                                                 {{ $userslist->name }}
                                             </option>
                                         @endforeach
                                     </select>
+
+                                    @error('PrimaryAttorney')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <label class="col-sm-2 col-form-label ">Agent: </label>
                                 <div class="col-md-3">
                                     <select name="Agent" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
                                         <option selected>Select Agent</option>
                                         @foreach ($users as $attorneys)
-                                        <option value="{{ $attorneys->id }}" {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
+                                        <option value="{{ $attorneys->id }}" {{ old('Agent') == $attorneys->id ? 'selected' : '' }}>
                                             {{ $attorneys->name }}
                                         </option>
                                         @endforeach
                                     </select>
                                 </div>
-                                @error('reference_number')
+                                @error('Agent')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -132,39 +160,23 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label ">Attorney-2:</label>
                                 <div class="col-md-3">
-                                    <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="SecondaryAttorney" class="form-control @error('SecondaryAttorney') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Attorney-2</option>
                                         @foreach ($users as $userslist)
-                                        <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        <option value="{{ $userslist->id }}" {{ old('SecondaryAttorney') == $userslist->id ? 'selected' : '' }}>
                                             {{ $userslist->name }}
                                         </option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label ">Agent-2: </label>
-                                <div class="col-md-3">
-                                    <select name="agreement_in_place" class="form-control @error('agreement_in_place') is-invalid @enderror text-black" required>
-                                        <option selected>Select Agent-2</option>
-                                        @foreach ($users as $attorneys)
-                                            <option value="{{ $attorneys->id }}" {{ old('primary_attorney') == $attorneys->id ? 'selected' : '' }}>
-                                                {{ $attorneys->name }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                @error('reference_number')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label ">Paralegal-1:</label>
                                 <div class="col-md-3">
-                                    <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="PrimaryParalegal" class="form-control @error('PrimaryParalegal') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-1</option>
                                         @foreach ($users as $userslist)
-                                        <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        <option value="{{ $userslist->id }}" {{ old('PrimaryParalegal') == $userslist->id ? 'selected' : '' }}>
                                             {{ $userslist->name }}
                                         </option>
                                         @endforeach
@@ -175,10 +187,10 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label ">Paralegal-2:</label>
                                 <div class="col-md-3">
-                                    <select name="primary_attorney" class="form-control @error('primary_attorney') is-invalid @enderror text-dark" required>
+                                    <select name="SecondaryParalegal" class="form-control @error('SecondaryParalegal') is-invalid @enderror text-dark" required>
                                         <option value="">Select a Paralegal-2</option>
                                         @foreach ($users as $userslist)
-                                        <option value="{{ $userslist->id }}" {{ old('primary_attorney') == $userslist->id ? 'selected' : '' }}>
+                                        <option value="{{ $userslist->id }}" {{ old('SecondaryParalegal') == $userslist->id ? 'selected' : '' }}>
                                             {{ $userslist->name }}
                                         </option>
                                         @endforeach
@@ -262,7 +274,7 @@
                         <div class="col-md-3 col-sm-12">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label">Next Tax Date: </label>
-                                <input name="NextTaxDate" type="date" class="col-md-9 form-control @error('NextTaxDate') is-invalid @enderror" placeholder=" 72" value="{{ old('NextTaxDate') ?? ((isset($sow->ExpireDate) ? $sow->ExpireDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                <input name="NextTaxDate" type="date" class="col-md-9 form-control @error('NextTaxDate') is-invalid @enderror" placeholder=" 72" value="{{ old('NextTaxDate') ?? ((isset($sow->NextTaxDate) ? $sow->NextTaxDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
                                 @error('NextTaxDate')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -291,7 +303,7 @@
                             <div class="form-group row" style="display: none" id="expireDateInputGroup">
                                 <label class="col-md-3 col-form-label">Expired Date: </label>
                                 <input name="ExpireDate" id="expireDateInput" type="date" class="col-md-9 form-control @error('ExpireDate') is-invalid @enderror"
-                                       value="{{ old('ExpireDate') ?? ((isset($sow->ExpireDate) ? $sow->ExpireDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" required>
+                                       value="{{ old('ExpireDate') ?? ((isset($sow->ExpireDate) ? $sow->ExpireDate->format('d-m-Y') : null) ?? (app()->environment('local') ? '' : '')) }}" >
                                 @error('ExpireDate')
                                 <div class="invalid-feedback">
                                     {{ $message }}

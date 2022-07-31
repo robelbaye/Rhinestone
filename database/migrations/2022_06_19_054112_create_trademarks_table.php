@@ -17,19 +17,18 @@ class CreateTrademarksTable extends Migration
             $table->id();
             $table->string("CaseNo")->unique();
             $table->string("TrademarkName")->unique();
-            $table->string("Trademark");# a path to uploaded file
+            $table->longText("Trademark");# a path to uploaded file
             $table->string("Country");
             $table->string("PrimaryAttorney");
             $table->string("SecondaryAttorney");
             $table->string("PrimaryParalegal");
             $table->string("SecondaryParalegal");
             $table->string("Agent");
-            $table->string("Agent2");
             $table->string("TaxPaidBy");
-            $table->date("ExpireDate");
+            $table->date("ExpireDate")->nullable();
+            $table->date("NextTaxDate");
             $table->string("TrademarkPriorityNo");
-            $table->string("PCountry");
-            $table->date("TrademarkPriorityNo");
+            $table->date("TrademarkPriorityDate");
             $table->string("TrademarkApplicationNo");
             $table->date("TrademarkApplicationDate");
             $table->string("TrademarkRegistrationNo");

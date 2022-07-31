@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Trademark extends Model
 {
     use HasFactory;
+    protected $fillable = ['CaseNo',
+        'TrademarkName',
+        'Trademark',
+        'Country',
+        'PrimaryAttorney',
+        'SecondaryAttorney',
+        'PrimaryParalegal',
+        'SecondaryParalegal',
+        'Agent',
+        'NextTaxDate',
+        'TaxPaidBy',
+        'ExpiryDate',
+        'TrademarkPriorityNo',
+        'TrademarkPriorityDate',
+        'TrademarkApplicationNo',
+        'TrademarkApplicationDate',
+        'TrademarkRegistrationNo',
+        'TrademarkRegistrationDate'];
 }

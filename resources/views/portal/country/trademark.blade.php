@@ -11,38 +11,40 @@
                     <table id="Devrotrademark" class="table table-striped table-bordered" style="width:100%">
                         <thead class="text-center">
                             <tr>
-                                <th>Family No</th>
-                                <th>Internal Title</th>
-                                <th>Formal Title</th>
-                                <th>Type of Filing</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th>Case No</th>
+                                <th>Trademark Name</th>
+                                <th>Taxes</th>
+                                <th>Invoice</th>
+                                <th>Applicant</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
+                        @foreach ($trademarks as $desitem)
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$desitem->CaseNo}}</td>
+                                <td>{{$desitem->Country}}</td>
+                                <td>{{$desitem->FormalTitle}}</td>
+                                <td>{{$desitem->TypeofFiling}}</td>
+                                <td>{{$desitem->Status}}</td>
                                 <td>
-                                    <label class="badge badge-info"></label>
-                                </td>
-                                <td>
-                                    <a class="btn btn-outline-warning btn-sm"
-                                        href="#">
+                                    <a class="btn btn-outline-warning btn-sm" href="{{ url('/designcrud/' . $desitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
-                                    <a class="btn btn-outline-primary btn-sm"
-                                        href="#">
+                                    <a class="btn btn-outline-secondary btn-sm" href="{{ url('/designcrud/' . $desitem->id . '/edit')}}">
+                                        <span class="material-icons" style="font-size: 15px;">copy_all</span>
+                                    </a>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>
                                     </a>
-                                    <a class="btn btn-outline-danger btn-sm"
-                                        href="#">
-                                        <span class="material-icons" style="font-size: 15px;">delete</span>
-                                    </a>
+                                    <form method="POST" action="{{ route('trademark.destroy',$desitem->id) }}" accept_charset="UTF-8" style="display:inline">
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
+                                        <button class="btn btn-outline-danger btn-sm" type="submit" title="Delete Patent" onclick="return confirm(&quot;Confirm to Delete ({{$desitem->CaseNo}}) ?&quot;)"><span class="material-icons" style="font-size: 15px;">delete</span></button>
+                                    </form>
                                 </td>
                             </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
