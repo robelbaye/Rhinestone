@@ -24,7 +24,7 @@
                             <tr>
                                 <td>{{$desitem->CaseNo}}</td>
                                 <td>{{$desitem->TrademarkName}}</td>
-                                <td>{{$desitem->Taxes}}</td>
+                                <td>{{$desitem->TaxPaidBy}}</td>
                                 <td>{{$desitem->Invoice}}</td>
                                 <td>{{$desitem->Applicant}}</td>
                                 <td>
