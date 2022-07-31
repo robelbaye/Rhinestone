@@ -23,10 +23,10 @@
                         @foreach ($trademarks as $desitem)
                             <tr>
                                 <td>{{$desitem->CaseNo}}</td>
-                                <td>{{$desitem->Country}}</td>
-                                <td>{{$desitem->FormalTitle}}</td>
-                                <td>{{$desitem->TypeofFiling}}</td>
-                                <td>{{$desitem->Status}}</td>
+                                <td>{{$desitem->TrademarkName}}</td>
+                                <td>{{$desitem->Taxes}}</td>
+                                <td>{{$desitem->Invoice}}</td>
+                                <td>{{$desitem->Applicant}}</td>
                                 <td>
                                     <a class="btn btn-outline-warning btn-sm" href="{{ url('/designcrud/' . $desitem->id . '/edit')}}">
                                         <span class="material-icons" style="font-size: 15px;">edit</span>
