@@ -797,7 +797,7 @@
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
-            $('#Devroinvestor').DataTable(
+            $('#Devroinvestor').DataTable({
                 "columns": [
                     {
                         "width": "10%"
@@ -817,9 +817,9 @@
                     {
                         "width": "15%"
                     }
-                ]
+                ]}
             );
-            $('#Devroapplicant').DataTable(
+            $('#Devroapplicant').DataTable({
                 "columns": [{
                         "width": "15%"
                     },
@@ -835,9 +835,9 @@
                     {
                         "width": "10%"
                     }
-                ]
+                ]}
             );
-            $('#Devrolicensor').DataTable(
+            $('#Devrolicensor').DataTable({
                 "columns": [{
                         "width": "10%"
                     },
@@ -856,9 +856,9 @@
                     {
                         "width": "15%"
                     }
-                ]
+                ]}
             );
-            $('#Devrolicensee').DataTable(
+            $('#Devrolicensee').DataTable({
                 "columns": [{
                         "width": "15%"
                     },
@@ -874,9 +874,9 @@
                     {
                         "width": "10%"
                     }
-                ]
+                ]}
             );
-            $('#Devroagent').DataTable(
+            $('#Devroagent').DataTable({
                 "columns": [{
                         "width": "15%"
                     },
@@ -895,7 +895,7 @@
                     {
                         "width": "15%"
                     }
-                ]
+                ]}
             );
             $('#Devropatent').DataTable();
             $('#Devrofamily').DataTable();

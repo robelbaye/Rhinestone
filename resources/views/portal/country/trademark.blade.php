@@ -53,8 +53,3 @@
     </div>
 </div>
 @endsection
-<script>
-    $(document).ready(function() {
-        $('#Devrotrademark').DataTable();
-    });
-</script>

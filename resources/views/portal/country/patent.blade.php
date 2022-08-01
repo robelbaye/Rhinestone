@@ -52,8 +52,3 @@
     </div>
 </div>
 @endsection
-<script>
-    $(document).ready(function() {
-        $('#Devropatent').DataTable();
-    });
-</script>

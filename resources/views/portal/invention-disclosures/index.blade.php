@@ -52,9 +52,5 @@
         </div>
     </div>
 </div>
+
 @endsection
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable();
-    });
-</script>
