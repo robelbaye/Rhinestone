@@ -45,7 +45,7 @@
                     </td>
                 </tr>
             </table>
-            <div class="card" style="margin-bottom: -80px;">
+            <div class="card pt-3" style="margin-bottom: -80px;">
                 <div class="card-body row">
                     <form class="row card-body" id="design-form" action="{{ route('design-crud.store') }}" method="POST">
                         @csrf

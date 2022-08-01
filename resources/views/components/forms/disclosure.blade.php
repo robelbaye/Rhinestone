@@ -44,7 +44,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <div class="card" style="margin-bottom: -80px;">
+                        <div class="pt-3 card" style="margin-bottom: -80px;">
                             <div class="card-body row">
                                 <form class="row card-body" id="disclosure-form" action="{{ route('invention-disclosures.store') }}" method="POST">
                                     @csrf
