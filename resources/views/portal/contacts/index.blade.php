@@ -290,12 +290,3 @@
     </div>
 </div>
 @endsection
-<script>
-    $(document).ready(function() {
-        $('#Devroinvestor').DataTable();
-        $('#Devroapplicant').DataTable();
-        $('#Devrolicensor').DataTable();
-        $('#Devrolicensee').DataTable();
-        $('#Devroagent').DataTable();
-    });
-</script>

@@ -8,7 +8,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-patent" role="tabpanel" aria-labelledby="pills-patent-tab">
                 <div class="table-responsive">
-                    <table id="Devrotrademark" class="table table-striped table-bordered" style="width:100%">
+                    <table id="Devrotrademark" class="table" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Case No</th>

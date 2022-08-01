@@ -58,9 +58,4 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $('#merged').DataTable();
-    });
-</script>
 @endsection

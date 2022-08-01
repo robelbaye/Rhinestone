@@ -83,7 +83,7 @@
     <script src="../../assets/js/todolist.js"></script>
     <script src="../../js/customchart.js"></script>
     <script src="../../js/popper.min.js"></script>
-    <script src="../../../../js/style.js"></script>
+    <!-- <script src="../../../../js/style.js"></script> -->
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -800,27 +800,28 @@
             $('#Devroinvestor').DataTable({
                 "columns": [
                     {
-                        "width": "10%"
-                    },
-                    {
-                        "width": "20%"
-                    },
-                    {
-                        "width": "20%"
-                    },
-                    {
-                        "width": "25%"
-                    },
-                    {
-                        "width": "10%"
+                        "width": "15%"
                     },
                     {
                         "width": "15%"
+                    },
+                    {
+                        "width": "15%"
+                    },
+                    {
+                        "width": "15%"
+                    },
+                    {
+                        "width": "15%"
+                    },
+                    {
+                        "width": "25%"
                     }
                 ]}
             );
             $('#Devroapplicant').DataTable({
-                "columns": [{
+                "columns": [
+                    {
                         "width": "15%"
                     },
                     {
@@ -902,6 +903,7 @@
             $('#Devrodesign').DataTable();
             $('#Devrotrademark').DataTable();
             $('#Devrolist').DataTable();
+            $('#merged').DataTable();;
         });
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
