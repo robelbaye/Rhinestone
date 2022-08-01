@@ -41,7 +41,7 @@
                     </td>
                 </tr>
             </table>
-            <div class="card">
+            <div class="card pt-3">
                 <div class="card-body row">
                     <form class="row card-body" id="Trademark" name="Trademark" action="{{ route('trademark.store') }}" method="POST">
                         @csrf
