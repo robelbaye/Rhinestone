@@ -15,6 +15,12 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class InvestorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         // Fetch all invenstion disclosures
