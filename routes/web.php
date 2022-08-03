@@ -18,6 +18,7 @@ use App\Http\Controllers\AutofillController;
 use App\Http\Controllers\MyprofileController;
 use App\Http\Controllers\InvoicesController;
 use App\Http\Controllers\UsersmgtController;
+use App\Http\Controllers\AddressBookController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -164,6 +165,8 @@ Route::resource('/usersmgtcrud', UsersmgtController::class);
 
 //usersprofile CRUD
 Route::resource('/myprofilecrud', MyprofileController::class);
+//Address Book CRUD
+Route::resource('/addressbook', AddressBookController::class);
 
 Route::get('logout',[App\Http\Controllers\AuthController::class, 'logout']);
 
