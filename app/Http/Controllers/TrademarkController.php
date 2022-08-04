@@ -36,7 +36,7 @@ class TrademarkController extends Controller
 
         $trademarks = Trademark::all();
         
-        return \view('portal.country.trademark', compact('countries','users', 'paralegals','trademarks'));
+        return \view('portal.country.trademark.index', compact('countries','users', 'paralegals','trademarks'));
     }
 
     /**
@@ -76,7 +76,7 @@ class TrademarkController extends Controller
     {
 
         // Fetch all invenstion disclosures
-        $trademark = Design::find($id);
+        $trademark = Trademark::find($id);
 
         //  Get manager users
         $users = User::all();
@@ -86,7 +86,8 @@ class TrademarkController extends Controller
 
         // Get Country
         $countries = Country::all();
-        return \view('portal.country.design_edit', compact('trademark','countries', 'users', 'paralegals'));
+
+        return \view('portal.country.trademark.edit', compact('trademark','countries', 'users', 'paralegals'));
     }
 
     /**
@@ -96,9 +97,14 @@ class TrademarkController extends Controller
      * @param  \App\Models\
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
-        //
+        $trademark = Trademark::find($id);
+        $input = $request->all();
+        $trademark->update($input);
+
+        Alert::success('Congrats', 'You\'ve Successfully Updated');
+        return redirect(route('trademark'));
     }
 
     /**

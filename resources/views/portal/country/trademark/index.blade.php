@@ -28,7 +28,7 @@
                                 <td>{{$desitem->Invoice}}</td>
                                 <td>{{$desitem->Applicant}}</td>
                                 <td>
-                                    <a class="btn btn-outline-warning btn-sm" href="{{ url('/designcrud/' . $desitem->id . '/edit')}}">
+                                    <a class="btn btn-outline-warning btn-sm" href="{{ route('trademark.edit' , $desitem->id)}}">
                                         <span class="material-icons" style="font-size: 15px;">edit</span>
                                     </a>
                                     <a class="btn btn-outline-secondary btn-sm" href="{{ url('/designcrud/' . $desitem->id . '/edit')}}">
