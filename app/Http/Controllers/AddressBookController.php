@@ -51,7 +51,7 @@ class AddressBookController extends Controller
     public function store(Request $request)
     {
         $addressBook = DB::transaction(function() use($request) {
-            $agent = AddressBook::create((array) $request->all());
+            $addressBook = AddressBook::create((array) $request->all());
         });
 
         Alert::success('Congrats', 'You\'ve Successfully Registered');
@@ -75,9 +75,20 @@ class AddressBookController extends Controller
      * @param  \App\Models\AddressBook  $addressBook
      * @return \Illuminate\Http\Response
      */
-    public function edit(AddressBook $addressBook)
+    public function edit($id)
     {
-        //
+                // Fetch all invenstion disclosures
+        $addressBook = AddressBook::find($id);
+
+        //fetch all country list
+        $countries = Country::all();
+
+        //  Get manager users
+        $attorneys = User::all();
+
+        //  Get trainer users
+        $paralegals = User::all();
+        return \view('portal.contacts.merged_edit', compact('countries','addressBook', 'attorneys', 'paralegals'));
     }
 
     /**
@@ -103,8 +114,11 @@ class AddressBookController extends Controller
      * @param  \App\Models\AddressBook  $addressBook
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AddressBook $addressBook)
+    public function destroy($id)
     {
-        //
+        $addressBook = AddressBook::destroy($id);
+
+        Alert::success('Congrats', 'You\'ve Successfully Deleted');
+        return back()->with($addressBook);
     }
 }
