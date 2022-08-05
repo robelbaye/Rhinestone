@@ -139,11 +139,11 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Inventor ID</th>
-                                <th>Surname</th>
-                                <th>Given Name(s)</th>
-                                <th>Nationality</th>
-                                <th>Employment Status</th>
+                                <th>Case No</th>
+                                <th>Country</th>
+                                <th>Formal Title</th>
+                                <th>Type Of Filing</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
