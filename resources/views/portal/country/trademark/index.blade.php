@@ -274,7 +274,7 @@
                                 <th>Due Date</th>
                                 <th>Amount</th>
                                 <th>Currency</th>
-                                <th>Paid By</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -283,7 +283,7 @@
                                 <td>29/07/2022</td>
                                 <td>500.00</td>
                                 <td>USD</td>
-                                <td>Demo name</td>
+                                <td>Pending</td>
                             </tr>
                             </tbody>
                         </table>
