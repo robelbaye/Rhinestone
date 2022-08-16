@@ -47,9 +47,6 @@
                         <button form="design-form" type="reset"  class="btn btn-outline-primary btn-sm" href="#">
                             <span class="material-icons" style="font-size: 15px;">backspace</span>
                         </button>
-                        <!-- <a class="btn btn-outline-primary btn-sm" href="#">
-                            <span class="material-icons" style="font-size: 15px;">print</span>
-                        </a> -->
                     </td>
                 </tr>
             </table>
