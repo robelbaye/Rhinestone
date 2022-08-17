@@ -30,7 +30,7 @@
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-outline-primary btn-sm" href="trademark">
+                        <a class="btn btn-outline-primary btn-sm" href="family">
                             <span class="material-icons" style="font-size: 15px;">arrow_forward</span>
                         </a>
                     </td>
