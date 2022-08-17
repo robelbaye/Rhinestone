@@ -42,11 +42,18 @@
                             <span class="material-icons" style="font-size: 15px;">print</span>
                         </a> -->
                                 </td>
+
+
+                                <td>
+                                    <button form="disclosure-form" type="reset"  class="btn btn-outline-primary btn-sm" href="#">
+                                        <span class="material-icons" style="font-size: 15px;">backspace</span>
+                                    </button>
+                                </td>
                             </tr>
                         </table>
                         <div class="pt-3 card" style="margin-bottom: -80px;">
                             <div class="card-body row">
-                                <form class="row card-body" id="disclosure-form" action="{{ route('invention-disclosures.store') }}" method="POST">
+                                <form class="row card-body" id="disclosure-form" name="disclosure-form" action="{{ route('invention-disclosures.store') }}" method="POST">
                                     @csrf
                                     <div class="col-4">
                                         <div class="form-group row">
