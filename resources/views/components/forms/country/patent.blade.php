@@ -39,6 +39,11 @@
                     </td>
 
                     <td>
+                        <button title="Save" form="patent" type="submit" class="btn btn-outline-primary btn-sm" href="#">
+                            <span class="material-icons" style="font-size: 15px;">save</span>
+                        </button>
+                    </td>
+                    <td>
                         <button form="patent" type="reset"  class="btn btn-outline-primary btn-sm" href="#">
                             <span class="material-icons" style="font-size: 15px;">backspace</span>
                         </button>
