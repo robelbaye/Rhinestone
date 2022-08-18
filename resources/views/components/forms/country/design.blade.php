@@ -39,9 +39,11 @@
                         <button class="btn btn-outline-primary btn-sm" href="#">
                             <span class="material-icons" style="font-size: 15px;">print</span>
                         </button>
-                        <!-- <a class="btn btn-outline-primary btn-sm" href="#">
-                            <span class="material-icons" style="font-size: 15px;">print</span>
-                        </a> -->
+                    </td>
+                    <td>
+                        <button title="Save" form="design-form" type="submit" class="btn btn-outline-primary btn-sm" href="#">
+                            <span class="material-icons" style="font-size: 15px;">save</span>
+                        </button>
                     </td>
                     <td>
                         <button form="design-form" type="reset"  class="btn btn-outline-primary btn-sm" href="#">
