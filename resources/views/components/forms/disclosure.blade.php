@@ -46,7 +46,11 @@
                         </a> -->
                                 </td>
 
-
+                                <td>
+                                    <button title="Save" form="disclosure-form" type="submit" class="btn btn-outline-primary btn-sm" href="#">
+                                        <span class="material-icons" style="font-size: 15px;">save</span>
+                                    </button>
+                                </td>
                                 <td>
                                     <button form="disclosure-form" type="reset"  class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">backspace</span>
