@@ -41,9 +41,6 @@
                                     <button class="btn btn-outline-primary btn-sm" href="#">
                                         <span class="material-icons" style="font-size: 15px;">print</span>
                                     </button>
-                                    <!-- <a class="btn btn-outline-primary btn-sm" href="#">
-                            <span class="material-icons" style="font-size: 15px;">print</span>
-                        </a> -->
                                 </td>
 
                                 <td>

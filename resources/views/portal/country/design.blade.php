@@ -69,12 +69,14 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" id="pills-Annuities-tab" data-bs-toggle="pill" href="#pills-Annuities" role="tab" aria-controls="pills-Annuities" aria-selected="false"><b> Annuities </b></a>
+                <a class="nav-link" id="pills-Notes-tab" data-bs-toggle="pill" href="#pills-Notes" role="tab"
+                   aria-controls="pills-Notes" aria-selected="false"><b>Notes</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-Annuities-tab" data-bs-toggle="pill" href="#pills-Annuities" role="tab"
+                   aria-controls="pills-Annuities" aria-selected="false"><b> Annuities </b></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" id="pills-Notes-tab" data-bs-toggle="pill" href="#pills-Notes" role="tab" aria-controls="pills-Notes" aria-selected="false"><b>Notes</b></a>
-            </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-Actions" role="tabpanel" aria-labelledby="pills-Actions-tab">
