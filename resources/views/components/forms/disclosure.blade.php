@@ -6,9 +6,12 @@
             <div class="accordion accordion-bordered" id="accordion-4" role="tablist">
                 <div class="card">
                     <div class="card-header" role="tab" id="heading-10">
+                        <button form="disclosure-form" type="submit" value="Submit" id="create-btn" class=" collapse hidden float-right btn btn-success mr-5 position-relative" style="min-width:8%;z-index: 100">
+                            Add Disclosure
+                        </button>
                         <h6 class="font-weight-bold mb-0">
-                            <a data-bs-toggle="collapse" href="#collapse-10" aria-expanded="true" aria-controls="collapse-10">
-                                <span class="btn btn-success"><b> Create Patent Family </b></span>
+                            <a data-bs-toggle="collapse" href="#collapse-10,#create-btn" aria-expanded="true" aria-controls="collapse-10">
+                                <span class="btn btn-success"><b> Create Disclosure </b></span>
                             </a>
                         </h6>
                     </div>
@@ -255,11 +258,6 @@
                                                 <textarea cols="600" rows="3" class="form-control" id="reason" name="reason" placeholder="Reasons of Approval or Rejection">{{ $evaluation->suggestion ?? '' }}</textarea>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="float-right">
-                                        <button form="disclosure-form" type="submit" class="btn btn-primary text-center" style="width: 200px; margin-top: -1015px; margin-left: 83%;">
-                                            Save Patent Family
-                                        </button>
                                     </div>
                                 </form>
                             </div>
