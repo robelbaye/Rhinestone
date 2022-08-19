@@ -110,6 +110,9 @@
                                         </div>
                                         @enderror
                                     </div>
+                                    <div class="col-md-6 row col-sm-12 form-group">
+                                        <div class="border mx-3">Figure 1</div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 row col-sm-12 form-group">
@@ -172,6 +175,7 @@
                                             @enderror
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-6 row col-sm-12 form-group">
 
