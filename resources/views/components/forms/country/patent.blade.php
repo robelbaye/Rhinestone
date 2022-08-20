@@ -207,20 +207,6 @@
                                         <option value="No">No</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-2 col-form-label text-right">Licensor:</label>
-                                <div class="col-sm-3">
-                                    <select name="Licensor" class="form-control @error('Licensor') is-invalid @enderror text-dark" required>
-                                        <option value="">Select a Licensor</option>
-                                        @foreach ($users as $userslist)
-                                        <option value="{{ $userslist->id }}" {{ old('Licensor') == $userslist->id ? 'selected' : '' }}>
-                                            {{ $userslist->name }}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Cost Center Code: </label>
                                 <div class="col-md-3">
                                     <input name="CostCenter" type="CostCenter" class="form-control" placeholder=" Cost Code" value="{{ old('CostCenter') ?? ($patents->CostCenter ?? (app()->environment('local') ? '' : '')) }}" required>
@@ -230,6 +216,23 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
+
+                            </div>
+                            <div class="form-group row">
+
+
+
+                                <label class="col-sm-2 col-form-label text-right">Licensor:</label>
+                                <div class="col-sm-3">
+                                    <select name="Licensor" class="form-control @error('Licensor') is-invalid @enderror text-dark" required>
+                                        <option value="">Select a Licensor</option>
+                                        @foreach ($users as $userslist)
+                                            <option value="{{ $userslist->id }}" {{ old('Licensor') == $userslist->id ? 'selected' : '' }}>
+                                                {{ $userslist->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <label class="col-sm-2 col-form-label text-right">Cost Center No: </label>
                                 <div class="col-md-3">
                                     <input name="CostCenterCode" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;" class="form-control" placeholder=" Cost No" value="{{ old('CostCenterCode') ?? ($patents->CostCenterCode ?? (app()->environment('local') ? '' : '')) }}" required>
