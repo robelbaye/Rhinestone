@@ -241,7 +241,7 @@
                                 <th>Submitted as IOS and on date case</th>
                                 <th>Kind code</th>
                                 <th>Pub country</th>
-                                <th>Include in DS</th>
+                                <th>Include in IDS</th>
                                 <th>Patentee/Applicant</th>
                             </tr>
                             </thead>
@@ -254,6 +254,11 @@
                                 <td>01</td>
                                 <td>01/20/2020</td>
                                 <td>Redet G. volume II, 178</td>
+                                <td>01/20/2020</td>
+                                <td>43</td>
+                                <td>US</td>
+                                <td>yes</td>
+                                <td>Test User</td>
                             </tr>
                             </tbody>
                         </table>
