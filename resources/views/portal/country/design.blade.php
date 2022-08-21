@@ -61,7 +61,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-applicant-tab" data-bs-toggle="pill" href="#pills-applicant"
-                   role="tab" aria-controls="pills-applicant" aria-selected="false"><b> Applicant(s) </b></a>
+                   role="tab" aria-controls="pills-applicant" aria-selected="false"><b> Applicants </b></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-Title-tab" data-bs-toggle="pill" href="#pills-Title" role="tab"
