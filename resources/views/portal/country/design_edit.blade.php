@@ -458,10 +458,10 @@
                             </div>
                             <!-- Line-10 -->
                             <div class="form-group row">
-                                <label class="col-sm-1 col-form-label text-right">Design App/n No: </label>
+                                <label class="col-sm-1 col-form-label text-right">Design Application No: </label>
                                     <div class="col-md-2">
                                         <input name="DesignAppNo" type="text" pattern="\d*" maxlength="8" onkeypress="return isNumber(event)" onpaste="return false;"  class="form-control"
-                                            placeholder=" Design App/n No"
+                                            placeholder=" Design Application No"
                                             value="{{ $designs->DesignAppNo }}" required>
                                     </div>
                                 @error('DesignAppNo')

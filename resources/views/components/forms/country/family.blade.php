@@ -63,7 +63,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label text-right">Priority/Application No:</label>
                                 <div class="col-md-2">
-                                    <input name="DesignPriorityNo" type="text" class="form-control" placeholder=" Priority App/n No" value="{{ old('DesignPriorityNo') ?? ($designs->DesignPriorityNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="DesignPriorityNo" type="text" class="form-control" placeholder=" Priority Application No" value="{{ old('DesignPriorityNo') ?? ($designs->DesignPriorityNo ?? (app()->environment('local') ? '' : '')) }}" required>
                                 </div>
                                 @error('DesignPriorityNo')
                                 <div class="invalid-feedback">
@@ -91,9 +91,9 @@
                             </div>
                             <!-- Line-2 -->
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label text-right">Prouisional PCT App/n No: </label>
+                                <label class="col-sm-2 col-form-label text-right">Prouisional PCT Application No: </label>
                                 <div class="col-md-2">
-                                    <input name="RegistrationNo" type="text" class="form-control" placeholder="PCT App/n No" value="{{ old('RegistrationNo') ?? ($designs->RegistrationNo ?? (app()->environment('local') ? '' : '')) }}" required>
+                                    <input name="RegistrationNo" type="text" class="form-control" placeholder="PCT Application No" value="{{ old('RegistrationNo') ?? ($designs->RegistrationNo ?? (app()->environment('local') ? '' : '')) }}" required>
                                 </div>
                                 @error('RegistrationNo')
                                 <div class="invalid-feedback">
