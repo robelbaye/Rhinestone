@@ -231,34 +231,37 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Application no</th>
-                                <th>Application date</th>
-                                <th>Publication no</th>
-                                <th>Publication date</th>
-                                <th>Created no</th>
-                                <th>Created date</th>
-                                <th>Publication author, volume, pages e.t.c</th>
-                                <th>Submitted as IOS and on date case</th>
-                                <th>Kind code</th>
-                                <th>Pub country</th>
-                                <th>Include in IDS</th>
                                 <th>Patentee/Applicant</th>
+                                <th>Application No.</th>
+                                <th>Country</th>
+                                <th>Application Date</th>
+                                <th>Publication No.</th>
+                                <th>Publication date</th>
+                                <th>Grant No.</th>
+                                <th>Grant Date</th>
+                                <th>Publication author, volume, pages e.t.c</th>
+                                <th>Kind code</th>
+                                <th>Include in IOS?</th>
+                                <th>Submitted as IOS and on date case?</th>
+                                <th>On which case ref?</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
+
+                                <td>Test User</td>
                                 <td>001</td>
+                                <td>Germany</td>
                                 <td>01/20/2020</td>
                                 <td>345345</td>
                                 <td>01/20/2020</td>
                                 <td>01</td>
                                 <td>01/20/2020</td>
                                 <td>Redet G. volume II, 178</td>
-                                <td>01/20/2020</td>
                                 <td>43</td>
-                                <td>US</td>
-                                <td>yes</td>
-                                <td>Test User</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>Case145</td>
                             </tr>
                             </tbody>
                         </table>
